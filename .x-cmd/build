@@ -1,0 +1,31 @@
+# shellcheck shell=bash disable=SC1091,SC2034 #xsh
+
+# Section: Arg
+xrc ui
+WORK_DIR="$(x wsroot)"
+COMMIT_ID="$(git rev-parse --short HEAD)"
+DIST_PATH=$WORK_DIR/docs/.vuepress/dist
+TEMPLATE_PATH=$WORK_DIR/docs/.vuepress/templates/
+PACKAGE_VERSION=template-${COMMIT_ID}
+# EndSection
+
+# Section: Main
+if [ -d "$TEMPLATE_PATH/$PACKAGE_VERSION" ];then
+	cd "$TEMPLATE_PATH" &&
+  	rm -rf "${PACKAGE_VERSION}"* &&
+	cd "$WORK_DIR" || exit
+fi
+yarn docs:build &&
+cp -r "$DIST_PATH" "$TEMPLATE_PATH" &&
+mv "${TEMPLATE_PATH}/dist" "${TEMPLATE_PATH}/${PACKAGE_VERSION}" &&
+cd "$TEMPLATE_PATH" &&
+zip -r "${PACKAGE_VERSION}.zip" "${PACKAGE_VERSION}" &&
+cd "$WORK_DIR" || exit
+if [ -f "$TEMPLATE_PATH/$PACKAGE_VERSION.zip" ];then
+	printf "%s\n%s\n%s\n%s\n" \
+		"$(ui blue '-------------------------------------------------')"\
+		"$(ui bold green 'Packaged successfully!')" \
+		"The package version is $(ui bold cyan "$PACKAGE_VERSION")" \
+		"The package address is $(ui yellow bold underline "$TEMPLATE_PATH")"
+fi
+# EndSection

@@ -1,0 +1,14 @@
+# shellcheck shell=bash disable=SC1091,SC2034 #xsh
+
+# Section: Arg
+WORK_DIR="$(x wsroot)"
+# EndSection
+
+# Section: Main
+if [ ! -d "$WORK_DIR/node_modules" ]; then
+    x pull repo &&
+    yarn docs:dev
+else
+  yarn docs:dev
+fi
+# EndSection
