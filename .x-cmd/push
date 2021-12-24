@@ -3,7 +3,7 @@
 # Section: Arg
 WORK_DIR="$(x wsroot)"
 # EndSection
-: "${1:=main}"
+: "${1:=blog}"
 # Section: Main
 git remote remove gitee 2>/dev/null
 git remote add gitee git@gitee.com:AAAben/qbenben.git

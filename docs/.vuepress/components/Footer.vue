@@ -2,7 +2,8 @@
   <footer
     class="items-center text-lg"
   >
-  自定义 footer 组件
+  
+  © 2021-2021 <a href="https://github.com/zhengqbbb" target="_blank">Qbenben</a> | <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备19092669号</a> .
   </footer>
 </template>
 

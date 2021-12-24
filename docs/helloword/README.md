@@ -1,3 +1,10 @@
+---
+lang: zh-CN
+title: xxxx
+description: xxxx
+lastUpdated: true
+sidebarDepth: 2
+---
 # Hello VuePress 第二模块
 > 引用
 

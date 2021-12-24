@@ -1,7 +1,6 @@
 <template>
   <div class="hello-world no-sidebar">
     <main class="main">
-      <h2>自定义首页组件</h2>
       <Footer />
     </main>
   </div>

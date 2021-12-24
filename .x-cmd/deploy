@@ -2,7 +2,7 @@
 
 # Section: Arg
 WORK_DIR="$(x wsroot)"
-GIT_URL=gitee.com:zhengqbbb/x-cmd-official-template.git
+GIT_URL=gitee.com/AAAben/qbenben.git
 BRANCH_NAME=gh-page
 # EndSection
 

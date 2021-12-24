@@ -1,3 +1,10 @@
+---
+lang: zh-CN
+title: xxxx
+description: xxxx
+lastUpdated: true
+sidebarDepth: 2
+---
 # hello-world-2 —— 第二模块
 
 template 第二分类篇文章

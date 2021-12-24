@@ -3,18 +3,36 @@ import type { SidebarConfig } from '@vuepress/theme-default'
 export const zh: SidebarConfig = {
   '/': [
     {
-      text: 'hello',
+      text: '首页',
       children: [
-        '/helloword.md',
+        'README.md',
       ],
     },
   ],
-  '/helloword/': [
+  '/play/': [
     {
-      text: 'Hello',
+      text: '捣鼓分享',
       children: [
-        '/helloword/README.md',
-        '/helloword/helloword.md',
+        "/play/README.md",
+        "/play/mac.md",
+        "/play/vscode.md",
+        "/play/chrome.md",
+      ],
+    }
+  ],
+  '/fontend/': [
+    {
+      text: '前端日常',
+      children: [
+        '/fontend/README.md',
+      ],
+    }
+  ],
+  '/shell/': [
+    {
+      text: 'Shell 点滴',
+      children: [
+        '/shell/README.md',
       ],
     }
   ],
