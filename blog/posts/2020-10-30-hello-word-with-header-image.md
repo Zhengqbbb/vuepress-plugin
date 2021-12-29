@@ -1,11 +1,11 @@
 ---
 layout: Post
-title: Hello Word 2
+title: Hello Word
 subtitle: A Test Post with a Header Image
 author: Renovamen
 date: 2020-10-30
 useHeaderImage: true
-headerImage: /img/in-post/2020-10-30/header.jpg
+headerImage: https://tva4.sinaimg.cn/large/6ccee0e1gy1gxuxbn8r8tj20x40imdhv.jpg
 headerMask: rgba(40, 57, 101, .4)
 catalog: true
 tags:

@@ -6,7 +6,7 @@ import codeCopyPlugin from './codeCopyPlugin';
 
 export default [ 
   // registerComponents,
-  // docSearchPlugin,
+  docSearchPlugin,
   codeCopyPlugin,
 
   // vuepressSearchPlugin,

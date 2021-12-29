@@ -3,9 +3,9 @@ import type { PluginConfig } from '@vuepress/core'
 const docSearchPlugin: PluginConfig  = [
   '@vuepress/plugin-docsearch',
   {
-    apiKey: 'dd1cbbb79a132fe023c59224395dc215',
-    indexName: 'x-cmd',
-    appId: 'CXZ8IP0O5G',
+    apiKey: '4fae99166456a832a0775eef6e61cae0',
+    indexName: 'qbenben',
+    appId: 'BUM16EKLGN',
     placeholder: '搜索',
   },
 ]

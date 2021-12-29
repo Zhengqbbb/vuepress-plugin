@@ -46,15 +46,15 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
   },
   homeHeaderImages: [
     {
-      path: "/images/home/1.jpg",
+      path: "https://tva2.sinaimg.cn/large/6ccee0e1gy1gxuxje4ampj21z4140agb.jpg",
       mask: "rgba(40, 57, 101, .2)"
     },
     {
-      path: "/images/home/2.jpg",
+      path: "https://tva3.sinaimg.cn/large/6ccee0e1gy1gxuxkqi0qyj217c0jwqd2.jpg",
       mask: "rgb(251, 170, 152, .2)"
     },
     {
-      path: "/images/home/3.jpg",
+      path: "https://tva3.sinaimg.cn/large/6ccee0e1gy1gxuxl4mzaij21hc0u0tfo.jpg",
       mask: "rgba(68, 74, 83, .2)"
     }
   ],
@@ -86,7 +86,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     tags: {
       subtitle: "Black Sheep Wall",
       bgImage: {
-        path: "/img/pages/tags.jpg",
+        path: "https://tva2.sinaimg.cn/large/6ccee0e1gy1gxuz06pfdpj21hc0mv78v.jpg",
         mask: "rgba(211, 136, 37, .5)"
       }
     },
@@ -94,7 +94,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
       subtitle:
         "When you are looking at the stars, please put the brightest star shining night sky as my soul.",
       bgImage: {
-        path: "/img/pages/links.jpg",
+        path: "https://tvax3.sinaimg.cn/large/6ccee0e1gy1gxuz0kflemj22an0i3q5s.jpg",
         mask: "rgba(64, 118, 190, 0.5)"
       }
     }

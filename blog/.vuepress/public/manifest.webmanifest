@@ -1,11 +1,11 @@
 {
-  "name": "Hello-template",
-  "short_name": "x-bash",
-  "description": "Hello-vuepress-template",
+  "name": "Qbenben-Blog",
+  "short_name": "qbenben",
+  "description": "Qbenben blog",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#ffa711",
-  "theme_color": "#ffa711",
+  "background_color": "#f08d49",
+  "theme_color": "#f08d49",
   "icons": [
     {
       "src": "/images/icons/android-chrome-192x192.png",

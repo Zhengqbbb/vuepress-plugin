@@ -20,6 +20,7 @@
     "vuepress-theme-gungnir": "2.0.0-alpha.7"
   },
   "devDependencies": {
+    "@vuepress/plugin-docsearch": "2.0.0-beta.32",
     "anywhere": "^1.5.0",
     "lerna": "^4.0.0",
     "rimraf": "^3.0.2",

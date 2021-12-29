@@ -16,6 +16,7 @@ if [ -d "$TEMPLATE_PATH/$PACKAGE_VERSION" ];then
   	rm -rf "${PACKAGE_VERSION}"* &&
 	cd "$WORK_DIR" || exit
 fi
+rm -rf "$DIST_PATH"
 yarn docs:build &&
 mkdir -p "$TEMPLATE_PATH" &&
 cp -r "$DIST_PATH" "$TEMPLATE_PATH/${PACKAGE_VERSION}" &&
