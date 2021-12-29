@@ -1,0 +1,30 @@
+{
+  "name": "@zhengqbbb/vuepress-plugin-clipboard",
+  "version": "1.0.2",
+  "description": "Vuepress2 plugin - copy clipboard",
+  "keywords": [
+    "vuepress-plugin",
+    "vuepress",
+    "plugin",
+    "code-clipboard",
+    "copy",
+    "clipboard"
+  ],
+  "homepage": "https://github.com/zhengqbbb",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengqbbb"
+  },
+  "bugs": {
+    "url": "https://github.com/zhengqbbb/zhengqbbb.github.io"
+  },
+  "author": "zhengqbbb",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

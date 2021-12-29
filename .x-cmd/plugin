@@ -5,10 +5,5 @@ WORK_DIR="$(x wsroot)"
 # EndSection
 
 # Section: Main
-if [ ! -d "$WORK_DIR/node_modules" ]; then
-    x init none &&
-    yarn dev
-else
-  yarn dev
-fi
+lerna bootstrap
 # EndSection

@@ -1,25 +1,30 @@
 {
-  "name": "vuepress-next-template",
-  "version": "0.0.1",
-  "description": "fastly get vuepress next template",
-  "main": "index.js",
-  "repository": "https://github.com/Zhengqbbb/vuepress-next-template.git",
-  "author": "Zhengqbbb <1074059947@qq.com>",
-  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.2",
+  "name": "renovamen-blog",
+  "description": "Renovamen's blog, powered by VuePress 2, themed by Gungnir.",
+  "license": "Apache-2.0",
+  "author": "Renovamen <renovamenzxh@gmail.com>",
   "scripts": {
-    "docs:dev": "vuepress dev docs --clean-cache",
-    "docs:build": "vuepress build docs --clean-cache",
-    "docs:info": "vuepress info"
+    "clean": "rimraf blog/.vuepress/.temp blog/.vuepress/.cache dist",
+    "dev": "vuepress dev blog --clean-cache",
+    "build": "yarn clean && vuepress build blog --clean-cache --dest dist",
+    "yarn docs:build": "yarn clean && vuepress build blog --clean-cache --dest dist",
+    "serve": "anywhere -h localhost -d dist"
+  },
+  "dependencies": {
+    "markdown-it-task-lists": "^2.1.1",
+    "vuepress-theme-gungnir": "2.0.0-alpha.7"
   },
   "devDependencies": {
-    "@snippetors/vuepress-plugin-code-copy": "^1.1.0",
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.22",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.22",
-    "@vuepress/plugin-search": "^2.0.0-beta.22",
-    "autoprefixer": "^10.3.1",
-    "postcss-import": "^14.0.2",
-    "tailwindcss": "^2.2.7",
-    "vuepress": "^2.0.0-beta.22",
-    "vuepress-vite": "^2.0.0-beta.22"
+    "anywhere": "^1.5.0",
+    "lerna": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "vuepress": "^2.0.0-beta.31",
+    "vuepress-vite": "2.0.0-beta.31",
+    "vuepress-webpack": "2.0.0-beta.31"
   }
 }

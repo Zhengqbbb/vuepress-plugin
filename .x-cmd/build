@@ -4,9 +4,10 @@
 xrc ui
 WORK_DIR="$(x wsroot)"
 COMMIT_ID="$(git rev-parse --short HEAD)"
+BRANCH_INFO="$(git symbolic-ref -q --short HEAD 2> /dev/null || git describe --tags --exact-match 2> /dev/null)"
 DIST_PATH=$WORK_DIR/docs/.vuepress/dist
-TEMPLATE_PATH=$WORK_DIR/docs/.vuepress/templates/
-PACKAGE_VERSION=template-${COMMIT_ID}
+TEMPLATE_PATH=$WORK_DIR/docs/.vuepress/templates
+PACKAGE_VERSION=template-${BRANCH_INFO}-${COMMIT_ID}
 # EndSection
 
 # Section: Main
@@ -16,16 +17,20 @@ if [ -d "$TEMPLATE_PATH/$PACKAGE_VERSION" ];then
 	cd "$WORK_DIR" || exit
 fi
 yarn docs:build &&
-cp -r "$DIST_PATH" "$TEMPLATE_PATH" &&
-mv "${TEMPLATE_PATH}/dist" "${TEMPLATE_PATH}/${PACKAGE_VERSION}" &&
+mkdir -p "$TEMPLATE_PATH" &&
+cp -r "$DIST_PATH" "$TEMPLATE_PATH/${PACKAGE_VERSION}" &&
 cd "$TEMPLATE_PATH" &&
-zip -r "${PACKAGE_VERSION}.zip" "${PACKAGE_VERSION}" &&
-cd "$WORK_DIR" || exit
+zip -r "${PACKAGE_VERSION}.zip" "${PACKAGE_VERSION}" > /dev/null &&
 if [ -f "$TEMPLATE_PATH/$PACKAGE_VERSION.zip" ];then
-	printf "%s\n%s\n%s\n%s\n" \
-		"$(ui blue '-------------------------------------------------')"\
-		"$(ui bold green 'Packaged successfully!')" \
-		"The package version is $(ui bold cyan "$PACKAGE_VERSION")" \
-		"The package address is $(ui yellow bold underline "$TEMPLATE_PATH")"
+	package_size="$(du -sh "$PACKAGE_VERSION" | awk '{ printf $1 }')"
+	printf "%s\n%s\n%s\n%s\n%s\n%s\n" \
+		"$(ui bold blue '----------------------------------------------------')"\
+		"$(ui bold green '🎉 Packaged successfully! 🎉')" \
+		"📦 The package version is $(ui bold cyan "$PACKAGE_VERSION")" \
+		"💼 The package address is $(ui bold yellow  underline "$TEMPLATE_PATH")" \
+		"📐 The package size is $(ui bold magenta "$package_size")" \
+		"$(ui bold blue '----------------------------------------------------')"
+
 fi
+cd "$WORK_DIR" || exit
 # EndSection
