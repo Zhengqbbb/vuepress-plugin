@@ -5,8 +5,8 @@ xrc ui
 WORK_DIR="$(x wsroot)"
 COMMIT_ID="$(git rev-parse --short HEAD)"
 BRANCH_INFO="$(git symbolic-ref -q --short HEAD 2> /dev/null || git describe --tags --exact-match 2> /dev/null)"
-DIST_PATH=$WORK_DIR/docs/.vuepress/dist
-TEMPLATE_PATH=$WORK_DIR/docs/.vuepress/templates
+DIST_PATH=$WORK_DIR/dist
+TEMPLATE_PATH=$WORK_DIR/templates
 PACKAGE_VERSION=template-${BRANCH_INFO}-${COMMIT_ID}
 # EndSection
 

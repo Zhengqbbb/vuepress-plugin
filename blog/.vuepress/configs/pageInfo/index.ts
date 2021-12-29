@@ -63,16 +63,17 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     git: isProd,
     katex: true,
     giscus: {
-      repo: "This-is-an-Apple/blog-giscus-comments",
-      repoId: "R_kgDOGl2SjQ",
+      repo: "Zhengqbbb/zhengqbbb.github.io",
+      repoId: "MDEwOlJlcG9zaXRvcnkxODM4OTUyNTQ",
+      mapping: "pathname",
       category: "Announcements",
-      categoryId: "DIC_kwDOGl2Sjc4CAcxK"
+      categoryId: "DIC_kwDOCvYE1s4CAdr1"
     },
-    // mdPlus: {
-    //   all: true
-    // },
-    // ga: "G-HCQSX53XFG",
-    // ba: "75381d210789d3eaf855fa16246860cc"
+    mdPlus: {
+      all: true
+    },
+    ga: "G-8R2K3ZRCY6",
+    ba: "dbf4327a921eac36c68ec119c80f31b9"
   },
   footer: `
     &copy; <a href="https://github.com/Zhengqbbb" target="_blank">Zhengqbbb</a> 2021-2021

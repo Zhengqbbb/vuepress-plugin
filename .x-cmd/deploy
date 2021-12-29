@@ -7,7 +7,7 @@ BRANCH_NAME=gh-page
 # EndSection
 
 # Section: Main
-cd "$WORK_DIR"/docs/.vuepress/dist || exit
+cd "$WORK_DIR"/dist || exit
 # 如果是发布到自定义域名
 # echo 'www.x-cmd.com' > CNAME
 git init

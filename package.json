@@ -12,7 +12,7 @@
     "clean": "rimraf blog/.vuepress/.temp blog/.vuepress/.cache dist",
     "dev": "vuepress dev blog --clean-cache",
     "build": "yarn clean && vuepress build blog --clean-cache --dest dist",
-    "yarn docs:build": "yarn clean && vuepress build blog --clean-cache --dest dist",
+    "docs:build": "yarn clean && vuepress build blog --clean-cache --dest dist",
     "serve": "anywhere -h localhost -d dist"
   },
   "dependencies": {
