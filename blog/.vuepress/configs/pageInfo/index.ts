@@ -9,7 +9,7 @@ export const lang = 'zh-CN'
 
 export const base = `/`
 
-export const title = `Qbenben (Qiubin Zheng)`
+export const title = `Qbenben`
 
 export const description = 'Qbenben blog. Record my life'
 

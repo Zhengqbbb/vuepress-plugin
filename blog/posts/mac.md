@@ -5,7 +5,7 @@ title: Mac初始化配置以及软件分享
 subtitle: MacOS系统常见软件和初始化配置分享
 author: qbenben
 date: 2021-10-29
-headerImage: https://tvax4.sinaimg.cn/large/6ccee0e1gy1gxuxcyelynj210a0gqjsl.jpg
+headerImage: https://tva3.sinaimg.cn/large/6ccee0e1gy1gxv3n4ru9hj219k0k0769.jpg
 catalog: true
 tags:
   - play
