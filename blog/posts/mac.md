@@ -1,20 +1,28 @@
 ---
 layout: Post
-lang: zh-CN
 title: Mac初始化配置以及软件分享
 subtitle: MacOS系统常见软件和初始化配置分享
 author: qbenben
-date: 2021-10-29
+date: 2021-11-30
+useHeaderImage: true
 headerImage: https://tva3.sinaimg.cn/large/6ccee0e1gy1gxv3n4ru9hj219k0k0769.jpg
+headerMask: rgba(40, 57, 101, .4)
 catalog: true
 tags:
-  - play
+  - 折腾记录
 ---
-> 记录留痕自己Mac常用的软件，以及share
+
+
+记录留痕自己Mac常用的软件，以及share
+
+<!-- more -->
 
 ## 1. Git
+
 ### 1.1. 安装Git
+
 1. 通过homebrew安装Git
+
 - 安装homebrew
 
 ```bash
@@ -22,22 +30,32 @@ tags:
 ```
 
 - 安装git
+
 ```bash
 brew install git
 ```
+
 2. 创建ssh key并配置
+
 - 设置好username和email，每次commit都会记录（配错不会有小绿点github记录哦）
+
 ```bash
 git config --global user.name "Zhengqbbb"
 git config --global user.email "1074059947@qq.com"
 ```
+
 - 创建ssh key
+
 ```bash
 ssh-keygen -t rsa -C "1074059947@qq.com"
 ```
+
 ### 1.2. 常见命令
+
 - 代理
+
   - 如果自己有github和gitee的项目可以把下面的--global去掉分repo
+
 ```bash
 # 看看自己的飞机 HTTP代理地址是多少
 git config --global https.proxy http://127.1:1087
@@ -51,6 +69,7 @@ git config list
 ```
 
 ## 2. Node
+
 > 这边Node使用brew安装
 
 ```bash

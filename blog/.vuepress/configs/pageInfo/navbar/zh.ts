@@ -3,25 +3,30 @@ import type { NavbarConfig } from "vuepress-theme-gungnir";
 export const zh: NavbarConfig = [
   {
     text: "首页",
+		icon: "fort-awesome",
     link: "/"
   },
   {
     text: "标签",
-    link: "/tags/"
+		icon: "tag",
+    link: "/tags/",
+		iconScale: 0.95
   },
   {
 		text: "文档",
+		icon: "book",
+    iconScale: 1.1,
 		children: [
 			{
 				text: "打怪升级",
 				children: [
 					{
 						text: "Fontend",
-						link: "/zh/docs/fontend/README.md"
+						link: "/docs/fontend/README.md"
 					},
 					{
 						text: "Shell",
-						link: "/zh/docs/shell/README.md"
+						link: "/docs/shell/README.md"
 					},
 				]
 			},
@@ -30,7 +35,7 @@ export const zh: NavbarConfig = [
 				children: [
 					{
 						text: "软件插件鼓捣分享",
-						link: "/zh/docs/play/README.md"
+						link: "/docs/play/README.md"
 					}
 				]
 			}

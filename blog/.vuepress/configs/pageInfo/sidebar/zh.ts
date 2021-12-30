@@ -1,30 +1,30 @@
 import type { SidebarConfig } from "vuepress-theme-gungnir";
 
 export const zh: SidebarConfig = {
-  '/zh/docs/play/': [
+  '/docs/play/': [
     {
       text: '捣鼓分享',
       children: [
-        "/zh/docs/play/README.md",
-        "/zh/docs/play/mac.md",
-        "/zh/docs/play/vscode.md",
-        "/zh/docs/play/chrome.md",
+        "/docs/play/README.md",
+        "/docs/play/mac.md",
+        "/docs/play/vscode.md",
+        "/docs/play/chrome.md",
       ],
     }
   ],
-  '/zh/docs/fontend/': [
+  '/docs/fontend/': [
     {
       text: '前端日常',
       children: [
-        '/zh/docs/fontend/README.md',
+        '/docs/fontend/README.md',
       ],
     }
   ],
-  '/zh/docs/shell/': [
+  '/docs/shell/': [
     {
       text: 'Shell 点滴',
       children: [
-        '/zh/docs/shell/README.md',
+        '/docs/shell/README.md',
       ],
     }
   ],

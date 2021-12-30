@@ -117,7 +117,6 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
       contributorsText: "贡献者",
       tagsText: "标签",
       linksText: "链接",
-      showAllTagsText: "全部",
       info: "信息",
       tip: "提示",
       warning: "注意",
