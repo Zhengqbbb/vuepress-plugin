@@ -1,5 +1,5 @@
 import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
+import type { DefaultThemeOptions } from '@vuepress/theme-default'
 import { pageInfo, bunderInfo } from './configs';
 import pagePlugins from './plugins';
 

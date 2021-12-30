@@ -7,7 +7,7 @@
 ###
 # Section: Arg
 WORK_DIR="$(x wsroot)"
-CONFIG_FILE=$WORK_DIR/docs/.vuepress/configs/docSearch/docSearchConfig.json
+CONFIG_FILE=$WORK_DIR/blog/.vuepress/configs/docSearch/docSearchConfig.json
 # EndSection
 
 # Section: Main

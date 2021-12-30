@@ -1,4 +1,4 @@
-import type { PluginConfig } from 'vuepress'
+import { PluginConfig, PluginOptions } from 'vuepress';
 import docSearchPlugin from './docSearchPlugin';
 import vuepressSearchPlugin from './vuepressSearchPlugin';
 import registerComponents from './registerComponents';
@@ -10,4 +10,4 @@ export default [
   codeCopyPlugin,
 
   // vuepressSearchPlugin,
-] as PluginConfig[];
+] as PluginConfig<PluginOptions>[];

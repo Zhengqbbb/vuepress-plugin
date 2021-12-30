@@ -3,7 +3,7 @@
   "references": [],
   "files": [],
   "include": [
-    "docs/.vuepress/**/*",
+    "blog/.vuepress/**/*",
     "**/*.ts",
     "**/*.vue",
   ]
