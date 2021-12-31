@@ -3,7 +3,7 @@ import type { PluginConfig } from '@vuepress/core'
 const docSearchPlugin: PluginConfig  = [
   '@vuepress/plugin-docsearch',
   {
-    apiKey: '4fae99166456a832a0775eef6e61cae0',
+    apiKey: 'a8b45d0e5d27d6ec39c687814b11fd0b',
     indexName: 'qbenben',
     appId: 'BUM16EKLGN',
     placeholder: '搜索',

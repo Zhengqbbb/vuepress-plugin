@@ -6,16 +6,16 @@ WORK_DIR="$(x wsroot)"
 
 # Section: Main
 case "${1:=repo}" in
-  cp)
-    cd "$WORK_DIR/vuepress-theme-gungnir/packages/theme/" &&
-    yarn clean &&
-    yarn build &&
-    yarn copy &&
-    cp -r "$WORK_DIR/vuepress-theme-gungnir/packages/theme/lib" "$WORK_DIR/node_modules/vuepress-theme-gungnir"
-    cd "$WORK_DIR" || exit
+  boot)
+      lerna bootstrap
   ;;
   *)
-    lerna bootstrap
+      cd "$WORK_DIR/vuepress-theme-gungnir/packages/theme/" &&
+      yarn clean &&
+      yarn build &&
+      yarn copy &&
+      cp -r "$WORK_DIR/vuepress-theme-gungnir/packages/theme/lib" "$WORK_DIR/node_modules/vuepress-theme-gungnir"
+      cd "$WORK_DIR" || exit
   ;;
 esac
 

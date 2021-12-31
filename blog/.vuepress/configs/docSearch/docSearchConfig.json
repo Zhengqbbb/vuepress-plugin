@@ -1,7 +1,7 @@
 {
   "index_name": "qbenben",
   "start_urls": [
-    "https://www.qbenben.com/"
+    "https://www.qbenben.com/docs/play/"
   ],
   "stop_urls": [],
   "selectors": {

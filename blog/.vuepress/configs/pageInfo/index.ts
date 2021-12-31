@@ -40,9 +40,13 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     description: "在前端世界里打怪升级.",
     sns: {
       github: "Zhengqbbb",
-      instagram: "qbqiubin",
+      instagram: {
+        icon: "instagram",
+        iconScale: 0.9,
+        link: "https://www.instagram.com/qbqiubin/"
+      },
       email: "1074059947@qq.com"
-    } as any
+    }
   },
   homeHeaderImages: [
     {

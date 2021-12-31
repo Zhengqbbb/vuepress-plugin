@@ -1,23 +1,52 @@
 @use 'about';
+
 p.desc {
   color: var(--c-text-sub);
   font-size: 14px;
   margin-top: -20px !important;
 }
 
-:root {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+body {
+  overflow: overlay;
 }
 
 :root {
+  scroll-behavior: smooth;
   // brand colors
   --c-brand: #f08d49;
   --c-brand-light: #f08d49;
 }
 
-
 // plugin-docsearch
+@media (max-width: 719px) {
+  .DocSearch-Button {
+    border-radius: 6px !important;
+  }
+}
+
+.is-fixed .DocSearch{
+  color: var(--c-text) !important;
+}
+.DocSearch {
+  &.DocSearch-Button {
+    background: rgb(245 246 247 / 30%);
+    transition: ease-in-out 100ms;
+    margin: 0;
+  }
+  .DocSearch-Search-Icon {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .DocSearch-Button-Placeholder {
+    font-size: 14px;
+  }
+  .DocSearch-Button-Key {
+    width: 15px;
+    height: 15px;
+    font-size: 0.2rem;
+    margin-right: 1.4em;
+  }
+}
 .DocSearch {
   --docsearch-primary-color: var(--c-brand);
   --docsearch-text-color: var(--c-text);

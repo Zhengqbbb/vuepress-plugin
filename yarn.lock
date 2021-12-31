@@ -1671,19 +1671,19 @@
     markdown-it "^12.2.0"
     markdown-it-container "^3.0.0"
 
-"@vuepress/plugin-docsearch@2.0.0-beta.32":
-  version "2.0.0-beta.32"
-  resolved "https://registry.npmjs.org/@vuepress/plugin-docsearch/-/plugin-docsearch-2.0.0-beta.32.tgz#57e60823ab79e04d2afec4129196350444ef08b3"
-  integrity sha512-BTpbYX1erDXT1kdlZYAHOmu5XwDRhFVVOgipnJ4IrDGgXaDgBvGIGFdBUbmSohtBSJGj/73PAc7xJG2Tga2m+A==
+"@vuepress/plugin-docsearch@2.0.0-beta.29":
+  version "2.0.0-beta.29"
+  resolved "https://registry.npmjs.org/@vuepress/plugin-docsearch/-/plugin-docsearch-2.0.0-beta.29.tgz#73fb3e72aed8cec73a00a1a48b993bff86a6e9cb"
+  integrity sha512-R+Kx3HIIqxiTCAnoNYbVlKAHfhxHJvz8BTcgtEdstsfHp0V+2JdvYBtlkUGlkNJDwID9AYNnJCBYPQ/AsKEs7A==
   dependencies:
     "@docsearch/css" "3.0.0-alpha.34"
     "@docsearch/js" "3.0.0-alpha.34"
     "@docsearch/react" "3.0.0-alpha.34"
     "@types/react" "^17.0.37"
-    "@vuepress/client" "2.0.0-beta.32"
-    "@vuepress/core" "2.0.0-beta.32"
-    "@vuepress/shared" "2.0.0-beta.32"
-    "@vuepress/utils" "2.0.0-beta.32"
+    "@vuepress/client" "2.0.0-beta.29"
+    "@vuepress/core" "2.0.0-beta.29"
+    "@vuepress/shared" "2.0.0-beta.28"
+    "@vuepress/utils" "2.0.0-beta.28"
     preact "^10.6.2"
     vue "^3.2.24"
     vue-router "^4.0.12"
@@ -1936,17 +1936,17 @@
     upath "^2.0.1"
 
 "@vueuse/core@^7.1.2":
-  version "7.4.1"
-  resolved "https://registry.npmjs.org/@vueuse/core/-/core-7.4.1.tgz#81ede3f67dfd58af8284c910ac2fee25458892c6"
-  integrity sha512-8UeLPCAieeQLXFHF1/28SIEK6ILLPb/4hp03hR+xkXF00gB/YUp0CEVcRAL9uQ8HTZa3S2T/jTISMc1ZjilM0A==
+  version "7.4.3"
+  resolved "https://registry.npmjs.org/@vueuse/core/-/core-7.4.3.tgz#cf5b616605c6d9641715889c462d31da36226e11"
+  integrity sha512-OflPLlQ7eqaDJgKYw9DpRCbtfpkFkg1EqHFq7CFrbIEElB39wIfB9ccNypCar8e5KRDrAbOJLIOOvDZO6aC2Gg==
   dependencies:
-    "@vueuse/shared" "7.4.1"
+    "@vueuse/shared" "7.4.3"
     vue-demi "*"
 
-"@vueuse/shared@7.4.1":
-  version "7.4.1"
-  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-7.4.1.tgz#0aa090147fbd66ba56334ada1ffa2dafab815c1b"
-  integrity sha512-Pzb7XoHIcgPwwBJ5Ow9lZb0HTDyaLDV3pgxKauPGTMN9qvEylG06kUG+VTjJXkPsRtiGu46di8XyFeMw2dongA==
+"@vueuse/shared@7.4.3":
+  version "7.4.3"
+  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-7.4.3.tgz#59ef90ea27a1ee4d08e001be293c821849252f0c"
+  integrity sha512-tNOCbpD3uZyzxNuw2GX5LTVkMB//IZ7GS452F7TwlY07aIoGjPgixi2Yfk/xSR4CcC9iU56zprZW33aEGj1O1Q==
   dependencies:
     vue-demi "*"
 
@@ -7974,9 +7974,9 @@ verror@1.10.0:
     extsprintf "^1.2.0"
 
 vite@^2.7.1:
-  version "2.7.9"
-  resolved "https://registry.npmjs.org/vite/-/vite-2.7.9.tgz#c72d8817cdddbb127daed0c8f87fbca4e7754a81"
-  integrity sha512-CyopIJIRrc26Wnbkch5BCHFhQodzeV4jjSegLAEw1RImvXSuoOo2SfpEW9zRVi188WmjJwCqCaoG25C0r4nekw==
+  version "2.7.10"
+  resolved "https://registry.npmjs.org/vite/-/vite-2.7.10.tgz#d12c4c10e56a0ecf7890cb529c15996c6111218f"
+  integrity sha512-KEY96ntXUid1/xJihJbgmLZx7QSC2D4Tui0FdS0Old5OokYzFclcofhtxtjDdGOk/fFpPbHv9yw88+rB93Tb8w==
   dependencies:
     esbuild "^0.13.12"
     postcss "^8.4.5"
