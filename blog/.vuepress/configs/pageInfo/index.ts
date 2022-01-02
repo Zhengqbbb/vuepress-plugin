@@ -80,7 +80,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     ba: "dbf4327a921eac36c68ec119c80f31b9"
   },
   footer: `
-    &copy; <a href="https://github.com/Zhengqbbb" target="_blank">Zhengqbbb</a> 2021-2021
+    &copy; <a href="https://github.com/Zhengqbbb" target="_blank">Zhengqbbb</a> 2021-2022
     <br>
     Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
     <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a> |
