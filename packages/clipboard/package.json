@@ -1,0 +1,36 @@
+{
+  "name": "vuepress-plugin-clipboard",
+  "version": "1.0.3",
+  "description": "Vuepress2 plugin - code clipboard",
+  "keywords": [
+    "vuepress2",
+    "vuepress-plugin",
+    "code-clipboard",
+    "codecopy",
+    "code-copy",
+    "clipboard"
+  ],
+  "homepage": "https://www.qbenben.com/docs/play/vuepress-plugin-clipboard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/blog/packages/clipboard"
+  },
+  "bugs": {
+    "url": "https://github.com/zhengqbbb/zhengqbbb.github.io"
+  },
+  "author": "zhengqbbb <zhengqbbb@gmail.com>",
+  "license": "MIT",
+  "main": "lib/node/index.js",
+  "types": "lib/node/index.d.ts",
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json && yarn copy",
+    "clean": "rimraf lib *.tsbuildinfo",
+    "copy": "cpx \"src/**/*.{css,vue}\" lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -6,5 +6,6 @@
     "blog/.vuepress/**/*",
     "**/*.ts",
     "**/*.vue",
+    "packages"
   ]
 }

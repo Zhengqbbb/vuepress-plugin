@@ -5,6 +5,8 @@ blog/.vuepress/dist/
 /dist/
 /templates/
 
+# Dist files
+lib/
 
 # Test temp files
 **/__fixtures__/.temp/

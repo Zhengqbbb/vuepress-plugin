@@ -108,3 +108,6 @@ html.dark .DocSearch {
   cursor: pointer;
   background-color: var(--c-brand);
 }
+.theme-gungnir-content:not(.custom) p {
+  margin: 0
+}

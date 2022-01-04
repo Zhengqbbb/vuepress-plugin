@@ -5,10 +5,15 @@ export const zh: SidebarConfig = {
     {
       text: '捣鼓分享',
       children: [
-        "/docs/play/README.md",
         "/docs/play/mac.md",
         "/docs/play/vscode.md",
         "/docs/play/chrome.md",
+      ],
+    },
+    {
+      text: '捣鼓文档',
+      children: [
+        "/docs/play/vuepress-plugin-clipboard.md",
       ],
     }
   ],
