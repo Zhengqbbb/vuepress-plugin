@@ -46,7 +46,7 @@ npm install -D vuepress-plugin-clipboard
 ## Use
 
 <CodeGroup>
-<CodeGroupItem title="js" active>
+<CodeGroupItem title="JS" active>
 
 ```js
 module.exports = {
@@ -62,7 +62,7 @@ module.exports = {
 
 </CodeGroupItem>
 
-<CodeGroupItem title="ts">
+<CodeGroupItem title="TS">
 
 ```ts
 import type { DefaultThemeOptions } from '@vuepress/theme-default'
@@ -95,4 +95,4 @@ export default defineUserConfig<DefaultThemeOptions>({
 | backgroundTransition      | boolean           | true                      | Enables the background transition animation of the attached code block when a user presses the copy button.  | 点击复制按钮时是否启动过渡动画                   |
 | backgroundTransitionColor | string            | "var(--code-bg-color)"    | This sets the color of the background transition animation and can take any hex code.                        | 过渡动画背景颜色, 可以使用任意的十六进制颜色代码 |
 | successText               | string            | "Copied!"                 | This sets the text that displays when a user presses the copy button.                                        | 复制成功后的提示词                               |
-| successTextColor          | string            | "var(--c-brand-light)"    | This sets the color of the text that displays when a user presses the copy button and
+| successTextColor          | string            | "var(--c-brand-light)"    | This sets the color of the text that displays when a user presses the copy button and                       | 设置提示词的颜色, 可以使用任意的十六进制颜色代码|
