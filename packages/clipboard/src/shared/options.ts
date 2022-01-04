@@ -42,7 +42,7 @@ export interface ClipboardOptions {
     backgroundTransition: boolean;
 
     /**
-     * @description: This sets the color of the text that displays when a user presses the copy button and can take any hex code.
+     * @description: This sets the color of the background transition animation and can take any hex code.
      * @description: 过渡动画背景颜色, 可以使用任意的十六进制颜色代码
      * @default: "var(--code-bg-color)"
      */
