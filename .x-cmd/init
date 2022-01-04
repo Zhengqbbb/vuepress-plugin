@@ -7,26 +7,39 @@ WORK_DIR="$(x wsroot)"
 
 # Section: Main
 if [ ! -d "$WORK_DIR/node_modules" ]; then
-    yarn install && lerna bootstrap
+    yarn install && x build plugin
 else
 	case "${1:=repo}" in
 		all)
 			rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
-			yarn install && lerna bootstrap
+			yarn install && x build plugin
 		;;
 		none)
 			:
 		;;
-		repo|*)
+		update|*)
 			ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
 				if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
 				rm -rf "$WORK_DIR/node_modules"
-				yarn install && lerna bootstrap
+				yarn install && x build plugin
 				else
-				yarn install && lerna bootstrap
+				yarn install && x build plugin
 				fi
 		;;
 	esac
 fi
 # EndSection
 
+# Section: Advise
+if ___x_cmd_is_suitable_advise_env; then
+		# init is advise keyword
+    x advise rm "init" "init"
+    advise "init" "init" - <<A
+{
+    "all": "--- delete lock file adn reinstall all dependencies",
+    "none": "--- check node_modules file and auto install dependencies",
+    "update": "--- update all dependencies"
+}
+A
+fi
+# EndSection
