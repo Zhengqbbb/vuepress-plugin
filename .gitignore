@@ -8,6 +8,8 @@ blog/.vuepress/dist/
 # Dist files
 lib/
 
+.obsidian/
+
 # Test temp files
 **/__fixtures__/.temp/
 

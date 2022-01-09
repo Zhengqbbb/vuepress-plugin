@@ -14,7 +14,7 @@ export default defineClientAppSetup(() => {
         setTimeout(() => {
             document.querySelectorAll(options.selector).forEach((el) => {
                 if (
-                    el.classList.contains("code-copy-added") ||
+                    el.classList.contains(`code-copy-added-${options.align}`) ||
                     el.querySelector("pre, code[class*='pre-']") === null
                 )
                     return;
@@ -28,7 +28,7 @@ export default defineClientAppSetup(() => {
                 el.appendChild(childEl);
                 instance.mount(childEl);
 
-                el.classList.add("code-copy-added");
+                el.classList.add(`code-copy-added-${options.align}`);
             });
         }, options.delay + 100);
     };

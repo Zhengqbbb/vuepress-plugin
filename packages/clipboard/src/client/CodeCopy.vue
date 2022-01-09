@@ -155,7 +155,7 @@ svg {
 
 .top {
   top: 0.4rem;
-  right: 2rem
+  right: 0.2rem
 }
 
 .bottom {
@@ -167,7 +167,7 @@ span {
   position: absolute;
   font-size: 0.85rem;
   line-height: 1.2rem;
-  right: 3.5rem!important;
+  right: 5rem!important;
   opacity: 0;
   transition: opacity 500ms;
 }
