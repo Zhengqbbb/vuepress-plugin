@@ -16,10 +16,11 @@
     "serve": "anywhere -h localhost -d dist"
   },
   "dependencies": {
-    "markdown-it-task-lists": "^2.1.1",
     "vuepress-theme-gungnir": "2.0.0-alpha.8"
   },
   "devDependencies": {
+    "markdown-it-deflist": "^2.1.0",
+    "markdown-it-task-lists": "^2.1.1",
     "@vuepress/plugin-docsearch": "2.0.0-beta.29",
     "@vuepress/plugin-pwa": "^2.0.0-beta.32",
     "@vuepress/plugin-pwa-popup": "^2.0.0-beta.32",

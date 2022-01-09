@@ -37,7 +37,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
   personalInfo: {
     name: "Qbenben",
     avatar: "/images/avatar.png",
-    description: "在前端世界里打怪升级.",
+    description: "在代码世界里打怪升级",
     sns: {
       github: "Zhengqbbb",
       instagram: {

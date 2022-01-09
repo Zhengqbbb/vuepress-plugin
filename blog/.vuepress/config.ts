@@ -23,6 +23,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   },
   extendsMarkdown: (md) => {
     md.use(require("markdown-it-task-lists"));
+    md.use(require("markdown-it-deflist"));
   },
 
   theme: "vuepress-theme-gungnir",
