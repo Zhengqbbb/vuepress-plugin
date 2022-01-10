@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 <p align="center">
     <a href="#">
-        <img  src="https://user-images.githubusercontent.com/40693636/144716462-5f4dc978-a6af-4b54-8f27-79af05ceccf6.png" alt="image" width="120" data-width="200" data-height="200">
+        <img  src="https://user-images.githubusercontent.com/40693636/144716462-5f4dc978-a6af-4b54-8f27-79af05ceccf6.png" alt="image" width="220" data-width="200" data-height="200">
     </a>
 </p>
 
