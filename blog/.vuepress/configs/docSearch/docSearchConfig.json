@@ -3,7 +3,10 @@
   "start_urls": [
     "https://www.qbenben.com/docs/play/"
   ],
-  "stop_urls": [],
+  "stop_urls": [
+    "!https://www.qbenben.com",
+    "!*.html"
+  ],
   "selectors": {
     "lvl0": {
       "selector": ".sidebar-heading.active",
@@ -13,9 +16,7 @@
     "lvl1": ".theme-container h1",
     "lvl2": ".theme-container h2",
     "lvl3": ".theme-container h3",
-    "lvl4": ".theme-container h4",
-    "lvl5": ".theme-container h5",
-    "text": ".theme-container p, .theme-container li",
+    "lvl4": "dt",
     "lang": {
       "selector": "/html/@lang",
       "type": "xpath",
