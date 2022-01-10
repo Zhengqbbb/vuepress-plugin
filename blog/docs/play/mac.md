@@ -153,5 +153,5 @@ nvm use 14
 
 ### 4.12 长截图工具
 
-[Xnip 安装地址](https://xnipapp.com/)
+[Xnip](https://xnipapp.com/)
 : mac 长列表截图工具大部分付费，而Xnip部分功能需要付费，并且带logo水印

@@ -137,4 +137,8 @@ eval "_REMOTE=gitee _G_USER=AAAben" "$(curl https://gitee.com/AAAben/qb/raw/main
 <br>
 通过 BSC/BEP20
 <br>
-[![BNB Tip Jar](https://img.shields.io/badge/BNB-tip-blue.svg?logo=binance&style=flat)](https://bscscan.com/address/0xa6635781b7fa8a210978b4a718caf3f01a197cc4) `0xa6635781b7fa8a210978b4a718caf3f01a197cc4` 
+
+<a href="https://bscscan.com/address/0xa6635781b7fa8a210978b4a718caf3f01a197cc4">
+<img style="display:inline-block;margin:0 1em;" alt="BNB Tip Jar" src="https://img.shields.io/badge/BNB-tip-blue.svg?logo=binance&style=flat">
+<code>0xa6635781b7fa8a210978b4a718caf3f01a197cc4</code>
+</a>
