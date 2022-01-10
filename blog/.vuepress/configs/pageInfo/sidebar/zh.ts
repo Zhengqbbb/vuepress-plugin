@@ -13,6 +13,7 @@ export const zh: SidebarConfig = {
     {
       text: '捣鼓文档',
       children: [
+        "/docs/play/terminal-plugin-qb.md",
         "/docs/play/vuepress-plugin-clipboard.md",
       ],
     }

@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: Vuepress插件-代码剪贴板
+title: Vuepress插件 — 代码剪贴板
 description: vuepress-plugin-clipboard
 lastUpdated: true
 sidebarDepth: 2
