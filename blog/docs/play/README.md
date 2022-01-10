@@ -6,12 +6,12 @@ lastUpdated: true
 sidebarDepth: 0
 ---
 
-## 常年捣鼓积累分享：
-- [Mac](/play/mac)
-- [VSCode](/play/vscode)
-- [Chrome](/play/chrome)
-- [终端](/play/terminal)
+## 常年捣鼓积累经验分享：
+- [Mac](/docs/play/mac)
+- [VSCode](/docs/play/vscode)
+- [Chrome](/docs/play/chrome)
+- [终端配置](/docs/play/terminal)
 
 ## 捣鼓插件文档：
-- [Terminal Plugin —— qb](/play/terminal-plugin-qb)
-- [Vuepress Plugin —— Code Clipboard](/play/vuepress-plugin-clipboard)
+- [Terminal Plugin —— qb](/docs/play/terminal-plugin-qb)
+- [Vuepress Plugin —— Code Clipboard](/docs/play/vuepress-plugin-clipboard)
