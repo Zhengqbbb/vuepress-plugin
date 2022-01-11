@@ -66,6 +66,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     // only enable git plugin in production mode
     git: isProd,
     katex: true,
+    mermaid: true,
     giscus: {
       repo: "Zhengqbbb/zhengqbbb.github.io",
       repoId: "MDEwOlJlcG9zaXRvcnkxODM4OTUyNTQ",

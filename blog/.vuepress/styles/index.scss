@@ -120,3 +120,15 @@ dd {
 a {
   font-weight: 600;
 }
+
+.vuepress-mermaid {
+  overflow: auto;
+  .marker{
+    fill: var(--c-text-accent) !important;
+    stroke: var(--c-brand-light) !important;
+  }
+  
+  .flowchart-link {
+    stroke: var(--c-brand-light) !important;
+  }
+}

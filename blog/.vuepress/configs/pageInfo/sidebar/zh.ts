@@ -20,9 +20,15 @@ export const zh: SidebarConfig = {
   ],
   '/docs/fontend/': [
     {
-      text: '前端日常',
+      text: 'Fontend',
       children: [
         '/docs/fontend/README.md',
+      ],
+    },
+    {
+      text: '前端工程化',
+      children: [
+        '/docs/fontend/husky.md',
       ],
     }
   ],

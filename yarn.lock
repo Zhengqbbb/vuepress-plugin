@@ -3625,6 +3625,11 @@ chardet@^0.7.0:
   resolved "https://registry.npmjs.org/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
+chart.js@^3.6.0:
+  version "3.7.0"
+  resolved "https://registry.npmjs.org/chart.js/-/chart.js-3.7.0.tgz#7a19c93035341df801d613993c2170a1fcf1d882"
+  integrity sha512-31gVuqqKp3lDIFmzpKIrBeum4OpZsQjSIAqlOpgjosHDJZlULtvwLEZKtEhIAZc7JMPaHlYMys40Qy9Mf+1AAg==
+
 "chokidar@>=3.0.0 <4.0.0", chokidar@^3.5.2:
   version "3.5.2"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.5.2.tgz#dba3976fcadb016f66fd365021d91600d01c1e75"
@@ -6429,6 +6434,11 @@ jsesc@~0.5.0:
   version "0.5.0"
   resolved "https://registry.npmjs.org/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
   integrity sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=
+
+json-fn@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/json-fn/-/json-fn-1.1.1.tgz#4293c9198a482d6697d334a6e32cd0d221121e80"
+  integrity sha1-QpPJGYpILWaX0zSm4yzQ0iESHoA=
 
 json-parse-better-errors@^1.0.1, json-parse-better-errors@^1.0.2:
   version "1.0.2"
@@ -9446,6 +9456,14 @@ vue@^3.2.20, vue@^3.2.24:
     "@vue/runtime-dom" "3.2.26"
     "@vue/server-renderer" "3.2.26"
     "@vue/shared" "3.2.26"
+
+vuepress-plugin-chart@^2.0.0-alpha.2:
+  version "2.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/vuepress-plugin-chart/-/vuepress-plugin-chart-2.0.0-alpha.2.tgz#f5f9c6601570d1fd22b15fa5720afbf209310cff"
+  integrity sha512-S4WZLTid0+yasvMwXdHHCUFv7q8WPkL8q6qDHqtvPzzQbmk1PvzMBdofcL6rFRKNqqk1/hDsrdzy6Zr42GjGHw==
+  dependencies:
+    chart.js "^3.6.0"
+    json-fn "^1.1.1"
 
 vuepress-plugin-code-enhance@2.0.0-alpha.7:
   version "2.0.0-alpha.7"

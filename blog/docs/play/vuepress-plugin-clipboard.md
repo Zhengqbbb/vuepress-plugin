@@ -96,3 +96,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 | backgroundTransitionColor | string            | "var(--code-bg-color)"    | This sets the color of the background transition animation and can take any hex code.                        | 过渡动画背景颜色, 可以使用任意的十六进制颜色代码 |
 | successText               | string            | "Copied!"                 | This sets the text that displays when a user presses the copy button.                                        | 复制成功后的提示词                               |
 | successTextColor          | string            | "var(--c-brand-light)"    | This sets the color of the text that displays when a user presses the copy button and                       | 设置提示词的颜色, 可以使用任意的十六进制颜色代码|
+
+<br>
+<br>
+
+> 我是 Qbenben，一个在沉浸在代码世界打怪升级的深圳小靓仔，目前正在开发维护 [X-Cmd](https://x-cmd.com/) Shell开源工具库，感谢您的阅读。[Github](https://github.com/Zhengqbbb) · [Blog](https://www.qbenben.com/)

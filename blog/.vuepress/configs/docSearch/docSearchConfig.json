@@ -15,7 +15,6 @@
     },
     "lvl1": ".theme-container h1",
     "lvl2": ".theme-container h2",
-    "lvl3": ".theme-container h3",
     "lvl4": "dt",
     "lang": {
       "selector": "/html/@lang",

@@ -142,3 +142,8 @@ eval "_REMOTE=gitee _G_USER=AAAben" "$(curl https://gitee.com/AAAben/qb/raw/main
 <img style="display:inline-block;margin:0 1em;" alt="BNB Tip Jar" src="https://img.shields.io/badge/BNB-tip-blue.svg?logo=binance&style=flat">
 <code>0xa6635781b7fa8a210978b4a718caf3f01a197cc4</code>
 </a>
+
+<br>
+<br>
+
+> 我是 Qbenben，一个在沉浸在代码世界打怪升级的深圳小靓仔，目前正在开发维护 [X-Cmd](https://x-cmd.com/) Shell开源工具库，感谢您的阅读。[Github](https://github.com/Zhengqbbb) · [Blog](https://www.qbenben.com/)
