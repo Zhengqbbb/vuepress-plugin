@@ -29,7 +29,7 @@ tags:
 </p>
 
 ---
-husky 是前端工程化不可缺少的工具，它支持添加项目的 git hooks(可以理解为git命令操作时会触发的钩子事件)，如此一来我们就能在提交代码时:
+husky 是前端工程化不可缺少的工具，它支持添加项目的 git hooks(可以理解当我们使用 git 命令操作时会触发的钩子事件)，如此一来我们就能在提交代码时:
 
 配合 [commitlint](https://github.com/conventional-changelog/commitlint) | [lint-staged](https://github.com/okonet/lint-staged) & ESlint & Stylelint，对==提交信息==进行检查 | 运行测试 | 检查代码格式与是否报错。
 
@@ -145,7 +145,7 @@ $  x ls -T .husky/ -a
 ├── commit-msg
 └── pre-commit
 ```
-3. 从这里开始他的设计已经明了：==定义了Git Hooks 指向文件夹后，git 命令的执行时会去对应文件夹下寻找与事件名同名的文件==
+3. 从这里开始他的设计已经明了：==定义了Git Hooks 指向文件夹后，每当我们使用 git 命令的执行时会去对应文件夹下寻找与钩子事件名同名的文件进行source==
 4. 至于新版的commit-msg命令中的 `$1` 进行输出确认是 `.git/COMMIT_EDITMSG` 文件： 即最近一次的commit edit message。
 
 ```mermaidjs
@@ -158,8 +158,8 @@ flowchart LR
 
 #### 总结
 
-- 其实新版这个设计对于小白添加了一定难度，但是对于项目上的设计放开的局限性。husky的目的也达到了：作为项目管理上的git hooks的入口。
-- 立个flag，我相信我们X-Cmd团队后续应该会替代他
+- 其实新版这个设计对于小白添加了一定难度，但是对于项目上的设计放开的局限性。husky的目的也达到了：**作为项目管理上的 git hooks 的入口**。
+- 立个flag，我相信我们X-Cmd团队会在不远的将来有一套方案和他竞争 😎
 
 ## 旧版迁移新版
 ---
