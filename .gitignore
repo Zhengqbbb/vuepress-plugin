@@ -9,6 +9,7 @@ blog/.vuepress/dist/
 lib/
 
 .obsidian/
+urls.txt
 
 # Test temp files
 **/__fixtures__/.temp/

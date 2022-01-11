@@ -9,6 +9,7 @@ DIST_PATH=$WORK_DIR/dist
 TEMPLATE_PATH=$WORK_DIR/templates
 PACKAGE_VERSION=template-${BRANCH_INFO}-${COMMIT_ID}
 DOC_SEARCH_CONFIG_FILE=$WORK_DIR/blog/.vuepress/configs/docSearch/docSearchConfig.json
+WEB_SIT="www.qbenben.com"
 # EndSection
 
 # Section: Function
@@ -56,6 +57,14 @@ build_docSearch() {
 	docker run -it --env-file=.env -e "CONFIG=$(cat "${DOC_SEARCH_CONFIG_FILE}" | x jq -r tostring)" algolia/docsearch-scraper
 }
 
+build_baiduCollect() {
+	local BAIDU_TOKEN
+	BAIDU_TOKEN="$(cat "$WORK_DIR/.env" | grep 'BAIDU_TOKEN')"
+	local TOKEN="${BAIDU_TOKEN#*=}"
+	[ -z "$TOKEN" ] && return 0
+	curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=$WEB_SIT&token=$TOKEN"
+}
+
 build_theme() {
   	cd "$WORK_DIR/vuepress-theme-gungnir/packages/theme/" &&
 	yarn clean &&
@@ -68,11 +77,11 @@ build_theme() {
 
 # Section: Main
 case "${1}" in
-	plugin) 								build_plugin 						;;
-	clean) 									clean_plugin 						;;
-	theme) 									build_theme							;;
-	search|docSearch)				build_docSearch 				;;
-	doc|*)									build_doc								;;
+	plugin) 								build_plugin 																	;;
+	clean) 									clean_plugin 																	;;
+	theme) 									build_theme																		;;
+	search|docSearch)				build_docSearch && build_baiduCollect 				;;
+	doc|*)									build_doc																			;;
 esac
 # EndSection
 

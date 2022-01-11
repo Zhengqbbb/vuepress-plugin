@@ -1,7 +1,8 @@
 {
   "index_name": "qbenben",
   "start_urls": [
-    "https://www.qbenben.com/docs/play/"
+    "https://www.qbenben.com/docs/play/",
+    "https://www.qbenben.com/docs/fontend/"
   ],
   "stop_urls": [
     "!https://www.qbenben.com",
