@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
 title: Chrome插件分享
-description: Chrome插件 | Chrome plugin share
+description: Chrome插件, Chrome plugin share | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
 ---

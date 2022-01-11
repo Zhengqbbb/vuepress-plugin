@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
-title: Chrome插件分享
-description: Chrome插件 | Chrome plugin share
+title: Mac终端配置分享
+description: Mac终端配置 | MacOS Terminal Share | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
 ---

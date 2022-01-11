@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
 title: 终端插件 — qb
-description: qb is a shell plugin document
+description: qb is a shell plugin | Document | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
 ---

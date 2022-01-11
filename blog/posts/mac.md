@@ -1,6 +1,7 @@
 ---
 layout: Post
 title: Mac初始化配置以及软件分享
+description: MacOS系统常见软件和初始化配置分享 | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 subtitle: MacOS系统常见软件和初始化配置分享
 author: qbenben
 date: 2021-11-30

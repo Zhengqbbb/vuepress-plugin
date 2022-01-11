@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
-title: VSCode插件以及配置分享
-description: 页面的描述
+title: VSCode插件以及配置分享 
+description: VSCode 插件配置分享 | vscode插件配置分享 | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
 ---

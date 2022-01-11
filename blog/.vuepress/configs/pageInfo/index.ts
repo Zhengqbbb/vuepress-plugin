@@ -11,7 +11,7 @@ export const base = `/`
 
 export const title = `Qbenben`
 
-export const description = 'Qbenben blog. Record my life'
+export const description = 'Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔'
 
 export const headConfig: HeadConfig[] = [
   [ 'meta', { name: 'application-name', content: 'Qbenben' } ],
@@ -37,7 +37,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
   personalInfo: {
     name: "Qbenben",
     avatar: "/images/avatar.png",
-    description: "在代码世界里打怪升级",
+    description: "在代码世界里打怪升级的小靓仔",
     sns: {
       github: "Zhengqbbb",
       instagram: {
