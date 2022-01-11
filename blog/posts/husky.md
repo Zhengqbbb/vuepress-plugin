@@ -1,10 +1,23 @@
 ---
-lang: zh-CN
+layout: Post
 title: 新版 husky 配置与Git Hooks剖析
 description: husky 配置与Git Hooks剖析，前端工程化 —— husky | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
-lastUpdated: true
-sidebarDepth: 1
+subtitle: 前端工程化 —— husky
+author: qbenben
+date: 2022-01-11
+useHeaderImage: true
+headerImage: https://tvax2.sinaimg.cn/large/6ccee0e1gy1gy9j86zzxcj21kw0y64la.jpg
+headerMask: rgba(40, 57, 101, .4)
+catalog: true
+tags:
+  - 前端
+  - 前端工程化
 ---
+
+
+分享近期配置 husky 的一些心得
+
+<!-- more -->
 
 # husky
 
@@ -184,5 +197,3 @@ flowchart LR
 <br>
 
 > 我是 Qbenben，一个在沉浸在代码世界打怪升级的深圳小靓仔，目前正在开发维护 [X-Cmd](https://x-cmd.com/) Shell开源工具库，感谢您的阅读。[Github](https://github.com/Zhengqbbb) · [Blog](https://www.qbenben.com/)
-
-
