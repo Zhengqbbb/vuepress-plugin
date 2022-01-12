@@ -133,7 +133,21 @@ $  x ls -T .husky/ -a
 └── pre-commit
 ```
 3. 从这里开始他的设计已经明了：==定义了Git Hooks 指向文件夹后，每当我们使用 git 命令的执行时会去对应文件夹下寻找与钩子事件名同名的文件进行source==
-4. 至于新版的commit-msg命令中的 `$1` 进行输出确认是 `.git/COMMIT_EDITMSG` 文件： 即最近一次的commit edit message。
+4. 至于新版的commit-msg命令中的 `$1` 进行输出确认是 `.git/COMMIT_EDITMSG` 文件： **即**最近一次的commit edit message。
+
+```bash
+#!/bin/sh
+# 上述的 e.g代码: .husky/commit-msg
+. "$(dirname "$0")/_/husky.sh"
+
+printf "\n\033[1;32m%s \033[1;33m%s \033[1;32m%s\033[0m\n" \
+    "»»»" \
+    "commitlint checking..." \
+    "«««"
+
+yarn commitlint --edit "$1"
+
+```
 
 ```mermaidjs
 flowchart LR
