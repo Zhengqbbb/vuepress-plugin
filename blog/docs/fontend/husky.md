@@ -116,6 +116,18 @@ npx husky add .husky/pre-push "npm run test"
 2. **没办法按需引入 `git hooks`**：当用户对 `package.json` 进行添加操作后，没办法同步添加 `.git/hooks`对应的钩子文件。
 3. **太局限，用户自定义困难**：比如我有需求在命令行当中利用钩子进行构建，生成文件，读取文件信息等需要大量 `shell` 命令时，对于一个天天接触 shell 的我而言只能写单一脚本的传统的 `package.json`写法 太局限了，会很难受。
 > e.g: 输出一些信息:
+```bash
+#!/bin/sh
+# 在新版中可以很舒服的写 shell 脚本
+. "$(dirname "$0")/_/husky.sh"
+
+printf "\n\033[1;32m%s \033[1;33m%s \033[1;32m%s\033[0m\n" \
+    "»»»" \
+    "commitlint checking..." \
+    "«««"
+
+yarn commitlint --edit "$1"
+```
 
 ![e.g-img](https://tvax2.sinaimg.cn/large/6ccee0e1gy1gy9s2f80wtj21c20raasm.jpg)
 
@@ -134,20 +146,6 @@ $  x ls -T .husky/ -a
 ```
 3. 从这里开始他的设计已经明了：==定义了Git Hooks 指向文件夹后，每当我们使用 git 命令的执行时会去对应文件夹下寻找与钩子事件名同名的文件进行source==，这个设计和我们 [x-cmd](https://x-cmd.com/guide/workspace.html) 的workspace script设计很像。
 4. 至于新版的commit-msg命令中的 `$1` 进行输出确认是 `.git/COMMIT_EDITMSG` 文件： **即**最近一次的commit edit message。
-
-```bash
-#!/bin/sh
-# 上述的 e.g代码: .husky/commit-msg
-. "$(dirname "$0")/_/husky.sh"
-
-printf "\n\033[1;32m%s \033[1;33m%s \033[1;32m%s\033[0m\n" \
-    "»»»" \
-    "commitlint checking..." \
-    "«««"
-
-yarn commitlint --edit "$1"
-
-```
 
 ```mermaidjs
 flowchart LR
