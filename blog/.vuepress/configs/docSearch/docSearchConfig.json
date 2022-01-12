@@ -16,7 +16,8 @@
     },
     "lvl1": ".theme-container h1",
     "lvl2": ".theme-container h2",
-    "lvl4": "dt",
+    "lvl3": ".theme-container h3",
+    "lvl4": ".theme-container dt",
     "lang": {
       "selector": "/html/@lang",
       "type": "xpath",
