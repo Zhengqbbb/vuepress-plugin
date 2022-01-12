@@ -5,7 +5,7 @@ description: VSCode 插件配置分享 | vscode插件配置分享 | Qbenben blog
 lastUpdated: true
 sidebarDepth: 2
 ---
-> 记录我VSCode插件以及配置，以及share
+> 记录我VSCode插件以及配置
 
 ## 整体效果
-![整体效果](/images/vscode/all-view.png)
+![整体效果](https://tva3.sinaimg.cn/large/6ccee0e1gy1gyao2urxjwj22yo1mmx6q.jpg)
