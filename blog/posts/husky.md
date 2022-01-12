@@ -145,7 +145,7 @@ $  x ls -T .husky/ -a
 ├── commit-msg
 └── pre-commit
 ```
-3. 从这里开始他的设计已经明了：==定义了Git Hooks 指向文件夹后，每当我们使用 git 命令的执行时会去对应文件夹下寻找与钩子事件名同名的文件进行source==
+3. 从这里开始他的设计已经明了：==定义了Git Hooks 指向文件夹后，每当我们使用 git 命令的执行时会去对应文件夹下寻找与钩子事件名同名的文件进行source==，这个设计和我们 [x-cmd](https://x-cmd.com/guide/workspace.html) 的workspace script设计很像。
 4. 至于新版的commit-msg命令中的 `$1` 进行输出确认是 `.git/COMMIT_EDITMSG` 文件： **即**最近一次的commit edit message。
 
 ```bash
