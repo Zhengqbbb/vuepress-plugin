@@ -132,3 +132,7 @@ a {
     stroke: var(--c-brand-light) !important;
   }
 }
+
+#docsearch-container .DocSearch-Button-Keys {
+  display: none;
+}
