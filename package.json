@@ -28,6 +28,7 @@
     "markdown-it-deflist": "^2.1.0",
     "markdown-it-task-lists": "^2.1.1",
     "rimraf": "^3.0.2",
+    "sitemap": "^7.1.0",
     "vuepress": "^2.0.0-beta.31",
     "vuepress-vite": "2.0.0-beta.31",
     "vuepress-webpack": "2.0.0-beta.31"

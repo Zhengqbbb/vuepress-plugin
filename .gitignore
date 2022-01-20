@@ -10,6 +10,7 @@ lib/
 
 .obsidian/
 urls.txt
+urls.json
 
 # Test temp files
 **/__fixtures__/.temp/

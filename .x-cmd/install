@@ -19,12 +19,12 @@ else
 		;;
 		update|*)
 			ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
-				if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
+			if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
 				rm -rf "$WORK_DIR/node_modules"
 				nvm use && yarn install && x build plugin
-				else
+			else
 				nvm use && yarn install && x build plugin
-				fi
+			fi
 		;;
 	esac
 fi
