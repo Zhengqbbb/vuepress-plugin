@@ -9,7 +9,7 @@
 # Use
 ```sh
 # use x-cmd workspace. so install it and enjoy -> https://www.x-cmd.com ~
-
+x install
 # development
 x dev
 

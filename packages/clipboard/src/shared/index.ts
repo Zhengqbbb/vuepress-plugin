@@ -1,0 +1,1 @@
+export { ClipboardOptions } from "./options";

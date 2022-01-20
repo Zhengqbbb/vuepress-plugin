@@ -7,9 +7,9 @@
     "**/*.md": "markdown",
     "**/*.yml": "yaml",
     "**/LICENSE": "TXT",
-    "**/*": "shellscript",
     "**/.x-cmd/**": "shellscript"
-},
+  },
+  "editor.tabSize": 2,
   "tailwindCSS.includeLanguages": {
     "plaintext": "html",
     "vue": "html",
@@ -17,16 +17,19 @@
   },
   "stylelint.config": {
     "rules": {
-      "at-rule-no-unknown": [true, {
-        "ignoreAtRules": [
-          "tailwind",
-          "apply",
-          "layer",
-          "variants",
-          "responsive",
-          "screen"
-        ]
-      }],
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "tailwind",
+            "apply",
+            "layer",
+            "variants",
+            "responsive",
+            "screen"
+          ]
+        }
+      ],
       "declaration-block-trailing-semicolon": null,
       "no-descending-specificity": null
     }

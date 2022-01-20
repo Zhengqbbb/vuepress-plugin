@@ -1,0 +1,30 @@
+{
+  "index_name": "qbenben",
+  "start_urls": [
+    "https://www.qbenben.com/docs/play/",
+    "https://www.qbenben.com/docs/fontend/"
+  ],
+  "stop_urls": [
+    "!https://www.qbenben.com",
+    "!*.html"
+  ],
+  "selectors": {
+    "lvl0": {
+      "selector": ".sidebar-heading.active",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": ".theme-container h1",
+    "lvl2": ".theme-container h2",
+    "lvl3": ".theme-container h3",
+    "lvl4": ".theme-container dt",
+    "lang": {
+      "selector": "/html/@lang",
+      "type": "xpath",
+      "global": true
+    }
+  },
+  "custom_settings": {
+    "attributesForFaceting": ["lang"]
+  }
+}

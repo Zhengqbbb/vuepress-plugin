@@ -2,18 +2,28 @@
 
 # Section: Arg
 WORK_DIR="$(x wsroot)"
-GIT_URL=gitee.com:zhengqbbb/x-cmd-official-template.git
+GITEE_URL=gitee.com:AAAben/qbenben.git
+GITHUB_URL=github.com:Zhengqbbb/zhengqbbb.github.io.git
 BRANCH_NAME=gh-page
+DIST_PATH="$WORK_DIR"/dist
+
+page_deploy(){
+    [ -d "$DIST_PATH/.git" ] && rm -rf "$DIST_PATH/.git"
+    git init
+    git remote add origin git@"$1"
+    git checkout -b $BRANCH_NAME
+    git add -A
+    git commit -m 'deploy'
+    git push -f git@"$1" $BRANCH_NAME
+}
 # EndSection
 
 # Section: Main
-cd "$WORK_DIR"/docs/.vuepress/dist || exit
+
+cd "$WORK_DIR"/dist || exit
 # 如果是发布到自定义域名
-# echo 'www.x-cmd.com' > CNAME
-git init
-git remote add origin git@$GIT_URL
-git checkout -b $BRANCH_NAME
-git add -A
-git commit -m 'deploy'
-git push -f git@$GIT_URL $BRANCH_NAME
+echo 'www.qbenben.com' > CNAME
+# page_deploy "$GITEE_URL"
+page_deploy "$GITHUB_URL"
+
 # EndSection

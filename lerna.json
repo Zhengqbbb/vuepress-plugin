@@ -1,0 +1,19 @@
+{
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "1.0.5",
+  "command": {
+    "version": {
+      "allowBranch": [
+        "blog",
+        "main"
+      ],
+      "conventionalCommits": true,
+      "exact": true,
+      "ignoreChanges": [
+        "**/*.md"
+      ],
+      "message": "build: publish %s"
+    }
+  }
+}

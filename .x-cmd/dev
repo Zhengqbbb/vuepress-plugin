@@ -6,9 +6,9 @@ WORK_DIR="$(x wsroot)"
 
 # Section: Main
 if [ ! -d "$WORK_DIR/node_modules" ]; then
-    x pull none &&
-    yarn docs:dev
+    x init none &&
+    yarn dev
 else
-  yarn docs:dev
+  yarn dev
 fi
 # EndSection

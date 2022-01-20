@@ -1,0 +1,45 @@
+# shellcheck shell=bash disable=SC1091,SC2034 #xsh
+
+# Section: Arg
+xrc ui
+WORK_DIR="$(x wsroot)"
+# EndSection
+
+# Section: Main
+if [ ! -d "$WORK_DIR/node_modules" ]; then
+    nvm use && yarn install && x build plugin
+else
+	case "${1:=repo}" in
+		all)
+			rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
+			nvm use && yarn install && x build plugin
+		;;
+		none)
+			:
+		;;
+		update|*)
+			ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
+			if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
+				rm -rf "$WORK_DIR/node_modules"
+				nvm use && yarn install && x build plugin
+			else
+				nvm use && yarn install && x build plugin
+			fi
+		;;
+	esac
+fi
+# EndSection
+
+# Section: Advise
+if ___x_cmd_is_suitable_advise_env; then
+		# init is advise keyword
+    x advise rm "install"
+    advise "install" - <<A
+{
+    "all": "--- delete lock file adn reinstall all dependencies",
+    "none": "--- check node_modules file and auto install dependencies",
+    "update": "--- update all dependencies"
+}
+A
+fi
+# EndSection
