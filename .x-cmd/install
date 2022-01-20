@@ -7,12 +7,12 @@ WORK_DIR="$(x wsroot)"
 
 # Section: Main
 if [ ! -d "$WORK_DIR/node_modules" ]; then
-    yarn install && x build plugin
+    nvm use && yarn install && x build plugin
 else
 	case "${1:=repo}" in
 		all)
 			rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
-			yarn install && x build plugin
+			nvm use && yarn install && x build plugin
 		;;
 		none)
 			:
@@ -21,9 +21,9 @@ else
 			ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
 				if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
 				rm -rf "$WORK_DIR/node_modules"
-				yarn install && x build plugin
+				nvm use && yarn install && x build plugin
 				else
-				yarn install && x build plugin
+				nvm use && yarn install && x build plugin
 				fi
 		;;
 	esac
