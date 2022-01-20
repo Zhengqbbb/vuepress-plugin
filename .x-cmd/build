@@ -67,7 +67,7 @@ build_theme() {
 }
 
 is_need_search_collect() {
-	ui prompt "$(ui bold green 'Is need to remove node_modules (y/N)')" _IS_NEED
+	ui prompt "$(ui bold green 'Is need to update seach console (y/N)')" _IS_NEED
 	if [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
 		x collect
 	fi
