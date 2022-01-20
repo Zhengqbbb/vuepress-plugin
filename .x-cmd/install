@@ -33,8 +33,8 @@ fi
 # Section: Advise
 if ___x_cmd_is_suitable_advise_env; then
 		# init is advise keyword
-    x advise rm "init" "init"
-    advise "init" "init" - <<A
+    x advise rm "install"
+    advise "install" - <<A
 {
     "all": "--- delete lock file adn reinstall all dependencies",
     "none": "--- check node_modules file and auto install dependencies",
