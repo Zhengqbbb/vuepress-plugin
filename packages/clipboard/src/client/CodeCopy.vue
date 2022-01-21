@@ -1,120 +1,134 @@
 <template>
   <div class="code-copy">
     <svg
-      @click="copyToClipboard"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       :class="[iconClass, alignClass]"
+      @click="copyToClipboard"
     >
       <path fill="none" d="M0 0h24v24H0z" />
       <path
-        :fill="options.color"
+        :fill="componentOptions.color"
         d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
       />
     </svg>
     <span
       :class="[success ? 'success' : '', alignClass]"
-      :style="{ color: options.successTextColor }"
+      :style="{ color: componentOptions.successTextColor }"
     >
-      {{ options.successText }}
+      {{ componentOptions.successText }}
     </span>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'CodeCopy',
-  props: {
-    parent: Object,
-    code: String,
-    options: {
-      align: String,
-      color: String,
-      backgroundTransition: Boolean,
-      backgroundTransitionColor: String,
-      successText: String,
-      successTextColor: String,
-      staticIcon: Boolean
-    }
-  },
-  data() {
-    return {
-      success: false,
-      originalBackground: null,
-      originalTransition: null
-    };
-  },
-  computed: {
-    alignClass() {
-      return this.options.align;
-    },
-    iconClass() {
-      return this.options.staticIcon ? '' : 'hover';
-    }
-  },
-  mounted() {
-    this.originalTransition = this.parent.style.transition;
-    this.originalBackground = this.parent.style.background;
-  },
-  beforeDestroy() {
-    this.parent.style.transition = this.originalTransition;
-    this.parent.style.background = this.originalBackground;
-  },
-  methods: {
-    // From: https://stackoverflow.com/a/5624139
-    hexToRgb(hex) {
-      let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-      return result
-        ? {
-            r: parseInt(result[1], 16),
-            g: parseInt(result[2], 16),
-            b: parseInt(result[3], 16)
-          }
-        : null;
-    },
-    copyToClipboard(el) {
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(this.code).then(
-          () => {
-            this.setSuccessTransitions();
-          },
-          () => {}
-        );
-      } else {
-        let copyelement = document.createElement('textarea');
-        document.body.appendChild(copyelement);
-        copyelement.value = this.code;
-        copyelement.select();
-        document.execCommand('Copy');
-        copyelement.remove();
+<script setup lang="ts">
+import { computed, onBeforeUnmount, onMounted, ref, toRefs } from "vue";
+import type { PropType } from "vue";
+import type { ClipboardOptions, HexToRgb } from "../shared";
 
-        this.setSuccessTransitions();
+const props = defineProps({
+  parent: {
+    type: Object as PropType<HTMLElement | null>,
+    default: null
+  },
+  options: {
+    type: Object as PropType<ClipboardOptions>,
+    default: null
+  },
+  code: {
+    type: String,
+    required: true
+  }
+});
+
+const { code, parent, options } = toRefs(props);
+const success = ref(false);
+const originalBackground = ref<string | null>(null);
+const originalTransition = ref<string | null>(null);
+const successTimeout = ref<number | undefined>(undefined);
+const componentOptions = computed(() =>
+  options.value === null ? genDefaultOption(null) : genDefaultOption(options.value)
+);
+const alignClass = computed(() => componentOptions.value.align);
+const iconClass = computed(() => (componentOptions.value.staticIcon ? "" : "hover"));
+
+onMounted(() => {
+  if (parent.value !== null) {
+    originalBackground.value = parent.value.style.background;
+    originalTransition.value = parent.value.style.transition;
+  }
+});
+
+onBeforeUnmount(() => {
+  if (parent.value !== null) {
+    if (originalBackground.value !== null) parent.value!.style.background = originalBackground.value;
+    if (originalTransition.value !== null) parent.value!.style.transition = originalTransition.value;
+  }
+  if (successTimeout.value !== undefined) window.clearTimeout(successTimeout.value);
+});
+
+const hexToRgb: HexToRgb = (hex: string) => {
+  const res = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return res
+    ? {
+        r: parseInt(res[1], 16),
+        g: parseInt(res[2], 16),
+        b: parseInt(res[3], 16)
       }
-    },
-    setSuccessTransitions() {
-      clearTimeout(this.successTimeout);
+    : null;
+};
 
-      if (this.options.backgroundTransition) {
-        this.parent.style.transition = 'background 350ms';
-        let transColor = this.options.backgroundTransitionColor
-        transColor = transColor.indexOf('#') !== -1 ? transColor : "#282c34";
-        let color = this.hexToRgb(transColor);
-        this.parent.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, 0.7)`;
-      }
-
-      this.success = true;
-      this.successTimeout = setTimeout(() => {
-        if (this.options.backgroundTransition) {
-          this.parent.style.background = this.originalBackground;
-          this.parent.style.transition = this.originalTransition;
-        }
-        this.success = false;
-      }, 500);
-    }
+const copyToClipboard = (el: MouseEvent): void => {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(code.value).then(
+      () => setSuccessTransitions(),
+      () => null
+    );
+  } else {
+    const copyElement = document.createElement("textarea");
+    document.body.appendChild(copyElement);
+    copyElement.value = code.value;
+    copyElement.select();
+    document.execCommand("Copy");
+    copyElement.remove();
+    setSuccessTransitions();
   }
 };
-</script>
 
+const setSuccessTransitions = (): void => {
+  window.clearTimeout(successTimeout.value);
+  successTimeout.value = undefined;
+  if (componentOptions.value.backgroundTransition && parent.value !== null) {
+    parent.value!.style.transition = "background 350ms";
+    let transColor = componentOptions.value.backgroundTransitionColor || "";
+    transColor = transColor.indexOf("#") === -1 ? transColor : "#282c34";
+    const color = hexToRgb(transColor);
+    if (color !== null) parent.value.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, 0.7)`;
+  }
+  success.value = true;
+  successTimeout.value = window.setTimeout(() => {
+    if (componentOptions.value.backgroundTransition && parent.value !== null) {
+      parent.value.style.background = originalBackground.value as string;
+      parent.value.style.transition = originalTransition.value as string;
+    }
+    success.value = false;
+  }, 500);
+};
+
+const genDefaultOption = (options: ClipboardOptions | null): ClipboardOptions => {
+  return {
+    staticIcon: options?.staticIcon === true || false,
+    align: options?.align || "bottom",
+    selector: options?.selector || 'div[class*="language-"]',
+    delay: options?.delay || 400,
+    color: options?.color || "var(--c-brand)",
+    backgroundTransition: options?.backgroundTransition !== false || true,
+    backgroundTransitionColor: options?.backgroundTransitionColor || "var(--code-bg-color)",
+    successTextColor: options?.successTextColor || "var(--c-brand-light)",
+    successText: options?.successText || "Copied!"
+  };
+};
+</script>
 <style scoped>
 @media (max-width: 1024px) {
   div svg {
@@ -128,6 +142,9 @@ export default {
     width: 1.3rem;
     height: 1.3rem;
   }
+}
+
+@media (max-width: 768px) {
   div .top {
     top: 0.6rem;
   }
@@ -149,7 +166,7 @@ svg {
   opacity: 0.75;
   cursor: pointer;
 }
-.code-group .top{
+.code-group .top {
   top: -2rem;
 }
 
@@ -167,7 +184,7 @@ span {
   position: absolute;
   font-size: 0.85rem;
   line-height: 1.2rem;
-  right: 5rem!important;
+  right: 4.5rem !important;
   opacity: 0;
   transition: opacity 500ms;
 }

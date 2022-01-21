@@ -1,15 +1,15 @@
 ---
 lang: zh-CN
-title: Vuepress插件 — 代码剪贴板
-description: vuepress-plugin-clipboard
+title: Vuepress2插件 — 代码剪贴板
+description: vuepress-plugin-clipboard | vuepress2 代码复制粘贴，剪贴板
 lastUpdated: true
 sidebarDepth: 2
 ---
-> vuepress2.x 插件 - 做了一个代码的剪贴板
+> vuepress2.x 插件 - 代码的剪贴板
 # vuepress-plugin-clipboard
 
 <p>
-<a href="https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/blog/packages/clipboard">
+<a href="https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/main/packages/clipboard">
 <img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/github/stars/zhengqbbb/zhengqbbb.github.io?style=social"/>
 </a>
 <a href="https://www.npmjs.com/package/vuepress-plugin-clipboard">
@@ -19,7 +19,7 @@ sidebarDepth: 2
 </a>
 </p>
 
-- 基于[snippets](https://github.com/Snippetors/snippets)的基础上进行 TS 改进版本，主要熟悉了vuepress 插件开发
+- ts + setup
 - 减轻light主题中的过渡动画
 - 添加了更多样式和响应式的支持
 

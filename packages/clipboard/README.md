@@ -1,7 +1,7 @@
 # vuepress-plugin-clipboard
 
 <p>
-<a href="https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/blog/packages/clipboard">
+<a href="https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/main/packages/clipboard">
 <img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/github/stars/zhengqbbb/zhengqbbb.github.io?style=social"/>
 </a>
 <a href="https://www.npmjs.com/package/vuepress-plugin-clipboard">
@@ -13,9 +13,7 @@
 
 Home: https://www.qbenben.com/docs/play/vuepress-plugin-clipboard
 
-Base: [snippets](https://github.com/Snippetors/snippets)
-
-Source: [Github](https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/blog/packages/clipboard)
+Source: [Github](https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/main/packages/clipboard)
 
 Vuepress2 code-copy plugin
 
