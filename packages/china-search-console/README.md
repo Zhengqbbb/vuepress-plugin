@@ -17,7 +17,9 @@ Home: https://www.qbenben.com/docs/play/vuepress-plugin-china-search-console
 Source: [Github](https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/main/packages/china-search-console)
 
 **Vuepress2** plugin: For the **Chinese** search engine console, include baidu analytics, vuepress page auto push baidu search engine and auto push 360 search engine.
+
 ---
+
 针对Vuepress2的SEO增强插件：包含 **百度统计，页面自动推送百度收录，页面自动推送360收录**。
 
 ![description](https://tva4.sinaimg.cn/large/6ccee0e1gy1gylxqsjhspj21cg08g7f4.jpg)
