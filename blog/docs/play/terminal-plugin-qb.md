@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: 追踪币安生态链终端插件 — qb
+title: 终端插件 — qb | 追踪币安生态链
 description: qb is track the Binance Ecosystem shell plugin, qb是一款可以追踪币安生态链价格的终端插件 | Document | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
