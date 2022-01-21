@@ -6,24 +6,36 @@ WORK_DIR="$(x wsroot)"
 # EndSection
 
 # Section: Main
+use_npm_verison() {
+	[ -z "$(command -v nvm)" ] \
+		&& printf "%s\n" "Not command nvm" \
+		&& xrc install  \
+		&& install nvm \
+		&& return 1
+	nvm use
+}
+
 if [ ! -d "$WORK_DIR/node_modules" ]; then
-    nvm use && yarn install && x build plugin
+    use_npm_verison && yarn install && x build plugin
 else
 	case "${1:=repo}" in
 		all)
 			rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
-			nvm use && yarn install && x build plugin
+			use_npm_verison && yarn install && x build plugin
 		;;
 		none)
 			:
+		;;
+		plugin)
+			shift; use_npm_verison && yarn add -D -W "$@"
 		;;
 		update|*)
 			ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
 			if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
 				rm -rf "$WORK_DIR/node_modules"
-				nvm use && yarn install && x build plugin
+				use_npm_verison && yarn install && x build plugin
 			else
-				nvm use && yarn install && x build plugin
+				use_npm_verison && yarn install && x build plugin
 			fi
 		;;
 	esac
@@ -37,7 +49,7 @@ if ___x_cmd_is_suitable_advise_env; then
     advise "install" - <<A
 {
     "all": "--- delete lock file adn reinstall all dependencies",
-    "none": "--- check node_modules file and auto install dependencies",
+    "plugin": "--- yarn add dependencies",
     "update": "--- update all dependencies"
 }
 A

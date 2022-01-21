@@ -46,8 +46,6 @@ case "${1}" in
 esac
 # EndSection
 
-
-
 # Section: Advise
 if ___x_cmd_is_suitable_advise_env; then
     x advise rm "collect"
