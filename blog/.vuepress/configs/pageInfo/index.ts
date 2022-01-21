@@ -81,7 +81,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
       all: true
     },
     ga: "G-8R2K3ZRCY6",
-    ba: "dbf4327a921eac36c68ec119c80f31b9"
+    ba: false
   },
   footer: `
     &copy; <a href="https://github.com/Zhengqbbb" target="_blank">Zhengqbbb</a> 2021-2022

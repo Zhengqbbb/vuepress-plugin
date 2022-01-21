@@ -8,14 +8,17 @@ sidebarDepth: 2
 > vuepress2.x 插件 - 代码的剪贴板
 # vuepress-plugin-clipboard
 
+---
+<br>
 <p>
 <a href="https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/main/packages/clipboard">
-<img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/github/stars/zhengqbbb/zhengqbbb.github.io?style=social"/>
+<img style="display: inline-block;margin: 0;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/github/stars/zhengqbbb/zhengqbbb.github.io?style=social"/>
 </a>
+<br>
 <a href="https://www.npmjs.com/package/vuepress-plugin-clipboard">
-<img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/npm/v/vuepress-plugin-clipboard?style=flat-square&logo=npm"/>
-<img style="display: inline-block;margin-right: 0.4rem;" alt="npm-download" src="https://img.shields.io/npm/dm/vuepress-plugin-clipboard.svg?style=flat-square&logo=npm"/>
-<img style="display: inline-block;margin-right: 0.4rem;" alt="npm-size" src="https://img.shields.io/bundlephobia/min/vuepress-plugin-clipboard?style=flat-square&logo=npm"/>
+<img style="display: inline-block;margin: 0;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/npm/v/vuepress-plugin-clipboard?style=flat-square&logo=npm"/>
+<img style="display: inline-block;margin: 0;margin-right: 0.4rem;" alt="npm-download" src="https://img.shields.io/npm/dm/vuepress-plugin-clipboard.svg?style=flat-square&logo=npm"/>
+<img style="display: inline-block;margin: 0;margin-right: 0.4rem;" alt="npm-size" src="https://img.shields.io/bundlephobia/min/vuepress-plugin-clipboard?style=flat-square&logo=npm"/>
 </a>
 </p>
 
@@ -99,5 +102,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 
 <br>
 <br>
+
+> get me a [star](https://github.com/Zhengqbbb/zhengqbbb.github.io)~~~
+
 
 > 我是 Qbenben，一个在沉浸在代码世界打怪升级的深圳小靓仔，目前正在开发维护 [X-Cmd](https://x-cmd.com/) Shell开源工具库，感谢您的阅读。[Github](https://github.com/Zhengqbbb) · [Blog](https://www.qbenben.com/)
