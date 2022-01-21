@@ -43,7 +43,7 @@ clean_plugin() {
 }
 
 build_plugin() {
-  	lerna run build && lerna bootstrap
+   nvm use && lerna run build && lerna bootstrap
 }
 ###
   # 运行docSearch docker建立搜索索引
