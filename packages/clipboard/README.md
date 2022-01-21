@@ -4,6 +4,7 @@
 <a href="https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/main/packages/clipboard">
 <img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/github/stars/zhengqbbb/zhengqbbb.github.io?style=social"/>
 </a>
+<br>
 <a href="https://www.npmjs.com/package/vuepress-plugin-clipboard">
 <img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/npm/v/vuepress-plugin-clipboard?style=flat-square&logo=npm"/>
 <img style="display: inline-block;margin-right: 0.4rem;" alt="npm-download" src="https://img.shields.io/npm/dm/vuepress-plugin-clipboard.svg?style=flat-square&logo=npm"/>
@@ -128,4 +129,6 @@ export interface ClipboardOptions {
 ```
 ## License
 
-[MIT](https://github.com/Snippetors/snippets/blob/main/LICENSE)
+[MIT](https://github.com/Zhengqbbb/zhengqbbb.github.io/blob/main/packages/clipboard/LICENSE)
+
+> get me a [star](https://github.com/Zhengqbbb/zhengqbbb.github.io)~~~
