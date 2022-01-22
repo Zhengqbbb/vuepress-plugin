@@ -5,8 +5,7 @@
     "https://www.qbenben.com/docs/fontend/"
   ],
   "stop_urls": [
-    "!https://www.qbenben.com",
-    "!*.html"
+    "!https://www.qbenben.com"
   ],
   "selectors": {
     "lvl0": {
