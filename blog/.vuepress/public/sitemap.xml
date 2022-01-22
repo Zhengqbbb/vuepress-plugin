@@ -20,17 +20,22 @@
 <url>
   <loc>https://www.qbenben.com/posts/husky.html</loc>
   <lastmod>2022-01-20T02:44:10+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>https://www.qbenben.com/docs/play/terminal-plugin-qb.html</loc>
   <lastmod>2022-01-20T02:44:10+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/docs/play/vuepress-plugin-china-search-console.html</loc>
+  <lastmod>2022-01-22T02:44:10+00:00</lastmod>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.qbenben.com/docs/play/vuepress-plugin-clipboard.html</loc>
-  <lastmod>2022-01-21T02:44:10+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2022-01-22T02:44:10+00:00</lastmod>
+  <priority>0.7</priority>
 </url>
 
 
