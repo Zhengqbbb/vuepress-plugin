@@ -24,9 +24,9 @@ sidebarDepth: 2
 </a>
 </p>
 
-- ts + setup
+- ts + setup 改进
 - 减轻light主题中的过渡动画
-- 添加了更多样式和响应式的支持
+- 添加了更多class，样式和响应式的支持 提供样式自定义
 
 ## Install
 
