@@ -29,7 +29,7 @@ sidebarDepth: 2
 
 - 借鉴了 Vuepress2官方插件 - [google分析](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html#install)
 - 本来该插件是只想做百度分析，但是自动推送收录这个随便一起集成了。
-- 其实目前来看最省心的 SEO 是设置 `sitemap` 站点地图 和 `robots.txt` 爬虫辅助文件，Vuepress官方也正在提交审核阶段，我也正在参与相信很快就会有了。[plugin-sitemap](https://github.com/vuepress/vuepress-next/pull/277)。推出后大家就可以去各个站长平台提交自己的 `sitemap` 地址了。
+- 其实目前来看最省心的 SEO 是设置 `sitemap` 站点地图 和 `robots.txt` 爬虫辅助文件，Vuepress官方也正在提交审核阶段，我也正在参与相信很快就会有了，[plugin-sitemap](https://github.com/vuepress/vuepress-next/pull/277)。推出后大家就可以去各个站长平台提交自己的 `sitemap` 地址了。
 
 ## Install
 
