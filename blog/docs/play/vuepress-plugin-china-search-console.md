@@ -105,10 +105,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 ## Other
 ### 如何获取百度统计id：
 - 进入百度站长页面
-![讲解图](https://tvax1.sinaimg.cn/large/6ccee0e1gy1gylwrxvtf7j216a0ms7cm.jpg)
+![讲解图](https://user-images.githubusercontent.com/40693636/150633498-f46b8220-f67a-43de-af81-4b7803e3b417.png)
 ### 如何获取360自动推送id和文件名
 - 进入360站长页面
-![讲解图](https://tvax4.sinaimg.cn/large/6ccee0e1gy1gylwqqixsaj21cm0l6jw3.jpg)
+![讲解图](https://user-images.githubusercontent.com/40693636/150633516-3a1af533-fb11-4faa-99a0-1ba551c2ae35.png)
 
 ## License
 

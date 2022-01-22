@@ -7,14 +7,15 @@ sidebarDepth: 0
 ---
 
 ## 常年捣鼓积累经验分享：
-- [Mac](/docs/play/mac)
-- [VSCode](/docs/play/vscode)
-- [Chrome](/docs/play/chrome)
-- [终端配置](/docs/play/terminal)
+- [Mac](/docs/play/mac.html)
+- [VSCode](/docs/play/vscode.html)
+- [Chrome](/docs/play/chrome.html)
+- [终端配置](/docs/play/terminal.html)
 
 ## 捣鼓插件文档：
-- [Terminal Plugin —— qb](/docs/play/terminal-plugin-qb)
-- [Vuepress Plugin —— Code Clipboard](/docs/play/vuepress-plugin-clipboard)
+- [Terminal Plugin —— qb](/docs/play/terminal-plugin-qb.html)
+- [Vuepress Plugin —— Code Clipboard](/docs/play/vuepress-plugin-clipboard.html)
+- [Vuepress Plugin —— China Search Console](/docs/play/vuepress-plugin-china-search-console.html)
 
 <br>
 <br>
