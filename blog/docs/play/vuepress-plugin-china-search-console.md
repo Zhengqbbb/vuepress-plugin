@@ -34,18 +34,18 @@ sidebarDepth: 2
 ## Install
 
 <CodeGroup>
-<CodeGroupItem title="YARN" active>
+<CodeGroupItem title="NPM" active>
 
 ```bash
-yarn add -D vuepress-plugin-china-search-console
+npm install -D vuepress-plugin-china-search-console
 ```
 
 </CodeGroupItem>
 
-<CodeGroupItem title="NPM">
+<CodeGroupItem title="YARN">
 
 ```bash
-npm install -D vuepress-plugin-china-search-console
+yarn add -D vuepress-plugin-china-search-console
 ```
 
 </CodeGroupItem>

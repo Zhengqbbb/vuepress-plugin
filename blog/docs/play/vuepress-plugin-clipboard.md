@@ -31,18 +31,18 @@ sidebarDepth: 2
 ## Install
 
 <CodeGroup>
-<CodeGroupItem title="YARN" active>
+<CodeGroupItem title="NPM" active>
 
 ```bash
-yarn add -D vuepress-plugin-clipboard
+npm install -D vuepress-plugin-clipboard
 ```
 
 </CodeGroupItem>
 
-<CodeGroupItem title="NPM">
+<CodeGroupItem title="YARN">
 
 ```bash
-npm install -D vuepress-plugin-clipboard
+yarn add -D vuepress-plugin-clipboard
 ```
 
 </CodeGroupItem>
