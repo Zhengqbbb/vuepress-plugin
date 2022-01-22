@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
 title: Vuepress2插件 — 百度360统计收录
-description: vuepress-plugin-china-search-console，vuepress2 插件内含百度统计，百度自动收录，360自动收录
+description: vuepress-plugin-china-search-console，vuepress2 插件内含百度统计，百度自动收录，360自动收录 | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
 ---

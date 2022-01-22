@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
 title: Vuepress2插件 — 代码剪贴板
-description: vuepress-plugin-clipboard | vuepress2 代码复制粘贴，剪贴板
+description: vuepress-plugin-clipboard | vuepress2 代码复制粘贴，剪贴板 | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
 ---
