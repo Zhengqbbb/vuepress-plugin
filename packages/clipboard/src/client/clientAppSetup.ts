@@ -9,13 +9,13 @@ const options = __CODE_CLIPBOARD_OPTIONS__;
 
 export default defineClientAppSetup(() => {
   const page = usePageData();
-
+  const copyBtnClassName = `code-copy-added-${options?.align || 'bottom'}`;
   const update = () => {
     if (page.value.path === "/") return;
     const delay = options.delay || 400;
     setTimeout(() => {
       document.querySelectorAll(options.selector || 'div[class*="language-"]').forEach((el) => {
-        if (el.classList.contains(`code-copy-added-${options?.align || 'bottom'}`) || el.querySelector("pre, code[class*='pre-']") === null)
+        if (el.classList.contains(copyBtnClassName) || el.querySelector("pre, code[class*='pre-']") === null)
           return;
         const codeContent = el.querySelector("pre, code[class*='pre-']") as HTMLElement;
         const instance = createApp(CodeCopy, {
@@ -27,17 +27,24 @@ export default defineClientAppSetup(() => {
         el.appendChild(childEl);
         instance.mount(childEl);
 
-        el.classList.add(`code-copy-added-${options?.align || 'bottom'}`);
+        el.classList.add(copyBtnClassName);
       });
     }, delay + 100);
   };
-
+  const clear = () => {
+    document.querySelectorAll(options.selector || 'div[class*="language-"]').forEach((el) => {
+      if (el.classList.contains(copyBtnClassName)) {
+        el.classList.remove(copyBtnClassName);
+      }
+    });
+  };
   onMounted(() => {
     update();
     window.addEventListener("vuepress-plugin-clipboard-update-event", update);
   });
 
   onBeforeUnmount(() => {
+    clear
     window.removeEventListener("vuepress-plugin-clipboard-update-event", update);
   });
 
@@ -45,7 +52,13 @@ export default defineClientAppSetup(() => {
     update();
   });
 
-  watch(() => page.value.path, update);
+  watch(
+    () => page.value.path,
+    () => {
+      clear();
+      update();
+    }
+  );
 
   return update;
 });
