@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
-title: Vuepress2插件 — 百度360统计收录
-description: vuepress-plugin-china-search-console，vuepress2 插件内含百度统计，百度自动收录，360自动收录 | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
+title: Vuepress2插件 — 国内搜索引擎配置设置
+description: vuepress-plugin-china-search-console，vuepress2 插件内含百度统计，百度自动收录，360搜索自动收录，头条搜索自动收录 | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
 ---
@@ -114,9 +114,9 @@ export default defineUserConfig<DefaultThemeOptions>({
 ### 如何获取百度统计id：
 - 进入百度站长页面
 ![讲解图](https://user-images.githubusercontent.com/40693636/150633498-f46b8220-f67a-43de-af81-4b7803e3b417.png)
-### 如何获取360自动推送id和文件名
-- 进入360站长页面
-![讲解图](https://user-images.githubusercontent.com/40693636/150633516-3a1af533-fb11-4faa-99a0-1ba551c2ae35.png)
+### 如何获取头条自动推送id
+- 进入头条站长页面
+![讲解图](https://user-images.githubusercontent.com/40693636/150680807-47ecc4c1-e99b-4b1c-8ec1-88bf59f7ebf2.png)
 
 ## License
 
