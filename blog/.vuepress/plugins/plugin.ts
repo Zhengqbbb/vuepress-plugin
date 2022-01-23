@@ -21,8 +21,7 @@ export const codeCopyPlugin: PluginConfig = [
  export const searchConsolePlugin: PluginConfig = [
   'vuepress-plugin-china-search-console',
   {
-    idBaidu: "dbf4327a921eac36c68ec119c80f31b9",
-    id360: "sozz",
-    filename360: "ab77b6ea7f3fbf79"
+    baiduId: "dbf4327a921eac36c68ec119c80f31b9",
+    toutiaoAutoPushId: "3dcbba9b816cb647a31f0b393b5c1830e236e2c357573edc072b52b73042d4dc30632485602430134f60bc55ca391050b680e2741bf7233a8f1da9902314a3fa"
   } as SearchConsolePluginOptions,
 ]

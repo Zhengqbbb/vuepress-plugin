@@ -1,43 +1,68 @@
 declare const searchConsoleTag: boolean;
 
 declare global {
-  interface Window {
-    searchConsoleTag?: typeof searchConsoleTag;
-  }
+    interface Window {
+        searchConsoleTag?: typeof searchConsoleTag;
+    }
 }
 
-export const useSearchConsole = (idBaidu: string, baiduAutoPush: boolean, id360: string, filename360: string): void => {
-  // avoid duplicated import
-  if (window.searchConsoleTag) {
-    return;
+/**
+ * @description: The following parameters are fixed
+ * @date checked: 2021-01-23
+ */
+const ___360_FileName___ = "ab77b6ea7f3fbf79"
+const ___360_id___ = "sozz"
+const ___TouTiao_id___ = "ttzz"
+
+
+export const useSearchConsole = (
+    baiduId: string,
+    toutiaoAutoPushId: string,
+    autoPushBaiduSwitch: boolean,
+    autoPush360Switch: boolean
+): void => {
+    // avoid duplicated import
+    if (window.searchConsoleTag) {
+        return;
+    }
+
+    const curProtocol = window.location.protocol.split(":")[0];
+    // insert baidu `<script>` tag
+    if (baiduId !== "") {
+        const btagScript = document.createElement("script");
+        btagScript.src = `https://hm.baidu.com/hm.js?${baiduId}`;
+        btagScript.async = true;
+        document.head.appendChild(btagScript);
+    }
+
+    // inset baidu auto search console `<script>` tag
+    if (autoPushBaiduSwitch) {
+        const bdAutoScript = document.createElement("script");
+        curProtocol === "https"
+            ? (bdAutoScript.src = "https://zz.bdstatic.com/linksubmit/push.js")
+            : (bdAutoScript.src = "http://push.zhanzhang.baidu.com/push.js");
+        bdAutoScript.async = true;
+        document.head.appendChild(bdAutoScript);
+    }
+
+    // inset 360 auto search console `<script>` tag
+    if (autoPush360Switch) {
+        const txzAutoScript = document.createElement("script");
+        txzAutoScript.src = `https://s.ssl.qhres2.com/ssl/${___360_FileName___}.js`;
+        txzAutoScript.id = ___360_id___;
+        txzAutoScript.async = true;
+        document.head.appendChild(txzAutoScript);
+    }
+
+    // inset TouTiao auto search console `<script>` tag
+    if (toutiaoAutoPushId !== "") {
+      const ttAutoScript = document.createElement("script");
+      ttAutoScript.src = `https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?${toutiaoAutoPushId}`;
+      ttAutoScript.id = ___TouTiao_id___;
+      ttAutoScript.async = true;
+      document.head.appendChild(ttAutoScript);
   }
 
-  const curProtocol = window.location.protocol.split(":")[0];
-  // insert baidu `<script>` tag
-  const btagScript = document.createElement("script");
-  btagScript.src = `https://hm.baidu.com/hm.js?${idBaidu}`;
-  btagScript.async = true;
-  document.head.appendChild(btagScript);
-
-  // inset baidu auto search console `<script>` tag
-  if ( baiduAutoPush ) {
-    const bdAutoScript = document.createElement("script");
-    curProtocol === "https"
-      ? (bdAutoScript.src = "https://zz.bdstatic.com/linksubmit/push.js")
-      : (bdAutoScript.src = "http://push.zhanzhang.baidu.com/push.js");
-    bdAutoScript.async = true;
-    document.head.appendChild(bdAutoScript);
-  }
-
-  // inset 360 auto search console `<script>` tag
-  if ( id360 !== "" && curProtocol === "https") {
-    const txzAutoScript = document.createElement("script");
-    txzAutoScript.src = `https://s.ssl.qhres2.com/ssl/${filename360}.js`
-    txzAutoScript.id = id360
-    txzAutoScript.async = true;
-    document.head.appendChild(txzAutoScript);
-  }
-
-  // insert stag snippet
-  window.searchConsoleTag = true;
+    // insert stag snippet
+    window.searchConsoleTag = true;
 };

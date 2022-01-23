@@ -5,9 +5,9 @@ description: vuepress-plugin-china-search-console，vuepress2 插件内含百度
 lastUpdated: true
 sidebarDepth: 2
 ---
-> [**Vuepress2**](https://v2.vuepress.vuejs.org/) 插件  - 针对Vuepress2的国内搜索引擎的SEO增强：包含 **百度统计，页面自动推送百度收录，页面自动推送360收录**。
+> [**Vuepress2**](https://v2.vuepress.vuejs.org/) 插件  - 针对Vuepress2的国内搜索引擎的SEO增强：包含 **百度统计，页面自动推送百度收录，页面自动推送360搜索收录, 页面自动推送头条搜索收录**。
 
-> [**Vuepress2**](https://v2.vuepress.vuejs.org/) plugin: For the **Chinese** search engine console, include baidu analytics, vuepress page auto push baidu search engine and auto push 360 search engine.
+> [**Vuepress2**](https://v2.vuepress.vuejs.org/) plugin: For the **Chinese** search engine console, include baidu analytics, vuepress page auto push baidu search engine, auto push 360 search engine and auto push toutiao(bytedance) search engine.
 
 # vuepress-plugin-china-search-console
 
@@ -25,7 +25,7 @@ sidebarDepth: 2
 </a>
 </p>
 
-![description](https://tva4.sinaimg.cn/large/6ccee0e1gy1gylxqsjhspj21cg08g7f4.jpg)
+![description](https://tva4.sinaimg.cn/large/6ccee0e1gy1gynwsvr1wmj227807adu2.jpg)
 
 - 借鉴了 Vuepress2官方插件 - [google分析](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html#install)
 - **自动收录** ：就是借浪打浪的思想，利用用户访问你的网站，网站发起给搜索引擎，进而提高你网站的曝光度。至于有多少成效其实要看搜索引擎了。
@@ -33,9 +33,10 @@ sidebarDepth: 2
 - **国外的话：谷歌和bing** 都是采用提交sitemap 站点地图，然后你有两种方式去提高收录，一种是利用api 发起GET请求的方式通知搜索引擎，这时候就可以==写一个脚本通过curl或者github action==，在发布的时候进行通知。
 - 国内的搜索引擎只能用两个字形容：难受。
   - 百度: 相比来说比较好，有多种方式，api手动收录，自动推送，代码集成等
-  - 360：有支持自动推送，但是托管在站点地图提交一直没下文...
-  - 头条搜索： 站点地图提交后就ok了，但是也不知道是不是Gitee page pro禁止了头条的ua及ip封禁，我在 x-cmd 网站提交验证就一直验证不上...
-  - 搜狗搜索：也是站点地图提交，流程很复杂，Gitee page pro也是一直验证不上...
+  - 360：有支持自动推送和站点地图，但是托管在站点地图提交一直没下文...
+  - 头条搜索： 有支持自动推送和站点地图，但是也不知道是不是Gitee page pro禁止了头条的ua及ip封禁，我在 x-cmd 网站提交验证就一直验证不上...
+  - 搜狗搜索：也是站点地图提交，但光是站点验证的流程就很复杂复杂，Gitee page pro也是一直验证不上...
+  - **由于百度和360自动收录是代码是固定的，但头条需要一个token，需要去站长平台进行查询，虽然自动推送比较方便但还是建议大家都去站点平台提交站点地图比较好。**
 - 本来该插件是只想做百度分析，但是百度和360自动推送收录这个随便一起集成了。
 
 ## Install
@@ -102,10 +103,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 ## Options:
 | options | type | default | info |
 |---|----|----|----|
-| idBaidu | string | / `require` | baidu 统计id|
-| baiduAutoPush | boolean | true | 是否开启百度自动推送 \| 即页面自动推送收录建议|
-| id360 | string | / | 360 自动推送id |
-| filename360 | string | / | 360 自动推送js文件名 |
+| baiduId | string | /  | 百度统计id|
+| toutiaoAutoPushId | string | /  | 头条搜索自动收录id，填写后开启自动收录 \| 即页面自动推送收录建议 |
+| autoPushBaiduSwitch | boolean | true | 是否开启百度自动推送 \| 即页面自动推送收录建议 |
+| autoPush360Switch | boolean | true | 是否开启百度自动推送 \| 即页面自动推送收录建议 |
 
 
 
