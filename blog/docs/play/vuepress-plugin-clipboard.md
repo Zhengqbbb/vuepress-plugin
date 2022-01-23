@@ -7,7 +7,7 @@ sidebarDepth: 2
 ---
 > [**Vuepress2**](https://v2.vuepress.vuejs.org/) 插件：添加代码块复制按钮，代码一键复制
 
-> [**Vuepress2**](https://v2.vuepress.vuejs.org/) plugin：add code copy button
+> [**Vuepress2**](https://v2.vuepress.vuejs.org/) plugin: generate code copy button | code clipboard
 # vuepress-plugin-clipboard
 
 ---
@@ -24,7 +24,7 @@ sidebarDepth: 2
 </a>
 </p>
 
-- ts + setup 改进
+- vue3 + ts + setup 改进
 - 减轻light主题中的过渡动画
 - 添加了更多class，样式和响应式的支持 提供样式自定义
 

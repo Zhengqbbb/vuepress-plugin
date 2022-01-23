@@ -72,7 +72,7 @@ yarn add -D husky@^4.3.0
 ```
 
 - 这样在你执行 `git commit` 的时候就会自动执行 `commitlint` 命令。**即**把你的commit信息赋值给 `HUSKY_GIT_PARAMS` 作为参数传入`commitlint`命令进行校验。
-- 这里可以看出旧版主要是利用 `package.json` 进行钩子信息获取。
+- 这里可以看出旧版主要是利用 `package.json` 进行git钩子信息获取。
 
 ## (7.*) 新版玩法
 ---
@@ -129,6 +129,9 @@ npx husky add .husky/pre-push "npm run test"
 2. **没办法按需引入 `git hooks`**：当用户对 `package.json` 进行添加操作后，没办法同步添加 `.git/hooks`对应的钩子文件。
 3. **太局限，用户自定义困难**：比如我有需求在命令行当中利用钩子进行构建，生成文件，读取文件信息等需要大量 `shell` 命令时，对于一个天天接触 shell 的我而言只能写单一脚本的传统的 `package.json`写法 太局限了，会很难受。
 > e.g: 输出一些信息:
+
+![e.g-img](https://tvax2.sinaimg.cn/large/6ccee0e1gy1gy9s2f80wtj21c20raasm.jpg)
+::: details 上图示例代码
 ```bash
 #!/bin/sh
 # 在新版中可以很舒服的写 shell 脚本
@@ -141,8 +144,7 @@ printf "\n\033[1;32m%s \033[1;33m%s \033[1;32m%s\033[0m\n" \
 
 yarn commitlint --edit "$1"
 ```
-
-![e.g-img](https://tvax2.sinaimg.cn/large/6ccee0e1gy1gy9s2f80wtj21c20raasm.jpg)
+:::
 
 #### 新版是什么原理
 1. git config 的`core.hooksPath`。在2016年 `git 2.9` 版本引入新[feature](https://git-scm.com/docs/githooks#_description)，`hooksPath`属性可以==支持设置 Git Hooks 文件夹指向==。我们可以打开 `.git/.config`文件看看：

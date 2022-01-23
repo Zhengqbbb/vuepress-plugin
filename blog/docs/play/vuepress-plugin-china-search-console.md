@@ -28,8 +28,15 @@ sidebarDepth: 2
 ![description](https://tva4.sinaimg.cn/large/6ccee0e1gy1gylxqsjhspj21cg08g7f4.jpg)
 
 - 借鉴了 Vuepress2官方插件 - [google分析](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html#install)
-- 本来该插件是只想做百度分析，但是自动推送收录这个随便一起集成了。
-- 其实目前来看最省心的 SEO 是设置 `sitemap` 站点地图 和 `robots.txt` 爬虫辅助文件，Vuepress官方也正在提交审核阶段，我也正在参与相信很快就会有了，[plugin-sitemap](https://github.com/vuepress/vuepress-next/pull/277)。推出后大家就可以去各个站长平台提交自己的 `sitemap` 地址了。
+- **自动收录** ：就是借浪打浪的思想，利用用户访问你的网站，网站发起给搜索引擎，进而提高你网站的曝光度。至于有多少成效其实要看搜索引擎了。
+- 其实目前来看最省心的 SEO 是设置 `sitemap` 站点地图 和 `robots.txt` 爬虫辅助文件，Vuepress官方也正在提交审核阶段，我也正在参与，相信很快就会有了，[plugin-sitemap](https://github.com/vuepress/vuepress-next/pull/277)。推出后大家就可以去各个站长平台提交自己的 `sitemap` 地址了。
+- **国外的话：谷歌和bing** 都是采用提交sitemap 站点地图，然后你有两种方式去提高收录，一种是利用api 发起GET请求的方式通知搜索引擎，这时候就可以==写一个脚本通过curl或者github action==，在发布的时候进行通知。
+- 国内的搜索引擎只能用两个字形容：难受。
+  - 百度: 相比来说比较好，有多种方式，api手动收录，自动推送，代码集成等
+  - 360：有支持自动推送，但是托管在站点地图提交一直没下文...
+  - 头条搜索： 站点地图提交后就ok了，但是也不知道是不是Gitee page pro禁止了头条的ua及ip封禁，我在 x-cmd 网站提交验证就一直验证不上...
+  - 搜狗搜索：也是站点地图提交，流程很复杂，Gitee page pro也是一直验证不上...
+- 本来该插件是只想做百度分析，但是百度和360自动推送收录这个随便一起集成了。
 
 ## Install
 
