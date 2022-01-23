@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: Vuepress2插件 — 国内搜索引擎配置设置
+title: Vuepress2插件 — 站点SEO增强
 description: vuepress-plugin-china-search-console，vuepress2 插件内含百度统计，百度自动收录，360搜索自动收录，头条搜索自动收录 | Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔
 lastUpdated: true
 sidebarDepth: 2
