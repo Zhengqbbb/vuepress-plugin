@@ -1,4 +1,4 @@
-# vuepress-theme-qbenben
+# vuepress-qbenben-blog
 - Base Vuepress2
 - qbenben blog: Thank ~
     - [vuepress-theme-gungnir](https://github.com/Renovamen/vuepress-theme-gungnir)
