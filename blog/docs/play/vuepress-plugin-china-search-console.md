@@ -106,7 +106,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 | baiduId | string | /  | 百度统计id|
 | toutiaoAutoPushId | string | /  | 头条搜索自动收录id，填写后开启自动收录 \| 即页面自动推送收录建议 |
 | autoPushBaiduSwitch | boolean | true | 是否开启百度自动推送 \| 即页面自动推送收录建议 |
-| autoPush360Switch | boolean | true | 是否开启百度自动推送 \| 即页面自动推送收录建议 |
+| autoPush360Switch | boolean | true | 是否开启360自动推送 \| 即页面自动推送收录建议 |
 
 
 
