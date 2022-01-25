@@ -10,10 +10,10 @@ declare global {
  * @description: The following parameters are fixed
  * @date checked: 2021-01-23
  */
-const ___360_FileName___ = "ab77b6ea7f3fbf79"
-const ___360_id___ = "sozz"
-const ___TouTiao_id___ = "ttzz"
-
+/* eslint-disable @typescript-eslint/naming-convention */
+const ___360_FILENAME___ = "ab77b6ea7f3fbf79";
+const ___360_ID___ = "sozz";
+const ___TOUTIAO_ID___ = "ttzz";
 
 export const useSearchConsole = (
     baiduId: string,
@@ -48,20 +48,20 @@ export const useSearchConsole = (
     // inset 360 auto search console `<script>` tag
     if (autoPush360Switch) {
         const txzAutoScript = document.createElement("script");
-        txzAutoScript.src = `https://s.ssl.qhres2.com/ssl/${___360_FileName___}.js`;
-        txzAutoScript.id = ___360_id___;
+        txzAutoScript.src = `https://s.ssl.qhres2.com/ssl/${___360_FILENAME___}.js`;
+        txzAutoScript.id = ___360_ID___;
         txzAutoScript.async = true;
         document.head.appendChild(txzAutoScript);
     }
 
     // inset TouTiao auto search console `<script>` tag
     if (toutiaoAutoPushId !== "") {
-      const ttAutoScript = document.createElement("script");
-      ttAutoScript.src = `https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?${toutiaoAutoPushId}`;
-      ttAutoScript.id = ___TouTiao_id___;
-      ttAutoScript.async = true;
-      document.head.appendChild(ttAutoScript);
-  }
+        const ttAutoScript = document.createElement("script");
+        ttAutoScript.src = `https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?${toutiaoAutoPushId}`;
+        ttAutoScript.id = ___TOUTIAO_ID___;
+        ttAutoScript.async = true;
+        document.head.appendChild(ttAutoScript);
+    }
 
     // insert stag snippet
     window.searchConsoleTag = true;

@@ -97,6 +97,7 @@ export interface SearchConsolePluginOptions {
 - **由于百度和360自动收录是代码是固定的，但头条需要一个token，需要去站长平台进行查询，虽然自动推送比较方便但还是建议大家都去站点平台提交站点地图比较好。**
 - 其实目前来看最省心的 SEO 是设置 `sitemap` 和 `robots.txt`，vuepress官方也正在提交审核阶段，相信很快就会有了。[plugin-sitemap](https://github.com/vuepress/vuepress-next/pull/277)。推出后大家就可以去各个站长平台提交自己的 `sitemap` 地址了。
 - 本来该插件是只想做百度分析，但是自动推送收录这个随便一起集成了。
+- 建议在百度统计 管理页面点击侧边栏的单页应用设置，开启单页应用数据统计
 ### 如何获取百度统计id：
 - 进入百度站长页面
 ![讲解图](https://tvax1.sinaimg.cn/large/6ccee0e1gy1gylwrxvtf7j216a0ms7cm.jpg)
