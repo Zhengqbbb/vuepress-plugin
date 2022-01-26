@@ -3,13 +3,13 @@
   "version": "2.0.0",
   "description": "VuePress plugin - China search console",
   "keywords": [
+    "vuepress-plugin",
     "vuepress2",
     "vuepress2-plugin",
     "baidu-tongji",
     "baidu-analytics",
     "baidu-auto-push",
     "360-auto-push",
-    "vuepress-plugin",
     "analytics"
   ],
   "homepage": "https://www.qbenben.com/docs/play/vuepress-plugin-china-search-console.html",

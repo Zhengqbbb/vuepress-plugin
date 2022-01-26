@@ -3,8 +3,8 @@
   "version": "1.0.6",
   "description": "Vuepress2 plugin - code clipboard",
   "keywords": [
-    "vuepress2",
     "vuepress-plugin",
+    "vuepress2",
     "codecopy",
     "code-copy",
     "code-clipboard",
