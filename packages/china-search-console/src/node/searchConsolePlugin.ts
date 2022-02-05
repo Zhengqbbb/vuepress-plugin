@@ -31,7 +31,7 @@ export const searchConsolePlugin: Plugin<SearchConsolePluginOptions> = (
         baiduId = "",
         toutiaoAutoPushId = "",
         autoPushBaiduSwitch = true,
-        autoPush360Switch = true
+        autoPush360Switch = false
     },
     app
 ) => {

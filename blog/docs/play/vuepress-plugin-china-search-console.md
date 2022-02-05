@@ -110,7 +110,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 | baiduId | string | /  | 百度统计id|
 | toutiaoAutoPushId | string | /  | 头条搜索自动收录id，填写后开启自动收录 \| 即页面自动推送收录建议 |
 | autoPushBaiduSwitch | boolean | true | 是否开启百度自动推送 \| 即页面自动推送收录建议 |
-| autoPush360Switch | boolean | true | 是否开启360自动推送 \| 即页面自动推送收录建议 |
+| autoPush360Switch | boolean | false | 是否开启360自动推送 \| 即页面自动推送收录建议 |
 
 
 
@@ -121,6 +121,11 @@ export default defineUserConfig<DefaultThemeOptions>({
 ### 如何获取头条自动推送id
 - 进入头条站长页面
 ![讲解图](https://user-images.githubusercontent.com/40693636/150680807-47ecc4c1-e99b-4b1c-8ec1-88bf59f7ebf2.png)
+
+### 获得360自动收录回复，v2.0.1目前默认值已调整为false
+> 您好，由于业务调整，站长平台自动收录功能于2021年5月10日下线关闭，详情可参看：https://bbs.360.cn/thread-15979727-1-1.html
+
+ 
 
 ## License
 

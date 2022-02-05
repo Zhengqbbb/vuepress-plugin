@@ -83,9 +83,9 @@ export interface SearchConsolePluginOptions {
      */
     autoPushBaiduSwitch?: boolean;
     /**
-     * @tip: 由于默认360自动推送采用https，使用http网页不会生成
+     * @tip: 2021-01-27 获得官方邮件回复，目前自动收录已不使用
      * @description: 是否开启360自动推送 | 即页面自动推送收录建议
-     * @default: true
+     * @default: false
      */
     autoPush360Switch?: boolean;
 }
