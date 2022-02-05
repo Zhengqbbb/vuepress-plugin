@@ -48,7 +48,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
         iconScale: 0.9,
         link: "https://www.instagram.com/qbqiubin/"
       },
-      email: "1074059947@qq.com"
+      email: "zhengqbbb@gmail.com"
     }
   },
   homeHeaderImages: [
@@ -73,7 +73,6 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     giscus: {
       repo: "Zhengqbbb/zhengqbbb.github.io",
       repoId: "MDEwOlJlcG9zaXRvcnkxODM4OTUyNTQ",
-      mapping: "pathname",
       category: "Announcements",
       categoryId: "DIC_kwDOCvYE1s4CAdr1"
     },
@@ -81,7 +80,8 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
       all: true
     },
     ga: "G-8R2K3ZRCY6",
-    ba: false
+    ba: false,
+    pwa: true
   },
   footer: `
     &copy; <a href="https://github.com/Zhengqbbb" target="_blank">Zhengqbbb</a> 2021-2022

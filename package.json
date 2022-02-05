@@ -6,7 +6,7 @@
   "name": "qbenben-blog",
   "description": "qbenben's blog.",
   "license": "Apache-2.0",
-  "author": "Qbenben <1074059947@qq.com>",
+  "author": "Qbenben <zhengqbbb@gmail.com>",
   "scripts": {
     "clean": "rimraf blog/.vuepress/.temp blog/.vuepress/.cache dist",
     "dev": "vuepress dev blog --clean-cache",
@@ -16,12 +16,10 @@
     "serve": "anywhere -h localhost -d dist"
   },
   "dependencies": {
-    "vuepress-theme-gungnir": "2.0.0-alpha.9"
+    "vuepress-theme-gungnir": "^2.0.0-alpha.9"
   },
   "devDependencies": {
     "@vuepress/plugin-docsearch": "2.0.0-beta.29",
-    "@vuepress/plugin-pwa": "^2.0.0-beta.32",
-    "@vuepress/plugin-pwa-popup": "^2.0.0-beta.32",
     "anywhere": "^1.5.0",
     "cpx2": "^4.1.2",
     "lerna": "^4.0.0",

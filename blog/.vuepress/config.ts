@@ -15,8 +15,6 @@ export default defineUserConfig<DefaultThemeOptions>({
     plugins: [
         pagePlugins.codeCopyPlugin,
         pagePlugins.docSearchPlugin,
-        pagePlugins.pwaPlugin,
-        pagePlugins.pwaPopupPlugin,
         pagePlugins.searchConsolePlugin,
     ],
     markdown: {

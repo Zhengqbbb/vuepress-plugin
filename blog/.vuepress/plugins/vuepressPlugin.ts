@@ -47,34 +47,3 @@ export const vuepressSearchPlugin: PluginConfig = [
         },
     },
 ];
-
-/**
- * @description: PWA Plugin
- * @see: https://v2.vuepress.vuejs.org/reference/plugin/pwa
- */
-export const pwaPlugin: PluginConfig = [
-    "@vuepress/pwa",
-    {
-        skipWaiting: false,
-    } as PwaPluginOptions,
-];
-
-/**
- * @description: PWA Popup Plugin
- * @see: https://v2.vuepress.vuejs.org/reference/plugin/pwa-popup
- */
-export const pwaPopupPlugin: PluginConfig = [
-    "@vuepress/plugin-pwa-popup",
-    {
-        locales: {
-            // "/": {
-            //     message: "New content is available.",
-            //     buttonText: "Refresh",
-            // },
-            "/": {
-                message: "发现新内容可用",
-                buttonText: "刷新",
-            },
-        },
-    } as PwaPopupPluginOptions,
-];
