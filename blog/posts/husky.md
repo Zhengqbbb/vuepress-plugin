@@ -9,6 +9,7 @@ useHeaderImage: true
 headerImage: https://tva3.sinaimg.cn/large/6ccee0e1gy1gyfzev5ju3j21kw0y6k0g.jpg
 headerMask: rgba(40, 57, 101, .4)
 catalog: true
+permalinkPattern: /post/:year/:month/:day/:slug/
 tags:
   - 前端
   - 前端工程化

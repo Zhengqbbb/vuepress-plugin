@@ -9,6 +9,7 @@ useHeaderImage: true
 headerImage: https://tva3.sinaimg.cn/large/6ccee0e1gy1gxv3n4ru9hj219k0k0769.jpg
 headerMask: rgba(40, 57, 101, .4)
 catalog: true
+permalinkPattern: /post/:year/:month/:day/:slug/
 tags:
   - 折腾记录
 ---
@@ -163,8 +164,12 @@ nvm use 14
 
 ### 4.12 长截图工具
 
-[Xnip 安装地址](https://xnipapp.com/)
+[Xnip](https://xnipapp.com/)
 : mac 长列表截图工具大部分付费，而Xnip部分功能需要付费，并且带logo水印
+
+### 4.13 窗口切换
+[HyperSwitch](https://bahoom.com/hyperswitch)
+: 解决Mac `cmd + tab` 无法同应用窗口切换问题
 
 <br>
 <br>

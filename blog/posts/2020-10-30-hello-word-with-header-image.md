@@ -8,6 +8,7 @@ useHeaderImage: true
 headerImage: https://tva4.sinaimg.cn/large/6ccee0e1gy1gxuxbn8r8tj20x40imdhv.jpg
 headerMask: rgba(40, 57, 101, .4)
 catalog: true
+permalinkPattern: /post/:year/:month/:day/:slug/
 tags:
   - test
 ---

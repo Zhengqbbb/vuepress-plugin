@@ -1,7 +1,4 @@
 import { path } from "@vuepress/utils";
-import type { DocsearchOptions } from "@vuepress/plugin-docsearch";
-import type { PwaPluginOptions } from "@vuepress/plugin-pwa";
-import type { PwaPopupPluginOptions } from "@vuepress/plugin-pwa-popup";
 import type { Page, PluginConfig } from "vuepress";
 
 /**
@@ -28,7 +25,7 @@ export const docSearchPlugin: PluginConfig = [
         indexName: "qbenben",
         appId: "BUM16EKLGN",
         placeholder: "搜索",
-    } as DocsearchOptions,
+    },
 ];
 
 /**

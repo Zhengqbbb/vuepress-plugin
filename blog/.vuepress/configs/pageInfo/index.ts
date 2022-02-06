@@ -80,7 +80,6 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
       all: true
     },
     ga: "G-8R2K3ZRCY6",
-    ba: false,
     pwa: true
   },
   footer: `
