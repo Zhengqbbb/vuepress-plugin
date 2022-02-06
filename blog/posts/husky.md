@@ -131,7 +131,7 @@ npx husky add .husky/pre-push "npm run test"
 3. **太局限，用户自定义困难**：比如我有需求在命令行当中利用钩子进行构建，生成文件，读取文件信息等需要大量 `shell` 命令时，对于一个天天接触 shell 的我而言只能写单一脚本的传统的 `package.json`写法 太局限了，会很难受。
 > e.g: 输出一些信息:
 
-![e.g-img](https://tvax2.sinaimg.cn/large/6ccee0e1gy1gy9s2f80wtj21c20raasm.jpg)
+![e.g-img](https://tva3.sinaimg.cn/large/6ccee0e1gy1gz4gj0f06oj21c20ragvr.jpg)
 ::: details 上图示例代码
 ```bash
 #!/bin/sh
@@ -149,7 +149,7 @@ yarn commitlint --edit "$1"
 
 #### 新版是什么原理
 1. git config 的`core.hooksPath`。在2016年 `git 2.9` 版本引入新[feature](https://git-scm.com/docs/githooks#_description)，`hooksPath`属性可以==支持设置 Git Hooks 文件夹指向==。我们可以打开 `.git/.config`文件看看：
-![git config](https://tvax2.sinaimg.cn/large/6ccee0e1gy1gy9scfxydgj21k00e6gth.jpg)
+![git config](https://tvax3.sinaimg.cn/large/6ccee0e1gy1gz4glcb6tpj21k00e6n1j.jpg)
 2. 新版顺利安装后我们会得到一个文件夹正是`.husky`：
 ```bash
 $  x ls -T .husky/ -a

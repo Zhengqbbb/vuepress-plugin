@@ -6,7 +6,7 @@ subtitle: VSCode常用插件以及配置分享
 author: qbenben
 date: 2022-02-06
 useHeaderImage: true
-headerImage: https://tvax4.sinaimg.cn/large/6ccee0e1gy1gz4g3z108rj22800z0an6.jpg
+headerImage: https://tva3.sinaimg.cn/large/6ccee0e1gy1gz4gi2e457j22800z0an6.jpg
 headerMask: rgba(40, 57, 101, .6)
 catalog: true
 permalinkPattern: /post/:year/:month/:day/:slug/
