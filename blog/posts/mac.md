@@ -15,7 +15,7 @@ tags:
 ---
 
 
-记录留痕自己Mac常用的软件，以及share
+记录留痕自己VS Code常用的插件，以及share配置
 
 <!-- more -->
 ## 1. Git
