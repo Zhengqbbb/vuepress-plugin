@@ -20,7 +20,7 @@ export default defineClientAppSetup(() => {
         const codeContent = el.querySelector("pre, code[class*='pre-']") as HTMLElement;
         const instance = createApp(CodeCopy, {
           parent: el,
-          code: codeContent.innerText,
+          code: codeContent.innerText || codeContent.textContent,
           options
         });
         const childEl = document.createElement("div");
