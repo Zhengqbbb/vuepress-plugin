@@ -13,13 +13,18 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.qbenben.com/posts/mac.html</loc>
-  <lastmod>2022-01-20T02:44:10+00:00</lastmod>
+  <loc>https://www.qbenben.com/posts/2021/11/30/mac.html</loc>
+  <lastmod>2022-02-10T02:44:10+00:00</lastmod>
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://www.qbenben.com/posts/husky.html</loc>
-  <lastmod>2022-01-23T02:44:10+00:00</lastmod>
+  <loc>https://www.qbenben.com/post/2022/01/11/husky.html</loc>
+  <lastmod>2022-02-10T02:44:10+00:00</lastmod>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/post/2022/02/06/vscode.html</loc>
+  <lastmod>2022-02-10T02:44:10+00:00</lastmod>
   <priority>0.6</priority>
 </url>
 <url>

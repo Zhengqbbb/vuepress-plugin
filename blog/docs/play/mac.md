@@ -88,7 +88,7 @@ nvm use 14
 
 ### 3.2 终端神器——iTerm2
 [iTerm2](https://iterm2.com/downloads.html)
-: 分享一下我的 [Termianl 折腾方案](/play/terminal)
+: 分享一下我的 [Termianl 折腾方案](/docs/play/terminal.html)
 
 ## 4. 应用程序
 
@@ -109,7 +109,7 @@ nvm use 14
 : 由于Mac触控板方向，导致我们外接鼠标时滚轮习惯是方向的，这个小软件就可以**只帮我们更改外接鼠标的滚轮方向变为正常**。
 ### 4.3 VSCode
 [VSCode](https://code.visualstudio.com/)
-: 开发必备，[分享一下我的VSCode插件以及配置](/play/vscode)
+: 开发必备，[分享一下我的VSCode插件以及配置](/docs/play/vscode.html)
 ### 4.4 Markdown
 [Typora](https://www.typora.io/)
 : md文件编辑查看
