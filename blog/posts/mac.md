@@ -171,6 +171,8 @@ nvm use 14
 [HyperSwitch](https://bahoom.com/hyperswitch)
 : 解决Mac `cmd + tab` 无法同应用窗口切换问题
 
+[强大的神奇地址] => (https://www.macwk.com/)
+
 <br>
 <br>
 

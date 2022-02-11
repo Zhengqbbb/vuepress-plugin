@@ -100,7 +100,7 @@ A
 :::
 
 **One Dark Pro**
-: 来自Atom中的dark主题
+: 来自Atom中的dark主题 | 吸血鬼主题
 
 **Material Icon Theme**
 : 文件图标
@@ -167,7 +167,7 @@ A
 : 配合 eslint 对于JavaScript代码进行规范
 
 **TypeScript Hero**
-: 只能排序组织 ts的相关导入性文件
+: 智能排序组织 ts的相关导入性文件
 
 **TSLint**
 : 配合 tslint 对于TypeScript代码进行规范
@@ -205,7 +205,7 @@ A
 :::
 
 **Shell**
-: Shell 是一个VS Code扩展，可让您直接从编辑器执行 shell 命令。
+: Shell 是一个VS Code扩展，可让您直接从vscode编辑器执行 shell 命令。
 
 **ShellCheck**
 : Shell代码类型检查，编写 Shell 脚本**必备**
@@ -238,11 +238,11 @@ A
 ### 配置篇
 
 #### 工作区
-**善用vscode的工作区**，vscode的工作可以有自己的版本管理，统一搜索，独立的配置等
+**善用vscode的工作区**，vscode的工作区可以有更舒服的版本管理，更好的全局搜索，与全局配置更高优先级的独立配置等
 
-比如：在 Vue2.x 使用 Vetur插件，禁用 Volar插件。而到 Vue3 的项目中就使用 Volar插件，禁用 Vetur插件。
+==比如：== 在 Vue2.x 项目使用 Vetur插件，禁用 Volar插件。而到 Vue3 的项目中就使用 Volar插件，禁用 Vetur插件。
 
-工作区是一份json配置文件，可以使用`code <工作区配置文件路径>` 快速打开
+工作区是一份json配置文件，可以使用命令行`code <工作区配置文件路径>` 快速打开工作区
 ```json
 {
   // 支持排序，可以把重要的代码仓库往前排
@@ -255,14 +255,20 @@ A
     },
   ],
   "settings": {
-    // 配置项，会覆盖系统配置。可以规定比如代码缩进，文件使用语言，风格等
+    // 配置项，会覆盖系统配置。可以统一规定比如代码缩进，文件使用语言，主题风格等
+  },
+  // 这个最好是在项目当中的.vscode/extensions.json中定义，起到规范全队使用的插件
+  "extensions": {
+    "recommendations": [
+      // 打开项目后右下角的推荐插件列表
+    ]
   }
 }
 ```
 
 #### 配置项
-每款插件都有自己的配置项，可以通过他的README获取，
-分享一下我的侧边栏颜色配置(青绿色对应Vue主题色),使用的色调可以自己调整
+每款插件都有自己的配置项，可以通过他的README钻研获取，
+分享一下我的侧边栏颜色配置(青绿色对应 Vue 主题色)， 当然你也可以不同的工作区不同色调可以自己调整
 ```json
 {
   "workbench.colorCustomizations": {
