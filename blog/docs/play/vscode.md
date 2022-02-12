@@ -102,6 +102,7 @@ while read -r s; do
   code --install-extension "$s" --force
 done <<A
 formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
 2gua.rainbow-brackets
 iceliu.highlight-icemode
 Zignd.html-css-class-completion
@@ -124,6 +125,9 @@ A
 
 **Auto Close Tag**
 : 自动合并html标签块
+
+**Auto Rename Tag**
+: 标签对同步修改
 
 **Rainbow Brackets**
 : 括号对 高亮区分
