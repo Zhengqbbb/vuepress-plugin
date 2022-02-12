@@ -32,6 +32,7 @@ wayou.vscode-todo-highlight
 emilast.LogFileHighlighter
 humao.rest-client
 MS-CEINTL.vscode-language-pack-zh-hans
+intellsmi.comment-translate
 A
 ```
 :::
@@ -72,9 +73,17 @@ A
 **REST Client**
 : 类似 postman 的vscode测试接口工具
 
-**Chinese**
-: 中文插件包
+#### 翻译插件
 
+**Chinese**
+: 中文汉化vscode
+
+**Comment Translate**
+: 强力安利这款==划词翻译插件==，是我目前用到最好用的，配置成使用的是`Bing`免去代理的痛苦，安装后打开 `setting.json` 添加下列配置就可以很舒服的使用
+
+```json
+"commentTranslate.source": "Bing"
+```
 
 ### 主题插件
 ::: details 命令行一键安装
@@ -115,7 +124,6 @@ xabikos.JavaScriptSnippets
 dbaeumer.vscode-eslint
 rbbit.typescript-hero
 ms-vscode.vscode-typescript-tslint-plugin
-liuji-jim.vue
 hollowtree.vue-snippets
 johnsoncodehk.volar
 octref.vetur
@@ -165,12 +173,6 @@ A
 **TSLint**
 : 配合 tslint 对于TypeScript代码进行规范
 
-**vue**
-: vue语言高亮支持
-
-**Vue 3 Snippets**
-: 提供Vue3 和 Vue2.x 的常见的代码片段
-
 > Vue 3
 
 **Volar**
@@ -181,7 +183,8 @@ A
 **Vetur**
 : 针对 Vue2.x 的官方插件
 
-
+**Vue 3 Snippets**
+: 提供Vue3 和 Vue2.x 的常见的代码片段
 #### Shell篇
 
 ::: details 命令行一键安装
@@ -208,6 +211,9 @@ A
 
 **awk**
 : 提供给awk的代码语法高亮
+
+**shell-format**
+: shell格式化插件(毕竟vscode自身和Prettier都没有针对shell脚本的格式化) | :)我写shell不怎么会用到，提供的配置太少了
 
 #### 其他插件
 
