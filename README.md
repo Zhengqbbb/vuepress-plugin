@@ -1,7 +1,7 @@
 # vuepress-qbenben-blog
 - Base Vuepress2
 - qbenben blog: Thank ~
-    - [vuepress-theme-gungnir](https://github.com/Renovamen/vuepress-theme-gungnir)
+    - one of contributors [vuepress-theme-gungnir](https://github.com/Renovamen/vuepress-theme-gungnir)
 # Use
 ```sh
 # use x-cmd workspace. so install it and enjoy -> https://www.x-cmd.com ~
