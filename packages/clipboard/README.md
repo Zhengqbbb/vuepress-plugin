@@ -130,5 +130,6 @@ export interface ClipboardOptions {
 ## License
 
 [MIT](https://github.com/Zhengqbbb/zhengqbbb.github.io/blob/main/packages/clipboard/LICENSE)
+Copyright (c) 2022-present Qiubin Zheng <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)
 
-> get me a [star](https://github.com/Zhengqbbb/zhengqbbb.github.io)~~~
+> Just do small better things, Could you give me a [star](https://github.com/Zhengqbbb/zhengqbbb.github.io)~~~

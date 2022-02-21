@@ -109,4 +109,6 @@ export interface SearchConsolePluginOptions {
 
 [MIT](https://github.com/Zhengqbbb/zhengqbbb.github.io/blob/main/packages/clipboard/LICENSE)
 
-> 喜欢给[项目](https://github.com/Zhengqbbb/zhengqbbb.github.io)一个star~~~
+Copyright (c) 2022-present Qiubin Zheng <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)
+
+> Just do small better things, Could you give me a [star](https://github.com/Zhengqbbb/zhengqbbb.github.io)~~~

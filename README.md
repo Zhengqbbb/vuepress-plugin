@@ -25,5 +25,9 @@ x deploy
 ## page:
 [http://www.qbenben.com](http://www.qbenben.com)
 
-### License: MIT
+## LICENSE
 
+MIT
+Copyright (c) 2022-present Qiubin Zheng <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)
+
+> Just do small better things, Could you give me a [star](https://github.com/Zhengqbbb/zhengqbbb.github.io)~~~

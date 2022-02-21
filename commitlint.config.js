@@ -1,3 +1,4 @@
+/** @type {import('cz-git').UserConfig} */
 module.exports = {
   prompt: {
     messages: {
