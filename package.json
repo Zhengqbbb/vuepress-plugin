@@ -14,7 +14,7 @@
     "docs:dev": "vuepress dev blog --clean-cache",
     "docs:build": "yarn clean && vuepress build blog --clean-cache --dest dist",
     "serve": "anywhere -h localhost -d dist",
-    "commit": "cz"
+    "commit": "git cz"
   },
   "dependencies": {
     "vuepress-theme-gungnir": "2.0.0-alpha.13"

@@ -16,6 +16,7 @@ export const zh: SidebarConfig = {
         "/docs/play/terminal-plugin-qb.md",
         "/docs/play/vuepress-plugin-clipboard.md",
         "/docs/play/vuepress-plugin-china-search-console.md",
+        "/docs/play/cz-git.md",
       ],
     }
   ],

@@ -9,7 +9,7 @@ module.exports = {
       body: '详细说明(可选) 使用"|"可换行 \n  Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
       breaking: "非兼容性说明(可选) | List any BREAKING CHANGES (optional):\n",
       footerPrefixsSelect: "选择关联issue前缀 | Select the ISSUES type of changeList by this change (optional):",
-      customFooterPrefixs: "输入自定义issue | Input ISSUES Prefix:",
+      customFooterPrefixs: "输入自定义issue前缀 | Input ISSUES Prefix:",
       footer: "列举关联issue (可选) 例如: #22, #31  List any ISSUES CLOSED by this change (optional) :\n",
       confirmCommit: "是否提交或修改commit | Are you sure you want to proceed with the commit above?"
     },

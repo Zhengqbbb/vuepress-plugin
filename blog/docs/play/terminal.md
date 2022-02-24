@@ -7,5 +7,4 @@ sidebarDepth: 2
 ---
 > 分享我终端主题的配置
 
-## 整体效果
-![整体效果](https://tva3.sinaimg.cn/large/6ccee0e1gy1gyao2urxjwj22yo1mmx6q.jpg)
+WIP ...

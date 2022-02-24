@@ -33,5 +33,6 @@
       "declaration-block-trailing-semicolon": null,
       "no-descending-specificity": null
     }
-  }
+  },
+  "markdown-toc.depthTo": 3
 }

@@ -13,6 +13,7 @@ sidebarDepth: 0
 - [终端配置](/docs/play/terminal.html)
 
 ## 捣鼓插件文档：
+- [Commitizen adapter —— cz-git](/docs/play/cz-git.html)
 - [Terminal Plugin —— qb](/docs/play/terminal-plugin-qb.html)
 - [Vuepress Plugin —— Code Clipboard](/docs/play/vuepress-plugin-clipboard.html)
 - [Vuepress Plugin —— China Search Console](/docs/play/vuepress-plugin-china-search-console.html)
