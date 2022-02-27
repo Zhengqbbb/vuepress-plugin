@@ -10,6 +10,6 @@
     "**/*.ts",
     "**/*.vue",
     "packages",
-    "packages/**/*",
+    "packages/**/*", "commitlint.config.js",
   ]
 }

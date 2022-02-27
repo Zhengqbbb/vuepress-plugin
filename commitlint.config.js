@@ -1,3 +1,10 @@
+const fs = require("fs");
+const path = require("path");
+
+const plugins = fs
+  .readdirSync(path.resolve(__dirname, "packages/"))
+  .map((value) => `plugin-${value}`);
+
 /** @type {import('cz-git').UserConfig} */
 module.exports = {
   prompt: {
@@ -5,7 +12,7 @@ module.exports = {
       type: "选择你的提交类型   | Select the type of change that you\'re committing:",
       scope: "选择一个模块范围(可选) | Denote the SCOPE of this change (optional)",
       customScope: "自定义修改模块名 | Denote the SCOPE of this change:",
-      subject: "简短说明 | Write a SHORT, IMPERATIVE tense description of the change:\n",
+      subject: "简短说明 | 使用"|"可换行 Write a SHORT, IMPERATIVE tense description of the change:\n",
       body: '详细说明(可选) 使用"|"可换行 \n  Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
       breaking: "非兼容性说明(可选) | List any BREAKING CHANGES (optional):\n",
       footerPrefixsSelect: "选择关联issue前缀 | Select the ISSUES type of changeList by this change (optional):",
@@ -29,8 +36,7 @@ module.exports = {
     scopes: [
       {name: 'blog'},
       {name: 'theme'},
-      {name: 'plugin-seo'},
-      {name: 'plugin-clipboard'}
+      ...plugins
     ],
     allowBreakingChanges: ['feat', 'fix'],
     issuePrefixs: [
