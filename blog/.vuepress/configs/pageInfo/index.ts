@@ -21,6 +21,9 @@ export const headConfig: HeadConfig[] = [
   [ 'meta', { name: 'apple-mobile-web-app-title', content: 'VuePress' } ],
   [ 'meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' } ],
   [ 'meta', { name: 'msapplication-TileColor', content: '#f5a214' } ],
+  ['meta', { name: 'twitter:site', content: '@vuejs' }],
+  ['meta', { name: 'twitter:card', content: 'summary' }],
+  ['meta', { name: 'twitter:image', content: 'https://www.qbenben.com/images/logo.png' }],
   [ 'meta', { name: 'theme-color', content: '#f5a214' } ],
   [ 'meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' } ],
 
