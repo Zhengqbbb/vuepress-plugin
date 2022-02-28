@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 <p align="center">
     <a target="_blank" href="https://github.com/Zhengqbbb/cz-git">
-        <img src="https://user-images.githubusercontent.com/40693636/154064210-964aeaa0-d9dc-4cea-9e52-2ffc3789611b.png" alt="cz-git-logo" width="400" data-width="400" data-height="400">
+        <img src="https://tvax3.sinaimg.cn/large/6ccee0e1gy1gztggliurwj20m80b4tcd.jpg" alt="cz-git-logo" width="400" data-width="400" data-height="400">
     </a>
 </p>
 
@@ -73,7 +73,7 @@ sidebarDepth: 2
 
 一款工程性更强，高度自定义，标准输出格式的 [commitizen](https://github.com/commitizen/cz-cli) 适配器
 
-![demo-gif](https://user-images.githubusercontent.com/40693636/154906217-e0b1c5d0-9294-4072-8082-c0cdd9392023.gif)
+![demo-gif](https://tva3.sinaimg.cn/large/6ccee0e1gy1gztghb579ig21nm0k8dnw.gif)
 
 > 什么是commitizen：基于Node.js的 `git commit` 命令行工具，辅助生成标准化规范化的 commit message。<br>
 > 什么是适配器：更换 commitizen 命令行工具的**交互方式**插件。

@@ -2,11 +2,11 @@
 layout: Post
 title: cz-git 友好型 commitizen 的适配器
 description: 我的开发的心路历程 | cz-git 是一款commitizen adapter(适配器)，拥有高度自定义，针对gitee commit issue支持，支持emoji的commit，与commitlint配合检查，可以有效减少commit错误，达到commit标准化规范，可针对monorepo前端工程化工具。
-subtitle: 我的开发的心路历程
+subtitle: 为什么开发 cz-git
 author: qbenben
 date: 2022-02-27
 useHeaderImage: true
-headerImage: https://tvax4.sinaimg.cn/large/6ccee0e1gy1gzri3n2y6rj21uc0x648q.jpg
+headerImage: https://tvax3.sinaimg.cn/large/6ccee0e1gy1gztgf8axlfj21uc0x648q.jpg
 headerMask: rgba(95, 96, 99, .5)
 catalog: true
 permalinkPattern: /post/:year/:month/:day/:slug/
