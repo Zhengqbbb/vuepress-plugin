@@ -66,7 +66,7 @@ sidebarDepth: 2
   - [全局安装后无法找到命令](#全局安装后无法找到命令)
   - [终端无法显示Emoji符号](#终端无法显示emoji符号)
   - [为什么输出的 Emoji符号要放在 subject](#为什么输出的-emoji符号要放在-subject)
-- [版权](#版权)
+- [版权信息](#版权信息)
 
 <!-- /TOC -->
 
@@ -814,7 +814,7 @@ e.g: `scopes: [{value: "theme", name: "theme : 风格主题"}]` <br>
 ### 为什么输出的 Emoji符号要放在 subject
 - 我也知道会破坏最终输出格式的美观体验，但Emoji 放在 subject 是因为遵循 [Angular commit](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits) 规范不能放于 type 中
 
-## 版权
+## 版权信息
 MIT
 Copyright (c) 2022-present Qiubin Zheng <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)
 
