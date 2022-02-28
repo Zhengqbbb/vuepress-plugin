@@ -80,10 +80,10 @@ sidebarDepth: 2
 
 ## 特点
 
-- 友好型命令行工具，**“懒字优先”** ！支持在命令行搜索和选择，减少错误。
+- 友好型命令行工具，**“懒字优先”** ！支持在命令行搜索和选择，减少拼写错误。
 - **高度自定义**, 但输出格式遵循标准的 [Angular commit](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits) 规范。
-- [更好维护monorepo 工程化项目](#scopes) 与 **commitlint** 配合给予命令行的相关校验信息。
-- **减少拼写错误** | 更好的与issue链接，尤其 [gitee](#issuePrefixs) | ✅ 支持在 commit 中添加 **emoji**。
+- [更好维护 monorepo 工程化项目](#scopes) 与 **commitlint** 配合给予命令行的相关校验信息。
+- 更好的与issue链接，尤其 [gitee](#issuePrefixs) | ✅ 支持在 commit 中添加 **emoji**。
 
 ## 使用
 
@@ -466,69 +466,67 @@ module.exports = {
 
 ### JSON模板
 ::: tip
-推荐使用js进行配置文件，你可以结合`fs`和`path` 为生成动态模块选择[范围](#scopes)
+推荐在项目中使用JavaScript进行配置文件，你可以结合`fs`和`path` 为生成动态模块选择[范围](#scopes)
 :::
 
-::: details .commitlintrc.json json 配置模板
+::: details json 配置模板
 ```json
-// .czrc | package.json | .commitlintrc
+// .czrc | package.json | .commitlintrc(need "prompt" key)
 {
-  "prompt": {
-    "messages": {
-      "type": "Select the type of change that you're committing:",
-      "scope": "Denote the SCOPE of this change (optional):",
-      "customScope": "Denote the SCOPE of this change:",
-      "subject": "Write a SHORT, IMPERATIVE tense description of the change:\n",
-      "body": "Provide a LONGER description of the change (optional). Use \"|\" to break new line:\n",
-      "breaking": "List any BREAKING CHANGES (optional). Use \"|\" to break new line:\n",
-      "footerPrefixsSelect": "Select the ISSUES type of changeList by this change (optional):",
-      "customFooterPrefixs": "Input ISSUES Prefix:",
-      "footer": "List any ISSUES by this change. E.g.: #31, #34, #I972S:\n",
-      "confirmCommit": "Are you sure you want to proceed with the commit above ?"
-    },
-    "types": [
-      { "value": "feat", "name": "feat:     A new feature", "emoji": ":sparkles:" },
-      { "value": "fix", "name": "fix:      A bug fix", "emoji": ":bug:" },
-      { "value": "docs", "name": "docs:     Documentation only changes", "emoji": ":memo:" },
-      { "value": "style", "name": "style:    Changes that do not affect the meaning of the code", "emoji": ":lipstick:" },
-      { "value": "refactor", "name": "refactor: A code change that neither fixes a bug nor adds a feature", "emoji": ":recycle:" },
-      { "value": "perf", "name": "perf:     A code change that improves performance", "emoji": ":zap:" },
-      { "value": "test", "name": "test:     Adding missing tests or correcting existing tests", "emoji": ":white_check_mark:" },
-      { "value": "build", "name": "build:    Changes that affect the build system or external dependencies", "emoji": ":building_construction:" },
-      { "value": "ci", "name": "ci:       Changes to our CI configuration files and scripts", "emoji": ":green_heart:" },
-      { "value": "chore", "name": "chore:    Other changes that don't modify src or test files", "emoji": ":hammer:" },
-      { "value": "revert", "name": "revert:   Reverts a previous commit", "emoji": ":rewind:" }
-    ],
-    "useEmoji": false,
-    "scopes": [],
-    "allowCustomScopes": true,
-    "allowEmptyScopes": true,
-    "customScopesAlign": "bottom",
-    "customScopesAlias": "custom",
-    "emptyScopesAlias": "empty",
-    "allowBreakingChanges": ["feat", "fix"],
-    "upperCaseSubject": false,
-    "breaklineChar": "|",
-    "skipQuestions": [],
-    "issuePrefixs": [{ "value": "closed", "name": "closed:   ISSUES has been processed" }],
-    "customIssuePrefixsAlign": "top",
-    "emptyIssuePrefixsAlias": "skip",
-    "customIssuePrefixsAlias": "custom",
-    "confirmColorize": true,
-    "minSubjectLength": 0,
-    "defaultBody": "",
-    "defaultIssues": "",
-    "defaultScope": "",
-    "defaultSubject": ""
-  }
-};
+  "messages": {
+    "type": "Select the type of change that you're committing:",
+    "scope": "Denote the SCOPE of this change (optional):",
+    "customScope": "Denote the SCOPE of this change:",
+    "subject": "Write a SHORT, IMPERATIVE tense description of the change:\n",
+    "body": "Provide a LONGER description of the change (optional). Use \"|\" to break new line:\n",
+    "breaking": "List any BREAKING CHANGES (optional). Use \"|\" to break new line:\n",
+    "footerPrefixsSelect": "Select the ISSUES type of changeList by this change (optional):",
+    "customFooterPrefixs": "Input ISSUES Prefix:",
+    "footer": "List any ISSUES by this change. E.g.: #31, #34, #I972S:\n",
+    "confirmCommit": "Are you sure you want to proceed with the commit above ?"
+  },
+  "types": [
+    { "value": "feat", "name": "feat:     A new feature", "emoji": ":sparkles:" },
+    { "value": "fix", "name": "fix:      A bug fix", "emoji": ":bug:" },
+    { "value": "docs", "name": "docs:     Documentation only changes", "emoji": ":memo:" },
+    { "value": "style", "name": "style:    Changes that do not affect the meaning of the code", "emoji": ":lipstick:" },
+    { "value": "refactor", "name": "refactor: A code change that neither fixes a bug nor adds a feature", "emoji": ":recycle:" },
+    { "value": "perf", "name": "perf:     A code change that improves performance", "emoji": ":zap:" },
+    { "value": "test", "name": "test:     Adding missing tests or correcting existing tests", "emoji": ":white_check_mark:" },
+    { "value": "build", "name": "build:    Changes that affect the build system or external dependencies", "emoji": ":building_construction:" },
+    { "value": "ci", "name": "ci:       Changes to our CI configuration files and scripts", "emoji": ":green_heart:" },
+    { "value": "chore", "name": "chore:    Other changes that don't modify src or test files", "emoji": ":hammer:" },
+    { "value": "revert", "name": "revert:   Reverts a previous commit", "emoji": ":rewind:" }
+  ],
+  "useEmoji": false,
+  "scopes": [],
+  "allowCustomScopes": true,
+  "allowEmptyScopes": true,
+  "customScopesAlign": "bottom",
+  "customScopesAlias": "custom",
+  "emptyScopesAlias": "empty",
+  "allowBreakingChanges": ["feat", "fix"],
+  "upperCaseSubject": false,
+  "breaklineChar": "|",
+  "skipQuestions": [],
+  "issuePrefixs": [{ "value": "closed", "name": "closed:   ISSUES has been processed" }],
+  "customIssuePrefixsAlign": "top",
+  "emptyIssuePrefixsAlias": "skip",
+  "customIssuePrefixsAlias": "custom",
+  "confirmColorize": true,
+  "minSubjectLength": 0,
+  "defaultBody": "",
+  "defaultIssues": "",
+  "defaultScope": "",
+  "defaultSubject": ""
+}
 ```
 :::
 
 ### TypeScript模板
 :::warning
 不推荐使用 TypeScript 定义配置，因为**这会影响命令行工具启动速度** <br>
-并且使用js配置文件添加`@type` 注释可以很好提供在配置时的代码提示
+并且使用 js 配置文件添加`@type` 注释可以很好提供在配置时的代码提示
 :::
 
 ::: details .commitlintrc.ts 完整 默认 配置模板
@@ -600,7 +598,7 @@ export default config
 ### 显示相关
 #### messages
 - **描述** : 自定义命令行提问信息
-- **例子** : `messages: { type: "type: "选择你的提交**类型**" }`
+- **例子** : `messages: { type: "type: "选择你的提交类型:" }`
 
 #### types
 - **描述** : 自定义选择**类型**提示
@@ -766,29 +764,29 @@ e.g: `scopes: [{value: "theme", name: "theme : 风格主题"}]` <br>
 :::
 
 #### maxHeaderLength
-- 描述 : 定义commit message中的 header 长度, 给予在命令行中的校验信息
-- 类型 : `number`
-- 默认 : `Infinity`
-- 使用 : 当没有使用 commitlint 并要使用规范化时
+- **描述** : 定义commit message中的 header 长度, 给予在命令行中的校验信息
+- **类型** : `number`
+- **默认** : `Infinity`
+- **使用** : 当没有使用 commitlint 并要使用规范化时
 :::tip
 如果使用 commitlint 会自动读取 `header-max-length` 进行设置给予在命令行中的提示
 :::
 
 
 #### maxSubjectLength
-- 描述 : 定义commit message中的 subject 长度, 给予在命令行中的校验信息
-- 类型 : `number`
-- 默认 : `Infinity`
-- 使用 : 当没有使用 commitlint，并要使用规范化时
+- **描述** : 定义commit message中的 subject 长度, 给予在命令行中的校验信息
+- **类型** : `number`
+- **默认** : `Infinity`
+- **使用** : 当没有使用 commitlint，并要使用规范化时
 :::tip
 如果使用 commitlint 会自动读取 `subject-max-length` 进行设置给予在命令行中的提示 <br>
 当然如果可以只定义 `maxHeaderLength` 即可达到目的
 :::
 #### minSubjectLength
-- 描述 : 定义commit message中的 subject 长度, 给予在命令行中的校验信息
-- 类型 : `number`
-- 默认 : `0`
-- 使用 : 当没有使用 commitlint，并要使用规范化时
+- **描述** : 定义commit message中的 subject 长度, 给予在命令行中的校验信息
+- **类型** : `number`
+- **默认** : `0`
+- **使用** : 当没有使用 commitlint，并要使用规范化时
 :::tip
 如果使用 commitlint 会自动读取 `subject-min-length` 进行设置给予在命令行中的提示
 :::
@@ -809,7 +807,7 @@ e.g: `scopes: [{value: "theme", name: "theme : 风格主题"}]` <br>
 - 可以打开.zshrc 或者 .bashrc 将加载 nvm 先注释掉，重新开启终端检查
 
 ### 终端无法显示Emoji符号 | 为什么输出的 Emoji符号要放在 subject
-- 终端无法Emoji符号，大概率是因为你的终端emoji/unicode 字符支持较差，但是不影响提交
+- 终端无法Emoji符号，大概率是因为你的终端对于 emoji/unicode 字符支持较差，但是不影响提交
   因为最终输出提交的是 Emoji Code，可以考虑更换终端与[字体](https://github.com/ryanoasis/nerd-fonts)
 - 我也知道会破坏最终输出格式的美观体验，但Emoji 放在 subject 是因为遵循 [Angular commit](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits) 规范不能放于 type 中
 
