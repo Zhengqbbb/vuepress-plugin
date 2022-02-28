@@ -64,8 +64,9 @@ sidebarDepth: 2
   - [为什么做了这款插件](#为什么做了这款插件)
   - [windows 用户使用](#windows-用户使用)
   - [全局安装后无法找到命令](#全局安装后无法找到命令)
-  - [终端无法显示Emoji符号 | 为什么输出的 Emoji符号要放在 subject](#终端无法显示emoji符号--为什么输出的-emoji符号要放在-subject)
-- [版权](#版权)
+  - [终端无法显示Emoji符号](#终端无法显示emoji符号)
+  - [为什么输出的 Emoji符号要放在 subject](#为什么输出的-emoji符号要放在-subject)
+- [版权信息](#版权信息)
 
 <!-- /TOC -->
 
@@ -674,9 +675,8 @@ export default config
 - **默认** : `""`
 - **使用** : 当你想要命令行中出现的默认值只需要按下 "Enter" 键即可
 
-<Badge type="tip" text="提示" vertical="middle" /> 可以编写JavaScript逻辑利用回调返回相关输入的默认值<br>
+<Badge type="tip" text="提示" vertical="middle" /> 可以编写JavaScript逻辑利用回调返回相关输入的默认值<br>e.g : `defaultSubject: ()=> {return ...}`
 
-e.g : `defaultSubject: ()=> {return ...}`
 ### 工程化规范化相关
 #### scopes
 - **描述** : 自定义选择 **模块范围** 命令行显示信息
@@ -806,13 +806,13 @@ e.g: `scopes: [{value: "theme", name: "theme : 风格主题"}]` <br>
 - 大概率是因为使用 nvm 更改了 npm 的全局下载路径前缀
 - 可以打开.zshrc 或者 .bashrc 将加载 nvm 先注释掉，重新开启终端检查
 
-### 终端无法显示Emoji符号 | 为什么输出的 Emoji符号要放在 subject
+### 终端无法显示Emoji符号
 - 终端无法Emoji符号，大概率是因为你的终端对于 emoji/unicode 字符支持较差，但是不影响提交
   因为最终输出提交的是 Emoji Code，可以考虑更换终端与[字体](https://github.com/ryanoasis/nerd-fonts)
+### 为什么输出的 Emoji符号要放在 subject
 - 我也知道会破坏最终输出格式的美观体验，但Emoji 放在 subject 是因为遵循 [Angular commit](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits) 规范不能放于 type 中
 
-## 版权
-
+## 版权信息
 MIT
 Copyright (c) 2022-present Qiubin Zheng <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)
 
