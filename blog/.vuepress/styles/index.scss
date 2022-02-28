@@ -135,3 +135,12 @@ a {
 #docsearch-container .DocSearch-Button-Keys {
   display: none;
 }
+
+@media (max-width: 1023px) {
+  .sns-wrapper {
+    &.hide-on-mobile {
+      display: block !important;
+      width: 100vw;
+    }
+  }
+}

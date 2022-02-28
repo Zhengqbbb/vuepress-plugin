@@ -46,10 +46,16 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     description: "在代码世界里打怪升级的小靓仔",
     sns: {
       github: "Zhengqbbb",
+      twitter: "zhengqbbb",
       instagram: {
-        icon: "instagram",
-        iconScale: 0.9,
+        icon: "ri-instagram-line",
+        iconScale: 1.1,
         link: "https://www.instagram.com/qbqiubin/"
+      },
+      discord: {
+        icon: "si-discord",
+        iconScale: 1.2,
+        link: "https://discordapp.com/users/902369403818094593"
       },
       email: "zhengqbbb@gmail.com"
     }

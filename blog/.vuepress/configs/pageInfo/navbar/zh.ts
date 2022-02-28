@@ -3,19 +3,17 @@ import type { NavbarConfig } from "vuepress-theme-gungnir";
 export const zh: NavbarConfig = [
   {
     text: "首页",
-		icon: "fort-awesome",
+		icon: "fa-fort-awesome",
     link: "/"
   },
   {
     text: "标签",
-		icon: "tag",
+		icon: "fa-tag",
     link: "/tags/",
-		iconScale: 0.95
   },
   {
 		text: "文档",
-		icon: "book",
-    iconScale: 1.1,
+		icon: "ri-book-2-fill",
 		children: [
 			{
 				text: "打怪升级",
