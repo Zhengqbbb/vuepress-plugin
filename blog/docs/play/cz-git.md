@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 <p align="center">
     <a target="_blank" href="https://github.com/Zhengqbbb/cz-git">
-        <img src="https://tva3.sinaimg.cn/large/6ccee0e1gy1gztgn21x8zj21uc0x648q.jpg" alt="cz-git-logo" width="400" data-width="400" data-height="400">
+        <img src="https://user-images.githubusercontent.com/40693636/154064210-964aeaa0-d9dc-4cea-9e52-2ffc3789611b.png" alt="cz-git-logo" width="400" data-width="400" data-height="400">
     </a>
 </p>
 
