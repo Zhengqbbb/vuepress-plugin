@@ -6,7 +6,7 @@ subtitle: 为什么开发 cz-git
 author: qbenben
 date: 2022-02-27
 useHeaderImage: true
-headerImage: https://tvax3.sinaimg.cn/large/6ccee0e1gy1gztgf8axlfj21uc0x648q.jpg
+headerImage: https://tva3.sinaimg.cn/large/6ccee0e1gy1gztgn21x8zj21uc0x648q.jpg
 headerMask: rgba(95, 96, 99, .5)
 catalog: true
 permalinkPattern: /post/:year/:month/:day/:slug/
