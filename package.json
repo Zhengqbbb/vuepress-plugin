@@ -17,7 +17,7 @@
     "commit": "git cz"
   },
   "dependencies": {
-    "vuepress-theme-gungnir": "2.0.0-alpha.13"
+    "vuepress-theme-gungnir": "^2.0.0-alpha.13"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
