@@ -1,11 +1,21 @@
-# shellcheck shell=bash disable=SC1091,SC2034 #xsh
+# shellcheck shell=bash disable=SC1091,SC2034,SC2154 #xsh
 
 # Section: Arg
-xrc ui
 WORK_DIR="$(x wsroot)"
-# EndSection
+xrc ui
 
-# Section: Main
+# Section: Function
+install() {
+    param:dsl       '
+type:
+    Type = all update plugin clean
+options:
+    --p    "select target install command"        <>:Type
+'
+    param:run
+    install_"${p}"
+}
+
 use_npm_verison() {
 	[ -z "$(command -v nvm)" ] \
 		&& printf "%s\n" "Not command nvm" \
@@ -15,43 +25,39 @@ use_npm_verison() {
 	nvm use
 }
 
-if [ ! -d "$WORK_DIR/node_modules" ]; then
-    use_npm_verison && yarn install && x build plugin
-else
-	case "${1:=repo}" in
-		all)
-			rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
-			use_npm_verison && yarn install && x build plugin
-		;;
-		none)
-			:
-		;;
-		plugin)
-			shift; use_npm_verison && yarn add -D -W "$@"
-		;;
-		update|*)
-			ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
-			if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
-				rm -rf "$WORK_DIR/node_modules"
-				use_npm_verison && yarn install && x build plugin
-			else
-				use_npm_verison && yarn install && x build plugin
-			fi
-		;;
-	esac
-fi
-# EndSection
-
-# Section: Advise
-if ___x_cmd_is_suitable_advise_env; then
-		# init is advise keyword
-    x advise rm "install"
-    advise "install" - <<A
-{
-    "all": "--- delete lock file adn reinstall all dependencies",
-    "plugin": "--- yarn add dependencies",
-    "update": "--- update all dependencies"
+install_none() {
+	[ ! -d "$WORK_DIR/node_modules" ] && \
+		 use_npm_verison && yarn install && x build plugin
+	return 0
 }
-A
-fi
-# EndSection
+
+install_update() {
+	local ___X_CMD_UI_FORM_EXIT_STRATEGY="execute|exit"
+    ___x_cmd_ui_form "Are you sure you want to delete $(___x_cmd_ui bold "node_modules")" tf 1 = "yes" "no"
+	if [ "$tf" != "yes" ];then
+		rm -rf "$WORK_DIR/node_modules"
+		use_npm_verison && yarn install && x build plugin
+	else
+		use_npm_verison && yarn install && x build plugin
+	fi
+}
+
+install_plugin() {
+	shift; use_npm_verison && yarn add -D -W "$@"
+}
+
+install_all() {
+	rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
+	use_npm_verison && x build clean && yarn install && x build plugin
+}
+
+case "${1}" in
+    none)   		install_none     			;;
+    update)   	install_update    		;;
+    plugin)  		install_plugin "$@" 	;;
+    all)    		install_all       		;;
+    *)      		install           		;;
+esac
+
+# Section: Main
+

@@ -1,4 +1,4 @@
-# shellcheck shell=bash disable=SC1091,SC2034,SC2002 #xsh
+# shellcheck shell=bash disable=SC1091,SC2034,SC2002,SC2154 #xsh
 
 # Section: Arg
 xrc ui
@@ -10,91 +10,63 @@ TEMPLATE_PATH=$WORK_DIR/templates
 PACKAGE_VERSION=template-${BRANCH_INFO}-${COMMIT_ID}
 DOC_SEARCH_CONFIG_FILE=$WORK_DIR/blog/.vuepress/configs/docSearch/docSearchConfig.json
 WEB_SIT="www.qbenben.com"
-# EndSection
 
 # Section: Function
-build_doc() {
-	if [ -d "$TEMPLATE_PATH/$PACKAGE_VERSION" ];then
-		cd "$TEMPLATE_PATH" &&
-		rm -rf "${PACKAGE_VERSION}"* &&
-		cd "$WORK_DIR" || exit
-	fi
-	rm -rf "$DIST_PATH"
-	yarn docs:build &&
-	mkdir -p "$TEMPLATE_PATH" &&
-	cp -r "$DIST_PATH" "$TEMPLATE_PATH/${PACKAGE_VERSION}" &&
-	cd "$TEMPLATE_PATH" &&
-	zip -r "${PACKAGE_VERSION}.zip" "${PACKAGE_VERSION}" > /dev/null &&
-	if [ -f "$TEMPLATE_PATH/$PACKAGE_VERSION.zip" ];then
-		package_size="$(du -sh "$PACKAGE_VERSION" | awk '{ printf $1 }')"
-		printf "%s\n%s\n%s\n%s\n%s\n%s\n" \
-		"$(ui bold blue '----------------------------------------------------')"\
-		"$(ui bold green '🎉 Packaged successfully! 🎉')" \
-		"📦 The package version is $(ui bold cyan "$PACKAGE_VERSION")" \
-		"💼 The package address is $(ui bold yellow  underline "$TEMPLATE_PATH")" \
-		"📐 The package size is $(ui bold magenta "$package_size")" \
-		"$(ui bold blue '----------------------------------------------------')"
-	fi
-	cd "$WORK_DIR" || exit
+build() {
+    param:dsl       '
+type:
+    Type = all docs plugin clean
+options:
+    --p    "select target build command"        <>:Type
+'
+    param:run
+    build_"${p}"
 }
 
-clean_plugin() {
-	lerna run clean
+build_docs() {
+		if [ -d "$TEMPLATE_PATH/$PACKAGE_VERSION" ];then
+			cd "$TEMPLATE_PATH" &&
+			rm -rf "${PACKAGE_VERSION}"* &&
+			cd "$WORK_DIR" || exit
+		fi
+		rm -rf "$DIST_PATH"
+		yarn docs:build &&
+		mkdir -p "$TEMPLATE_PATH" &&
+		cp -r "$DIST_PATH" "$TEMPLATE_PATH/${PACKAGE_VERSION}" &&
+		cd "$TEMPLATE_PATH" &&
+		zip -r "${PACKAGE_VERSION}.zip" "${PACKAGE_VERSION}" > /dev/null &&
+		if [ -f "$TEMPLATE_PATH/$PACKAGE_VERSION.zip" ];then
+			package_size="$(du -sh "$PACKAGE_VERSION" | awk '{ printf $1 }')"
+			printf "%s\n%s\n%s\n%s\n%s\n%s\n" \
+			"$(ui bold blue '----------------------------------------------------')"\
+			"$(ui bold green '🎉 Packaged successfully! 🎉')" \
+			"📦 The package version is $(ui bold cyan "$PACKAGE_VERSION")" \
+			"💼 The package address is $(ui bold yellow  underline "$TEMPLATE_PATH")" \
+			"📐 The package size is $(ui bold magenta "$package_size")" \
+			"$(ui bold blue '----------------------------------------------------')"
+		fi
+		cd "$WORK_DIR" || exit
+}
+
+build_clean() {
+		npx lerna run clean
 }
 
 build_plugin() {
-   nvm use && lerna run build && lerna bootstrap
-}
-###
-  # 运行docSearch docker建立搜索索引
-  # 根目录需建立.env文件：https://www.algolia.com/apps/CXZ8IP0O5G/api-keys/all
-  # APPLICATION_ID=your APPLICATION_ID
-  # API_KEY=your API_KEY
-###
-build_docSearch() {
-	local env_file_path="$WORK_DIR/.env"
-  	[ ! -f "$env_file_path" ] && echo 'APPLICATION_ID=your_algolia_application_id' >> "$env_file_path" && echo 'APPLICATION_ID=your_algolia_api_key' >> "$env_file_path" && return
-	docker run -it --env-file=.env -e "CONFIG=$(cat "${DOC_SEARCH_CONFIG_FILE}" | x jq -r tostring)" algolia/docsearch-scraper
+		npx lerna run build
 }
 
-build_theme() {
-  cd "$WORK_DIR/vuepress-theme-gungnir/packages/theme/" &&
-	yarn clean &&
-	yarn build &&
-	yarn copy &&
-	cp -r "$WORK_DIR/vuepress-theme-gungnir/packages/theme/lib" "$WORK_DIR/node_modules/vuepress-theme-gungnir"
-	cd "$WORK_DIR" || exit
+build_all() {
+		build_clean
+		build_plugin
+		build_docs
 }
-
-is_need_search_collect() {
-	ui prompt "$(ui bold green 'Is need to update seach console (y/N)')" _IS_NEED
-	if [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
-		x collect
-	fi
-}
-# EndSection
 
 # Section: Main
 case "${1}" in
-	plugin) 								build_plugin 																	;;
-	clean) 									clean_plugin 																	;;
-	theme) 									build_theme																		;;
-	search|docSearch)				build_docSearch && is_need_search_collect 		;;
-	doc|*)									build_doc																			;;
+    docs)   	build_docs      ;;
+    plugin)   build_plugin    ;;
+    clean)  	build_clean     ;;
+    all)    	build_all       ;;
+    *)      	build           ;;
 esac
-# EndSection
-
-# Section: Advise
-if ___x_cmd_is_suitable_advise_env; then
-    x advise rm "build"
-    advise "build" - <<A
-{
-    "plugin": "--- build the plugin And link node_modules",
-    "clean": "--- clean plugins build file",
-    "theme": "--- build the theme And link node_modules",
-    "search": "--- build the algolia document search index",
-    "doc": "--- build the doc",
-}
-A
-fi
-# EndSection
