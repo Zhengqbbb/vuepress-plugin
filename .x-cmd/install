@@ -8,7 +8,7 @@ xrc ui
 install() {
     param:dsl       '
 type:
-    Type = all update plugin clean
+    Type = all update plugin
 options:
     --p    "select target install command"        <>:Type
 '
@@ -25,39 +25,39 @@ use_npm_verison() {
 	nvm use
 }
 
-install_none() {
-	[ ! -d "$WORK_DIR/node_modules" ] && \
-		 use_npm_verison && yarn install && x build plugin
-	return 0
-}
-
-install_update() {
-	local ___X_CMD_UI_FORM_EXIT_STRATEGY="execute|exit"
-    ___x_cmd_ui_form "Are you sure you want to delete $(___x_cmd_ui bold "node_modules")" tf 1 = "yes" "no"
-	if [ "$tf" != "yes" ];then
-		rm -rf "$WORK_DIR/node_modules"
-		use_npm_verison && yarn install && x build plugin
-	else
-		use_npm_verison && yarn install && x build plugin
-	fi
+install_all() {
+	rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
+	use_npm_verison && yarn install && x build clean && x build plugin && rm_react_type
 }
 
 install_plugin() {
 	shift; use_npm_verison && yarn add -D -W "$@"
 }
 
-install_all() {
-	rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
-	use_npm_verison && x build clean && yarn install && x build plugin
+install_update() {
+	local ___X_CMD_UI_FORM_EXIT_STRATEGY="execute|exit"
+    ___x_cmd_ui_form "Are you sure you want to delete $(___x_cmd_ui bold "node_modules")" tf 1 = "yes" "no"
+	if [ "$tf" != "yes" ];then
+		use_npm_verison && yarn install && x build plugin && rm_react_type
+	else
+		rm -rf "$WORK_DIR/node_modules"
+		use_npm_verison && yarn install && x build clean && x build plugin && rm_react_type
+	fi
 }
 
+install_none() {
+	[ ! -d "$WORK_DIR/node_modules" ] && \
+		 use_npm_verison && yarn install && x build clean &&  x build plugin && rm_react_type
+	return 0
+}
+
+# Section: Main
+
 case "${1}" in
-    none)   		install_none     			;;
-    update)   	install_update    		;;
+    none)   		install_none     		;;
+    update)   		install_update    		;;
     plugin)  		install_plugin "$@" 	;;
     all)    		install_all       		;;
     *)      		install           		;;
 esac
-
-# Section: Main
 

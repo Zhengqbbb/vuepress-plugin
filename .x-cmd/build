@@ -24,42 +24,42 @@ options:
 }
 
 build_docs() {
-		if [ -d "$TEMPLATE_PATH/$PACKAGE_VERSION" ];then
-			cd "$TEMPLATE_PATH" &&
-			rm -rf "${PACKAGE_VERSION}"* &&
-			cd "$WORK_DIR" || exit
-		fi
-		rm -rf "$DIST_PATH"
-		yarn docs:build &&
-		mkdir -p "$TEMPLATE_PATH" &&
-		cp -r "$DIST_PATH" "$TEMPLATE_PATH/${PACKAGE_VERSION}" &&
+	if [ -d "$TEMPLATE_PATH/$PACKAGE_VERSION" ];then
 		cd "$TEMPLATE_PATH" &&
-		zip -r "${PACKAGE_VERSION}.zip" "${PACKAGE_VERSION}" > /dev/null &&
-		if [ -f "$TEMPLATE_PATH/$PACKAGE_VERSION.zip" ];then
-			package_size="$(du -sh "$PACKAGE_VERSION" | awk '{ printf $1 }')"
-			printf "%s\n%s\n%s\n%s\n%s\n%s\n" \
-			"$(ui bold blue '----------------------------------------------------')"\
-			"$(ui bold green '🎉 Packaged successfully! 🎉')" \
-			"📦 The package version is $(ui bold cyan "$PACKAGE_VERSION")" \
-			"💼 The package address is $(ui bold yellow  underline "$TEMPLATE_PATH")" \
-			"📐 The package size is $(ui bold magenta "$package_size")" \
-			"$(ui bold blue '----------------------------------------------------')"
-		fi
+		rm -rf "${PACKAGE_VERSION}"* &&
 		cd "$WORK_DIR" || exit
+	fi
+	rm -rf "$DIST_PATH"
+	yarn docs:build &&
+	mkdir -p "$TEMPLATE_PATH" &&
+	cp -r "$DIST_PATH" "$TEMPLATE_PATH/${PACKAGE_VERSION}" &&
+	cd "$TEMPLATE_PATH" &&
+	zip -r "${PACKAGE_VERSION}.zip" "${PACKAGE_VERSION}" > /dev/null &&
+	if [ -f "$TEMPLATE_PATH/$PACKAGE_VERSION.zip" ];then
+		package_size="$(du -sh "$PACKAGE_VERSION" | awk '{ printf $1 }')"
+		printf "%s\n%s\n%s\n%s\n%s\n%s\n" \
+		"$(ui bold blue '----------------------------------------------------')"\
+		"$(ui bold green '🎉 Packaged successfully! 🎉')" \
+		"📦 The package version is $(ui bold cyan "$PACKAGE_VERSION")" \
+		"💼 The package address is $(ui bold yellow  underline "$TEMPLATE_PATH")" \
+		"📐 The package size is $(ui bold magenta "$package_size")" \
+		"$(ui bold blue '----------------------------------------------------')"
+	fi
+	cd "$WORK_DIR" || exit
 }
 
 build_clean() {
-		npx lerna run clean
+	npx lerna run clean
 }
 
 build_plugin() {
-		npx lerna run build
+	npx lerna run build
 }
 
 build_all() {
-		build_clean
-		build_plugin
-		build_docs
+	build_clean
+	build_plugin
+	build_docs
 }
 
 # Section: Main
