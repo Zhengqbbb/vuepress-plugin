@@ -13,6 +13,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     bundler: bunderInfo.bundler,
 
     plugins: [
+        pagePlugins.vuepressSearchPlugin,
         pagePlugins.codeCopyPlugin,
         pagePlugins.searchConsolePlugin,
     ],

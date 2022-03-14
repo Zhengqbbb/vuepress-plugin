@@ -36,7 +36,7 @@ export const vuepressSearchPlugin: PluginConfig = [
     "@vuepress/plugin-search",
     {
         // 排除首页
-        isSearchable: (page: Page) => page.path !== "/",
+        isSearchable: (page: Page) => !["Tags", "Links", "HomePage"].includes(page.frontmatter.layout as string),
         locales: {
             "/": {
                 placeholder: "搜索",

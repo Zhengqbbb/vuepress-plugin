@@ -20,6 +20,7 @@
     "vuepress-theme-gungnir": "^2.0.0-alpha.13"
   },
   "devDependencies": {
+    "@vuepress/plugin-search": "^2.0.0-beta.35",
     "@commitlint/cli": "^13.2.1",
     "anywhere": "^1.5.0",
     "cpx2": "^4.1.2",

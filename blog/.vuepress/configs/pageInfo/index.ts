@@ -14,9 +14,6 @@ export const title = `Qbenben`
 export const description = 'Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔'
 export const headConfig: HeadConfig[] = [
   [ 'meta', { name: 'google-site-verification', content: 'bmaXCuUg4k9-nZLe3yIz1yQb0WO4_h8wHhkhBOl3Dec' } ],
-  [ 'meta', { name: 'sogou_site_verification', content: 'i6UNjrUzGB' } ],
-  [ 'meta', { name: '360-site-verification', content: '80dcc3bdc9e87d53b8636b2944d73092' } ],
-  [ 'meta', { name: 'bytedance-verification-code', content: 'VjfOT0+iYOjKyLYAmvTi' } ],
   [ 'meta', { name: 'application-name', content: 'Qbenben' } ],
   [ 'meta', { name: 'apple-mobile-web-app-title', content: 'VuePress' } ],
   [ 'meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' } ],
@@ -163,5 +160,6 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
   logo: '/images/logo.png',
   docsRepo: 'https://github.com/Zhengqbbb/vuepress-next-template',
   editLinkPattern: ':repo/',
+  search: false
 }
 
