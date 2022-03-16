@@ -19,7 +19,7 @@ tags:
 
 <!-- more -->
 ## 整体效果
-![整体效果](https://tva3.sinaimg.cn/large/6ccee0e1gy1gyao2urxjwj22yo1mmx6q.jpg)
+![整体效果](https://user-images.githubusercontent.com/40693636/158596979-75c4b2ab-82b1-45dd-833c-7ffc1f37abb6.png)
 
 ## 插件篇
 
@@ -102,14 +102,14 @@ A
 while read -r s; do
   code --install-extension "$s" --force
 done <<A
-zhuangtongfa.material-theme
+Zhengqbbb.vitesse-qb-vscode-theme
 PKief.material-icon-theme
 A
 ```
 :::
 
-**One Dark Pro**
-: 来自Atom中的dark主题 | 吸血鬼主题
+**vitesse-qb**
+:  主题是我 fork 了 [vitesse](https://github.com/antfu/vscode-theme-vitesse) 并自己做了一些改动
 
 **Material Icon Theme**
 : 文件图标
