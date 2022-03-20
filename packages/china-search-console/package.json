@@ -4,9 +4,9 @@
   "description": "VuePress plugin - China search console",
   "keywords": [
     "vuepress-plugin",
+    "baidu-tongji",
     "vuepress2",
     "vuepress2-plugin",
-    "baidu-tongji",
     "baidu-analytics",
     "baidu-auto-push",
     "360-auto-push",
