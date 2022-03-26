@@ -14,10 +14,6 @@ tags:
   - 折腾记录
 ---
 
-
-记录留痕自己VS Code常用的插件，以及share配置
-
-<!-- more -->
 ## 整体效果
 ![整体效果](https://user-images.githubusercontent.com/40693636/158596979-75c4b2ab-82b1-45dd-833c-7ffc1f37abb6.png)
 

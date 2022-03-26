@@ -14,10 +14,6 @@ tags:
   - 折腾记录
 ---
 
-
-记录留痕自己VS Code常用的插件，以及share配置
-
-<!-- more -->
 ## 1. Git
 
 1. 通过homebrew安装Git

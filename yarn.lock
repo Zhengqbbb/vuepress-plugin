@@ -2847,7 +2847,7 @@
     vue "^3.2.28"
     workbox-build "^6.4.2"
 
-"@vuepress/plugin-search@^2.0.0-beta.35":
+"@vuepress/plugin-search@^2.0.0-beta.36":
   version "2.0.0-beta.36"
   resolved "https://registry.npmjs.org/@vuepress/plugin-search/-/plugin-search-2.0.0-beta.36.tgz#4b8219514ae704919cc31d227d571dc06eefa9fd"
   integrity sha512-UMtWH5h9wXiZgram2w5m/4Ni5R/8w+G/r22pBdBuqB1KMOUO473EmgOWgxqAsT3DLvOgevfmxQvp/OcEQv9Esw==
@@ -4079,7 +4079,7 @@ cosmiconfig@^7, cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
-cpx2@^4.1.2:
+cpx2@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmjs.org/cpx2/-/cpx2-4.2.0.tgz#d65c52fc1e804f6567f57868cd1e88aaab367316"
   integrity sha512-Ik81d7J849x0dGpR/8TBLXc1MwkFuv29kkstgLau8IOQwptrEENsXefC4o+tnkTjiFnXbsaz08/6YSZdJER+nQ==
@@ -4172,7 +4172,7 @@ csstype@^2.6.8:
   resolved "https://registry.npmjs.org/csstype/-/csstype-2.6.20.tgz#9229c65ea0b260cf4d3d997cb06288e36a8d6dda"
   integrity sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==
 
-cz-git@^1.0.5:
+cz-git@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/cz-git/-/cz-git-1.2.1.tgz#6fd4d606f59a185f9e5b7de59fab90d9c1fbea1f"
   integrity sha512-3oojecl1aIlUf4RT74Jxi74Ri0naxbHWON2KsE/kF+HMDz3kec7+rFSz/aAkXpCsGtCn1BsXpAaebe3Abeo7+w==
@@ -9778,7 +9778,7 @@ vuepress-plugin-giscus@2.0.0-alpha.16:
   dependencies:
     "@vuepress/client" "2.0.0-beta.35"
 
-vuepress-theme-gungnir@^2.0.0-alpha.13:
+vuepress-theme-gungnir@^2.0.0-alpha.18:
   version "2.0.0-alpha.18"
   resolved "https://registry.npmjs.org/vuepress-theme-gungnir/-/vuepress-theme-gungnir-2.0.0-alpha.18.tgz#c478bee7f03f9a1e0ded95f1aa5acac5c18cf0de"
   integrity sha512-cKPfQo2zx2pJ3wp1m2acYzDu8sNu4ZTY+Yfxe0UlSKbqNVu8jzlGA6wSOdDb6Igl9Q3xQ0cRTDdb3R8lwvZbkg==
@@ -9845,7 +9845,7 @@ vuepress-webpack@2.0.0-beta.35:
     "@vuepress/core" "2.0.0-beta.35"
     "@vuepress/theme-default" "2.0.0-beta.35"
 
-vuepress@^2.0.0-beta.35:
+vuepress@^2.0.0-beta.36:
   version "2.0.0-beta.36"
   resolved "https://registry.npmjs.org/vuepress/-/vuepress-2.0.0-beta.36.tgz#e620ee1d7ebfff2fa755aaaab858adbc39c362e6"
   integrity sha512-EObFjxn91cMRZ+9cgDGjKaTHaCH4NChMqUIGRnPTrIlJfKa4eX4aS0GzPtHSy+L1fKgNnDyUq67fW8q3hrHVjA==

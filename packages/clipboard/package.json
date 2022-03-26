@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-clipboard",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Vuepress2 plugin - code clipboard",
   "keywords": [
     "vuepress-plugin",

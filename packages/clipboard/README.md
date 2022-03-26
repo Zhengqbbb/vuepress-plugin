@@ -1,6 +1,8 @@
 # vuepress-plugin-clipboard
 
 <p>
+<a href="https://github.com/vuepress/awesome-vuepress/blob/main/v2.md#community-plugins">
+<img style="display: inline-block;margin-right: 0.4rem;" alt="awesome-vuepress" src="https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"/>
 <a href="https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/main/packages/clipboard">
 <img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/github/stars/zhengqbbb/zhengqbbb.github.io?style=social"/>
 </a>
