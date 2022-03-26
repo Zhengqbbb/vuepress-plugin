@@ -3,6 +3,11 @@ import { addIcons } from "oh-vue-icons";
 import About from "./components/About.vue"
 
 import {
+  BiGit,
+  RiChromeFill,
+  ViFileTypeVscode,
+  BiTerminalFill,
+  BiApple,
   SiDiscord,
   RiInstagramLine,
   CoGit,
@@ -19,6 +24,11 @@ import {
 } from "oh-vue-icons/icons";
 
 addIcons(
+  BiGit,
+  RiChromeFill,
+  ViFileTypeVscode,
+  BiTerminalFill,
+  BiApple,
   SiDiscord,
   RiInstagramLine,
   RiBilibiliLine,

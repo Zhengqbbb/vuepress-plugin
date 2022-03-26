@@ -1,10 +1,10 @@
 import type { HeadConfig, AppOptions } from 'vuepress'
-import { path } from '@vuepress/utils';
 import type { GungnirThemeOptions } from "vuepress-theme-gungnir";
 import * as navbar from './navbar'
 import * as sidebar from './sidebar'
 
 const isProd = process.env.NODE_ENV === "production";
+
 export const lang = 'zh-CN'
 
 export const base = `/`
@@ -12,6 +12,7 @@ export const base = `/`
 export const title = `Qbenben`
 
 export const description = 'Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔'
+
 export const headConfig: HeadConfig[] = [
   [ 'meta', { name: 'google-site-verification', content: 'bmaXCuUg4k9-nZLe3yIz1yQb0WO4_h8wHhkhBOl3Dec' } ],
   [ 'meta', { name: 'application-name', content: 'Qbenben' } ],
@@ -50,7 +51,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
   personalInfo: {
     name: "Qbenben",
     avatar: "/images/avatar.png",
-    description: "在代码世界里打怪升级的小靓仔",
+    description: "🤯 > /dev/null",
     sns: {
       github: "Zhengqbbb",
       twitter: "zhengqbbb",
