@@ -1,5 +1,6 @@
 # vuepress-qbenben-blog
 
+[![awesome-vuepress](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/vuepress/awesome-vuepress/blob/main/v2.md#projects-using-vuepressv2)
 [![vuepress-theme-gungnir](https://img.shields.io/badge/Vuepress--theme-Gungnir--V2-lightgrey?logo=vuedotjs&color=blue)](https://github.com/Renovamen/vuepress-theme-gungnir)
 
 - Base Vuepress-next
