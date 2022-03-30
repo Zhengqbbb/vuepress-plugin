@@ -1,6 +1,7 @@
 import { defineClientAppEnhance } from "@vuepress/client";
 import { addIcons } from "oh-vue-icons";
-import About from "./components/About.vue"
+import { IVuepress } from "./configs/icons";
+import About from "./components/About.vue";
 
 import {
   BiGit,
@@ -41,7 +42,8 @@ addIcons(
   RiGithubLine,
   OiGitCompare,
   OiRocket,
-  RiSailboatLine
+  RiSailboatLine,
+  IVuepress
 );
 
 export default defineClientAppEnhance(({ app }) => {

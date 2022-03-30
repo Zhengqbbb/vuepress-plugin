@@ -7,40 +7,47 @@ sidebarDepth: 0
 ---
 
 ## 常年捣鼓积累经验分享
+<div class="link-container">
 
-::: link [bi-apple](/docs/play/mac.html)
+::: link {bi-apple} [Mac初始化配置以及分享](/docs/play/mac.html)
 记录自己Mac常用的软件
 :::
 
-::: link [vi-file-type-vscode](/docs/play/vscode.html)
+::: link {vi-file-type-vscode} [VSCode插件以及配置分享](/docs/play/vscode.html)
 记录自己VSCode常用插件以及配置分享
 :::
 
-::: link [ri-chrome-fill](/docs/play/chrome.html)
+::: link {ri-chrome-fill} [Chrome插件分享](/docs/play/chrome.html)
 WIP: 记录自己谷歌浏览器常用插件
 :::
 
-::: link [bi-terminal-fill](/docs/play/terminal.html)
+::: link {bi-terminal-fill} [终端配置分享](/docs/play/terminal.html)
 WIP: 记录自己终端配置设置
 :::
 
+</div>
+
 ## 捣鼓插件文档
 
+<div class="link-container">
+
 ::: link {bi-git} [cz-git](/docs/play/cz-git.html)
-一款工程性更强，高度自定义，标准输出格式的 commitizen 适配器
+一款工程性更强，高度自定义，输出标准格式的 commitizen 适配器
 :::
 
 ::: link {bi-terminal-fill} [qb](/docs/play/terminal.html)
-🚀 qb 是一款轻量级简洁的终端插件, 🌕 可以让你在终端中查看币安生态链上的币价，也可以帮助你管理你的本地的币安链信息，并且国内用户可以方便管理和使用终端代理.
+🚀 qb 是一款轻量级简洁的终端插件, 🌕 在终端中查看币安生态链上的币价
 :::
 
-::: link {https://vuepress.vuejs.org/hero.png} [Vuepress Plugin —— Code Clipboard](/docs/play/vuepress-plugin-clipboard.html)
-Vuepress2 插件：添加代码块复制按钮，代码一键复制
+::: link {i-vuepress} [Vuepress Plugin —— Code Clipboard](/docs/play/vuepress-plugin-clipboard.html)
+Vuepress2 插件：生成代码块复制按钮，代码一键复制
 :::
 
-::: link {https://vuepress.vuejs.org/hero.png} [Vuepress Plugin —— China Search Console](/docs/play/vuepress-plugin-china-search-console.html)
-Vuepress2 插件 - 针对Vuepress2的国内搜索引擎的SEO增强：包含 百度统计，页面自动推送百度收录，页面自动推送360搜索收录, 页面自动推送头条搜索收录。
+::: link {i-vuepress} [Vuepress Plugin —— China Search Console](/docs/play/vuepress-plugin-china-search-console.html)
+Vuepress2 插件：百度统计，页面自动推送百度收录，页面自动推送360搜索收录, 页面自动推送头条搜索收录。
 :::
+
+</div>
 
 <br>
 <br>

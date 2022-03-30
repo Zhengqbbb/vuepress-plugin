@@ -3,6 +3,10 @@ import type { SidebarConfig } from "vuepress-theme-gungnir";
 export const zh: SidebarConfig = {
   '/docs/play/': [
     {
+      text: '捣鼓归档',
+      link: "/docs/play/README.md"
+    },
+    {
       text: '捣鼓分享',
       children: [
         "/docs/play/mac.md",
