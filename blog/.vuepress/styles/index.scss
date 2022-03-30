@@ -98,28 +98,36 @@ html.dark .DocSearch {
   }
 }
 
-@media (max-width: 719px) {
-  .DocSearch-Button {
-    border-radius: 6px !important;
-  }
-}
-
-// sns
-@media (max-width: 1023px) {
-  .sns-wrapper {
-    &.hide-on-mobile {
-      display: block !important;
-      width: 100vw;
-    }
-  }
-}
-
 // link
 .link-container {
   display: flex;
   flex-wrap: wrap;
 	.link {
 		width: 40%;
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 719px) {
+  .DocSearch-Button {
+    border-radius: 6px !important;
+  }
+  .link-container .link {
+		width: 70%;
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 1023px) {
+  // sns
+  .sns-wrapper {
+    &.hide-on-mobile {
+      display: block !important;
+      width: 100vw;
+    }
+  }
+  .link-container .link {
+		width: 50%;
 		margin-left: 10px;
 	}
 }
