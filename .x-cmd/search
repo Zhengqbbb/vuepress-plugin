@@ -29,7 +29,7 @@ search_all() {
     search_google
     search_baidu
     search_bing
-    # search_docsearch
+    search_docsearch
 }
 
 search_google() {
