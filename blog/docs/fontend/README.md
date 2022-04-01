@@ -6,11 +6,13 @@ lastUpdated: true
 sidebarDepth: 0
 ---
 
-## 前端日常记录：
+## 前端日常记录
 
+## 前端工程化分享
 
-## 前端工程化分享：
-- [husky](/docs/fontend/husky): 添加项目的 git hooks
+::: link {gi-hook} [husky](/docs/fontend/husky.html)
+新版 husky 配置与 Git Hooks 剖析
+:::
 
 <br>
 <br>

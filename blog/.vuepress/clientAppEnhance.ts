@@ -21,10 +21,12 @@ import {
   RiBook2Fill,
   RiGithubLine,
   RiSailboatLine,
-  RiVuejsLine
+  RiVuejsLine,
+  GiHook
 } from "oh-vue-icons/icons";
 
 addIcons(
+  GiHook,
   BiGit,
   RiChromeFill,
   ViFileTypeVscode,
