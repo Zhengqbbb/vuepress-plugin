@@ -24,7 +24,7 @@ module.exports = {
       {value: 'docs',     name: 'docs:     文档更新 | Documentation only changes'},
       {value: 'feat',     name: 'feat:     新增功能 | A new feature'},
       {value: 'fix',      name: 'fix:      修复缺陷 | A bug fix'},
-      {value: 'style',    name: 'style:    样式更改 | Changes that do not affect the meaning of the code'},
+      {value: 'style',    name: 'style:    代码样式 | Changes that do not affect the meaning of the code'},
       {value: 'refactor', name: 'refactor: 代码重构 | A code change that neither fixes a bug nor adds a feature'},
       {value: 'perf',     name: 'perf:     性能提升 | A code change that improves performance'},
       {value: 'test',     name: 'test:     测试相关 | Adding missing tests or correcting existing tests'},
@@ -38,10 +38,6 @@ module.exports = {
       {name: 'theme'},
       ...plugins
     ],
-    allowBreakingChanges: ['feat', 'fix'],
-    issuePrefixs: [
-      { value: "link", name: "link:     关联issue | processing to ISSUES" },
-      { value: "closed", name: "closed:   关闭issue | ISSUES has been processed" }
-    ]
+    skipQuestions: ["body", "breaking"]
   }
 };

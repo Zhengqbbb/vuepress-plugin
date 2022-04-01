@@ -1,5 +1,6 @@
 import type { HeadConfig, AppOptions } from 'vuepress'
 import type { GungnirThemeOptions } from "vuepress-theme-gungnir";
+import { i18n } from "vuepress-theme-gungnir";
 import * as navbar from './navbar'
 import * as sidebar from './sidebar'
 
@@ -97,7 +98,8 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
       all: true
     },
     ga: "G-8R2K3ZRCY6",
-    pwa: true
+    pwa: true,
+    search: false
   },
   footer: `
     &copy; <a href="https://github.com/Zhengqbbb" target="_blank">Zhengqbbb</a> 2021-2022
@@ -124,43 +126,15 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     }
   },
   locales: {
-    // "/en/": {
-      // navbar: navbar.en,
-      // sidebar: sidebar.en,
-      // editLinkText: "Edit this page on GitHub"
-    // },
     "/": {
       navbar: navbar.zh,
       sidebar: sidebar.zh,
-      selectLanguageName: "简体中文",
-      selectLanguageText: "选择语言",
-      selectLanguageAriaLabel: "选择语言",
-      editLink: false,
-      editLinkText: "在 GitHub 上编辑此页",
-      lastUpdatedText: "上次更新",
-      contributorsText: "贡献者",
-      tagsText: "标签",
-      linksText: "链接",
-      info: "信息",
-      tip: "提示",
-      warning: "注意",
-      danger: "警告",
-      notFound: [
-        "这里什么都没有",
-        "我们怎么到这来了？",
-        "这是一个 404 页面",
-        "看起来我们进入了错误的链接"
-      ],
-      backToHome: "$ cd /home/",
-      openInNewWindow: "在新窗口打开",
-      toggleDarkMode: "切换夜间模式",
-      toggleSidebar: "切换侧边栏"
+      ...i18n.zh
     }
   },
   sidebarDepth: 1,
   logo: '/images/logo.png',
   docsRepo: 'https://github.com/Zhengqbbb/vuepress-next-template',
-  editLinkPattern: ':repo/',
-  search: false
+  editLinkPattern: ':repo/'
 }
 
