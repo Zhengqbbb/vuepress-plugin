@@ -45,9 +45,9 @@ export const headConfig: HeadConfig[] = [
 ]
 
 export const themeConfig: Partial<GungnirThemeOptions> = {
-  repo: 'https://github.com/Zhengqbbb/',
+  docsRepo: 'Zhengqbbb/zhengqbbb.github.io',
   docsDir: 'blog',
-  docsBranch: 'blog',
+  contributors: true,
   hitokoto: "https://v1.hitokoto.cn?c=d&c=i", // enable hitokoto (一言) or not?
   personalInfo: {
     name: "Qbenben",
@@ -92,7 +92,8 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
       repo: "Zhengqbbb/zhengqbbb.github.io",
       repoId: "MDEwOlJlcG9zaXRvcnkxODM4OTUyNTQ",
       category: "Announcements",
-      categoryId: "DIC_kwDOCvYE1s4CAdr1"
+      categoryId: "DIC_kwDOCvYE1s4CAdr1",
+      lazyLoad: true
     },
     mdPlus: {
       all: true
@@ -133,8 +134,6 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     }
   },
   sidebarDepth: 1,
-  logo: '/images/logo.png',
-  docsRepo: 'https://github.com/Zhengqbbb/vuepress-next-template',
-  editLinkPattern: ':repo/'
+  logo: '/images/logo.png'
 }
 
