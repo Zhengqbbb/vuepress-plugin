@@ -35,7 +35,7 @@ WIP: 记录自己终端配置设置
 一款工程性更强，高度自定义，输出标准格式的 commitizen 适配器
 :::
 
-::: link {bi-terminal-fill} [qb](/docs/play/terminal.html)
+::: link {bi-terminal-fill} [qb](/docs/play/terminal-plugin-qb.html)
 🚀 qb 是一款轻量级简洁的终端插件, 🌕 在终端中查看币安生态链上的币价
 :::
 
