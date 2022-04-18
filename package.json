@@ -18,7 +18,7 @@
     "commit": "git cz"
   },
   "dependencies": {
-    "vuepress-theme-gungnir": "^2.0.0-alpha.19"
+    "vuepress-theme-gungnir": "2.0.0-alpha.21"
   },
   "devDependencies": {
     "@vuepress/plugin-docsearch": "2.0.0-beta.38",

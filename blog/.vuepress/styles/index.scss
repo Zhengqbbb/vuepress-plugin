@@ -22,14 +22,6 @@ a {
   // brand colors
   --c-brand: #f08d49;
   --c-brand-light: #f08d49;
-
-  // plugin-pwa-popup
-  --pwa-popup-z-index: 40 !important;
-  --pwa-popup-bg-color: var(--c-bg-transparent) !important;
-  --pwa-popup-border-color: var(--c-border-sub) !important;
-  --pwa-popup-shadow: none !important;
-  --pwa-popup-btn-bg-color: #377bb5 !important;
-  --pwa-popup-btn-hover-bg-color: rgba(55, 123, 181, 0.8) !important;
 }
 
 html.dark {

@@ -2764,7 +2764,7 @@
     markdown-it "^12.3.2"
     markdown-it-container "^3.0.0"
 
-"@vuepress/plugin-docsearch@^2.0.0-beta.38":
+"@vuepress/plugin-docsearch@2.0.0-beta.38":
   version "2.0.0-beta.38"
   resolved "https://registry.npmjs.org/@vuepress/plugin-docsearch/-/plugin-docsearch-2.0.0-beta.38.tgz#9bbb98b1007ece4be3ae26a7afc9f9f9dfe84291"
   integrity sha512-gn+SsaoD74iPdPInvLwSVkIbfoEnPmObjvjGp60DOKhAXmsjQCiuAYF++lvXrq+Cj6StvdRj+pAFEjZOw8BZHw==
@@ -9947,17 +9947,17 @@ vuepress-plugin-code-enhance@2.0.0-alpha.10:
   resolved "https://registry.npmjs.org/vuepress-plugin-code-enhance/-/vuepress-plugin-code-enhance-2.0.0-alpha.10.tgz#a39a04798826e3a32ff8d8dc16d9306ab38e1f65"
   integrity sha512-ybib9fOIzEmy1AqmjQ2m/iZKvz/QB35y/SRu2c+GMVGINRLmxMkC0wWuZMYs1/0dRqtqMEaL6vHO/765x5Du9A==
 
-vuepress-plugin-giscus@2.0.0-alpha.20:
-  version "2.0.0-alpha.20"
-  resolved "https://registry.npmjs.org/vuepress-plugin-giscus/-/vuepress-plugin-giscus-2.0.0-alpha.20.tgz#4d543ccbb8024ac8ea7a1dca59f7a2482fd36403"
-  integrity sha512-QjNI16Qeo+y1w+ZN/o7tnhPQTxnuVPXm0NoX3ctIO5O6uKb778JF4cfsWJuk9uz+KGzEYstljYR9TfF9eBmf3w==
+vuepress-plugin-giscus@2.0.0-alpha.21:
+  version "2.0.0-alpha.21"
+  resolved "https://registry.npmjs.org/vuepress-plugin-giscus/-/vuepress-plugin-giscus-2.0.0-alpha.21.tgz#f347554ac6213cc84f0f1875f93b3834ae26e63f"
+  integrity sha512-EvA0J/2kvTpFlBvQyCNkKkLhUQfHJNaCP2Zg8HfnU4YnRuC9BB5IZuEQHYKjQqZRCG7Fxtneo9ppmuyOWcaErw==
   dependencies:
     "@vuepress/client" "2.0.0-beta.38"
 
-vuepress-theme-gungnir@^2.0.0-alpha.19:
-  version "2.0.0-alpha.20"
-  resolved "https://registry.npmjs.org/vuepress-theme-gungnir/-/vuepress-theme-gungnir-2.0.0-alpha.20.tgz#2f31c5f9eeeb3e3cbfbec951b1ca076c9a71ae14"
-  integrity sha512-m5rxWjrO1jazKMlir9TS8WL11HjkWz6GHrv4Qd/cPR1W0a2PXGOpwiNvE6FJBz1n98uR9VXGN/nOq5cNrA4BNw==
+vuepress-theme-gungnir@2.0.0-alpha.21:
+  version "2.0.0-alpha.21"
+  resolved "https://registry.npmjs.org/vuepress-theme-gungnir/-/vuepress-theme-gungnir-2.0.0-alpha.21.tgz#55c39f00ba67a2c23c06a0a680dfc01422bc80a5"
+  integrity sha512-Z5k55P03VA5b/RAVtZyrUO7pxE6CJWoTSYvEgQUwyAgzfB7PvwE+vLOe9p68qCmNgLbKQiIYKP++Eq7gwGYcpg==
   dependencies:
     "@renovamen/vuepress-plugin-baidu-tongji" "2.0.0-alpha.20"
     "@renovamen/vuepress-plugin-katex" "2.0.0-alpha.15"
@@ -9989,9 +9989,9 @@ vuepress-theme-gungnir@^2.0.0-alpha.19:
     vue-router "^4.0.12"
     vuepress-plugin-chart "2.0.0-alpha.19"
     vuepress-plugin-code-enhance "2.0.0-alpha.10"
-    vuepress-plugin-giscus "2.0.0-alpha.20"
+    vuepress-plugin-giscus "2.0.0-alpha.21"
 
-vuepress-vite@2.0.0-beta.39, vuepress-vite@^2.0.0-beta.35:
+vuepress-vite@2.0.0-beta.39:
   version "2.0.0-beta.39"
   resolved "https://registry.npmjs.org/vuepress-vite/-/vuepress-vite-2.0.0-beta.39.tgz#3929865738aae09be8aa46b85eedba3a6be36105"
   integrity sha512-j0xGZC3W8hCvjy1OuzCYkTZV6evHJb/3fa0XRHZ2Dfak/7GbXeTsbShiMb/Sz1R2VItox60U3Gv3gP5+K5rp4g==
@@ -10001,7 +10001,7 @@ vuepress-vite@2.0.0-beta.39, vuepress-vite@^2.0.0-beta.35:
     "@vuepress/core" "2.0.0-beta.38"
     "@vuepress/theme-default" "2.0.0-beta.38"
 
-vuepress-webpack@^2.0.0-beta.35:
+vuepress-webpack@2.0.0-beta.38:
   version "2.0.0-beta.38"
   resolved "https://registry.npmjs.org/vuepress-webpack/-/vuepress-webpack-2.0.0-beta.38.tgz#fd8abc0ba4cb7db5e2937a5cc52dbacb160db23b"
   integrity sha512-6u2ci4VgNnWAwzmZItnNncNB97iRCPHJZRfapsK58gPQpAQ4TpjobF9JoLgYtdeXd0XpPIYOsqjT6X36dK1gVQ==
@@ -10011,7 +10011,7 @@ vuepress-webpack@^2.0.0-beta.35:
     "@vuepress/core" "2.0.0-beta.38"
     "@vuepress/theme-default" "2.0.0-beta.38"
 
-vuepress@^2.0.0-beta.36:
+vuepress@2.0.0-beta.39:
   version "2.0.0-beta.39"
   resolved "https://registry.npmjs.org/vuepress/-/vuepress-2.0.0-beta.39.tgz#a22a7eef60f29c04fa0a49e3e1faf1c161ee070d"
   integrity sha512-rAO0W+wlITVtUObo9vdZiLUZnlvCfIQ4wVst98yxjF9p5yeFYdCXCi1MLljag98Xl3W2u+rzUzfQGMhVR0jQnQ==
