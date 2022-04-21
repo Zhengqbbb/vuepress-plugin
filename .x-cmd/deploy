@@ -20,8 +20,12 @@ page_deploy(){
 }
 
 # Section: Main
-[ -n "$___X_CMD_INSIDE_GITHUB_ACTION" ] && yarn --frozen-lockfile
-x build all
+if [ ! -d "$WORK_DIR/node_modules" ]; then
+    yarn --frozen-lockfile
+    x build
+else
+    x build docs
+fi
 cd "$WORK_DIR"/dist || exit
 # 如果是发布到自定义域名
 echo 'www.qbenben.com' > CNAME
