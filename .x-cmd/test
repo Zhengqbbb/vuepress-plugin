@@ -1,4 +1,4 @@
-# shellcheck shell=bash disable=
+# shellcheck shell=bash disable= # xsh
 
 echo 1111
 X_WORK_DIR="$(x wsroot)"
