@@ -55,7 +55,7 @@ A
 : vscode 访问docker容器
 
 **Github Actions(黑色图标)**
-: 可视化启动 Github Action启动，设置环境变量
+: 可视化启动 Github Action，设置环境变量
 
 **GitLens**
 : 代码行中查看 git 提交历史
