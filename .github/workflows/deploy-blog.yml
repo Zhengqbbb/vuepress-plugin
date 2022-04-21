@@ -32,10 +32,10 @@ jobs:
             ${{ runner.os }}-node-
 
       - uses: x-cmd/action@main
-        env:
+        with:
           git_user: Zhengqbbb
           git_email: 1074059947@qq.com
           ssh_key: '${{ secrets.ssh_key }}'
-          shellcode: pwd && xws deploy
+          shellcode: x deploy
   
     

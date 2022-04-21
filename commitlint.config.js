@@ -29,7 +29,7 @@ module.exports = {
       {value: 'perf',     name: 'perf:     性能提升 | A code change that improves performance'},
       {value: 'test',     name: 'test:     测试相关 | Adding missing tests or correcting existing tests'},
       {value: 'build',    name: 'build:    构建相关 | Changes that affect the build system or external dependencies (example scopes: gulp, webpack, npm)'},
-      {value: 'ci',       name: 'ci:       持续集成 | Changes to our CI configuration files and scripts'},
+      {value: 'ci',       name: 'ci:       持续集成 | Changes to our CI configuration files and scripts', emoji: ":wrench:"},
       {value: 'revert',   name: 'revert:   回退代码 | Revert to a commit'},
       {value: 'chore',    name: 'chore:    其他修改 | Other changes that do not modify src or test files'},
       {value: 'workflow', name: 'workflow: 工作流程 | script use workflow'},
@@ -39,6 +39,7 @@ module.exports = {
       {name: 'theme'},
       ...plugins
     ],
+    useEmoji: true,
     skipQuestions: ["body", "breaking"]
   }
 };
