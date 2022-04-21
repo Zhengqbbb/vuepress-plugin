@@ -3,5 +3,6 @@
 echo 1111
 X_WORK_DIR="$(x wsroot)"
 echo "$X_WORK_DIR"
+echo "$1"
 
 # EndSection
