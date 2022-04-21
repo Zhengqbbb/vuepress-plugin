@@ -7,30 +7,31 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Node 14
-        uses: actions/setup-node@v3
-        with:
-           node-version: 14
+      - run: ls && pwd
+      # - name: Set up Node 14
+      #   uses: actions/setup-node@v3
+      #   with:
+      #      node-version: 14
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      # - name: Get yarn cache directory path
+      #   id: yarn-cache-dir-path
+      #   run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Handle yarn cache
-        uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ matrix.node }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ matrix.node }}-yarn-
-            ${{ runner.os }}-node-
+      # - name: Handle yarn cache
+      #   uses: actions/cache@v2
+      #   id: yarn-cache
+      #   with:
+      #     path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+      #     key: ${{ runner.os }}-node-${{ matrix.node }}-yarn-${{ hashFiles('**/yarn.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-${{ matrix.node }}-yarn-
+      #       ${{ runner.os }}-node-
 
-      - uses: x-cmd/action@main
-        with:
-          git_user: Zhengqbbb
-          git_email: 1074059947@qq.com
-          ssh_key: '${{ secrets.ssh_key }}'
-          shellcode: ls && pwd && xws test nice
+      # - uses: x-cmd/action@main
+      #   with:
+      #     git_user: Zhengqbbb
+      #     git_email: 1074059947@qq.com
+      #     ssh_key: '${{ secrets.ssh_key }}'
+      #     shellcode: ls && pwd && xws test nice
   
     
