@@ -3,14 +3,19 @@ name: Deploy Blog
 on:
   push:
     branches: [ main ]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        node: [ 14 ]
     steps:
-      - name: Set up Node 14
+      - name: Set up Node ${{ matrix.os }}
         uses: actions/setup-node@v3
         with:
-           node-version: 14
+           node-version: ${{ matrix.node }}
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -31,6 +36,6 @@ jobs:
           git_user: Zhengqbbb
           git_email: 1074059947@qq.com
           ssh_key: '${{ secrets.ssh_key }}'
-          shellcode: cd zhengqbbb.github.io && xws test nice
+          shellcode: cd zhengqbbb.github.io && xws deploy
   
     
