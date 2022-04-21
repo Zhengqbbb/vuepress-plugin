@@ -8,6 +8,7 @@ BRANCH_NAME=gh-page
 DIST_PATH="$WORK_DIR"/dist
 
 page_deploy(){
+    set -e
     [ -d "$DIST_PATH/.git" ] && rm -rf "$DIST_PATH/.git"
     git init
     git remote add origin git@"$1"
@@ -15,6 +16,7 @@ page_deploy(){
     git add -A
     git commit -m 'deploy'
     git push -f git@"$1" $BRANCH_NAME
+    set +e
 }
 
 # Section: Main
