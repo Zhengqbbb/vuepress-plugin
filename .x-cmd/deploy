@@ -1,4 +1,4 @@
-# shellcheck shell=bash disable=SC1091,SC2034 #xsh
+# shellcheck shell=bash disable=SC2034 #xsh
 
 # Section: Arg
 WORK_DIR="$(x wsroot)"
@@ -16,15 +16,12 @@ page_deploy(){
     git commit -m 'deploy'
     git push -f git@"$1" $BRANCH_NAME
 }
-# EndSection
 
 # Section: Main
-yarn --frozen-lockfile
+[ -n "$___X_CMD_INSIDE_GITHUB_ACTION" ] && yarn --frozen-lockfile
 x build all
 cd "$WORK_DIR"/dist || exit
 # 如果是发布到自定义域名
 echo 'www.qbenben.com' > CNAME
 # page_deploy "$GITEE_URL"
 page_deploy "$GITHUB_URL"
-
-# EndSection
