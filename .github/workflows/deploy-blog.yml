@@ -1,6 +1,7 @@
 name: Deploy Blog
 
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
 
@@ -37,6 +38,6 @@ jobs:
           git_user: Zhengqbbb
           git_email: 1074059947@qq.com
           ssh_key: '${{ secrets.ssh_key }}'
-          shellcode: x deploy
+          shellcode: xws deploy
   
     
