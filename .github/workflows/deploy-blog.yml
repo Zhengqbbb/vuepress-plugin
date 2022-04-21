@@ -31,11 +31,12 @@ jobs:
             ${{ runner.os }}-node-${{ matrix.node }}-yarn-
             ${{ runner.os }}-node-
 
-      - uses: x-cmd/action@main
+      - name: 🔖 Run Deploy Script 🔖
+        uses: x-cmd/action@main
         with:
           git_user: Zhengqbbb
           git_email: 1074059947@qq.com
           ssh_key: '${{ secrets.ssh_key }}'
-          shellcode: ls && xws deploy
+          shellcode: x deploy
   
     
