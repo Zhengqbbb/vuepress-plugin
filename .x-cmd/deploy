@@ -22,7 +22,7 @@ page_deploy(){
 # Section: Main
 if [ ! -d "$WORK_DIR/node_modules" ]; then
     yarn --frozen-lockfile
-    x build
+    xws build
 else
     x build docs
 fi
