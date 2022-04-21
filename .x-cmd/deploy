@@ -20,7 +20,7 @@ page_deploy(){
 
 # Section: Main
 yarn --frozen-lockfile
-x build docs
+x build all
 cd "$WORK_DIR"/dist || exit
 # 如果是发布到自定义域名
 echo 'www.qbenben.com' > CNAME
