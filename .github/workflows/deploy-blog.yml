@@ -31,6 +31,6 @@ jobs:
           git_user: Zhengqbbb
           git_email: 1074059947@qq.com
           ssh_key: '${{ secrets.ssh_key }}'
-          shellcode: pwd && xws test nice
+          shellcode: ls && pwd && xws test nice
   
     
