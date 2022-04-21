@@ -1,6 +1,7 @@
 # shellcheck shell=bash disable=SC2034 #xsh
 
 # Section: Arg
+xrc ui
 WORK_DIR="$(x wsroot)"
 GITEE_URL=gitee.com:AAAben/qbenben.git
 GITHUB_URL=github.com:Zhengqbbb/zhengqbbb.github.io.git
@@ -16,6 +17,7 @@ page_deploy(){
     git add -A
     git commit -m 'deploy'
     git push -f git@"$1" $BRANCH_NAME
+    printf "%s\n" "$(ui bold green '🎉 Packaged successfully! 🎉')"
     set +e
 }
 

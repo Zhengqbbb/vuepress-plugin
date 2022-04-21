@@ -34,5 +34,8 @@
       "no-descending-specificity": null
     }
   },
-  "markdown-toc.depthTo": 3
+  "markdown-toc.depthTo": 3,
+  "github-actions.workflows.pinned.workflows": [".github/workflows/deploy-blog.yml"],
+  "github-actions.workflows.pinned.refresh.enabled": true,
+  "github-actions.workflows.pinned.refresh.interval": 65,
 }
