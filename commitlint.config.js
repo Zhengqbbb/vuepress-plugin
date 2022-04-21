@@ -21,7 +21,7 @@ module.exports = {
       confirmCommit: "是否提交或修改commit | Are you sure you want to proceed with the commit above?"
     },
     types: [
-      {value: 'docs',     name: 'docs:     文档更新 | Documentation only changes'},
+      {value: 'docs',     name: 'docs:     文档更新 | Documentation only changes', emoji: ":books:"},
       {value: 'feat',     name: 'feat:     新增功能 | A new feature'},
       {value: 'fix',      name: 'fix:      修复缺陷 | A bug fix'},
       {value: 'style',    name: 'style:    代码样式 | Changes that do not affect the meaning of the code'},
