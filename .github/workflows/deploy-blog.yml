@@ -3,30 +3,39 @@ name: Deploy Blog
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   deploy:
     strategy:
       matrix:
-        os: [ ubuntu-latest ]
-        node: [ 14 ]
+        os: [ubuntu-latest]
+        node: [14]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Node ${{ matrix.os }}
         uses: actions/setup-node@v3
         with:
-           node-version: ${{ matrix.node }}
-           cache: yarn
+          node-version: ${{ matrix.node }}
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v3
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
       - name: 🔖 Run Deploy Script 🔖
         uses: x-cmd/action@main
         with:
           git_user: Zhengqbbb
           git_email: 1074059947@qq.com
-          ssh_key: '${{ secrets.ssh_key }}'
+          ssh_key: "${{ secrets.ssh_key }}"
           code: xws deploy
-  
-    
