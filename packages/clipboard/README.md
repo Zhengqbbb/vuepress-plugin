@@ -32,11 +32,12 @@ npm install -D vuepress-plugin-clipboard
 
 ```js
 // .vuepress/config.js
+import { clipboardPlugin } from "vuepress-plugin-clipboard";
 module.exports = {
   plugins: [
-    [
-      "vuepress-plugin-clipboard", {options...}
-    ]
+    clipboardPlugin({
+      // options ...
+    })
   ]
 }
 ```
@@ -44,17 +45,14 @@ module.exports = {
 ## Use TS:
 ```ts
 // .vuepress/config.ts
-import type { DefaultThemeOptions } from '@vuepress/theme-default'
-import type { ClipboardOptions } from 'vuepress-plugin-clipboard'
+import { defineUserConfig } from "vuepress";
+import { clipboardPlugin } from "vuepress-plugin-clipboard";
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
   plugins: [
-    [
-      'vuepress-plugin-clipboard',
-      {
-        // options...
-      } as ClipboardOptions,
-    ]
+    clipboardPlugin({
+      // options ...
+    })
   ]
 });
 ```

@@ -15,13 +15,15 @@
 # Use
 
 ```sh
-yarn
+pnpm run install
 
 # development
-yarn dev
+pnpm run dev
+pnpm run docs:dev
 
 # build
-yarn build
+pnpm run build
+pnpm run docs:build
 
 ```
 

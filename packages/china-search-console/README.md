@@ -38,11 +38,12 @@ npm install -D vuepress-plugin-china-search-console
 
 ```js
 // .vuepress/config.js
+import { searchConsolePlugin } from "vuepress-plugin-china-search-console";
 module.exports = {
   plugins: [
-    [
-      "vuepress-plugin-china-search-console", {options...}
-    ]
+    searchConsolePlugin({
+      // options ...
+    })
   ]
 }
 ```
@@ -50,17 +51,14 @@ module.exports = {
 ## Use TS:
 ```ts
 // .vuepress/config.ts
-import type { DefaultThemeOptions } from '@vuepress/theme-default'
-import type { SearchConsolePluginOptions } from 'vuepress-plugin-china-search-console'
+import { defineUserConfig } from "vuepress";
+import { searchConsolePlugin } from "vuepress-plugin-china-search-console";
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
   plugins: [
-    [
-      'vuepress-plugin-china-search-console',
-      {
-        // options...
-      } as SearchConsolePluginOptions,
-    ]
+    searchConsolePlugin({
+      // options ...
+    })
   ]
 });
 ```
