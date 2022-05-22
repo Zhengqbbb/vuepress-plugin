@@ -15,7 +15,7 @@ page_deploy(){
     git remote add origin git@"$1"
     git checkout -b $BRANCH_NAME
     git add -A
-    git commit -m 'build: :books: deploy docs'
+    git commit -m 'build: :books: deploy blog'
     git push -f git@"$1" $BRANCH_NAME
     printf "%s\n" "$(ui bold green '🎉 Packaged successfully! 🎉')"
     set +e
