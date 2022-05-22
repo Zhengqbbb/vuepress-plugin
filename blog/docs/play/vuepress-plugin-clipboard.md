@@ -57,13 +57,13 @@ yarn add -D vuepress-plugin-clipboard
 <CodeGroupItem title="JS" active>
 
 ```js
+// .vuepress/config.js
+import { clipboardPlugin } from "vuepress-plugin-clipboard";
 module.exports = {
   plugins: [
-    [
-      "vuepress-plugin-clipboard", {
-        // options...
-      }
-    ]
+    clipboardPlugin({
+      // options ...
+    })
   ]
 }
 ```
@@ -73,17 +73,15 @@ module.exports = {
 <CodeGroupItem title="TS">
 
 ```ts
-import type { DefaultThemeOptions } from '@vuepress/theme-default'
-import type { ClipboardOptions } from 'vuepress-plugin-clipboard'
+// .vuepress/config.ts
+import { defineUserConfig } from "vuepress";
+import { clipboardPlugin } from "vuepress-plugin-clipboard";
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
   plugins: [
-    [
-      'vuepress-plugin-clipboard',
-      {
-        // options...
-      } as ClipboardOptions,
-    ]
+    clipboardPlugin({
+      // options ...
+    })
   ]
 });
 ```

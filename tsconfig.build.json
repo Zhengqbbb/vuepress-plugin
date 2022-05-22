@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "references": [
+    { "path": "./packages/china-search-console/tsconfig.build.json" },
+    { "path": "./packages/clipboard/tsconfig.build.json" },
+  ],
+  "files": []
+}
+

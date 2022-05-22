@@ -5,7 +5,7 @@ xrc ui
 WORK_DIR="$(x wsroot)"
 COMMIT_ID="$(git rev-parse --short HEAD)"
 BRANCH_INFO="$(git symbolic-ref -q --short HEAD 2> /dev/null || git describe --tags --exact-match 2> /dev/null)"
-DIST_PATH=$WORK_DIR/dist
+DIST_PATH=$WORK_DIR/blog/.vuepress/dist
 TEMPLATE_PATH=$WORK_DIR/templates
 PACKAGE_VERSION=template-${BRANCH_INFO}-${COMMIT_ID}
 DOC_SEARCH_CONFIG_FILE=$WORK_DIR/blog/.vuepress/configs/docSearch/docSearchConfig.json
@@ -15,7 +15,7 @@ WEB_SIT="www.qbenben.com"
 build() {
     param:dsl       '
 type:
-    Type = all docs plugin clean
+    Type = all docs plugin
 options:
     --p    "select target build command"        <>:Type
 '
@@ -30,7 +30,7 @@ build_docs() {
 		cd "$WORK_DIR" || exit
 	fi
 	rm -rf "$DIST_PATH"
-	yarn docs:build &&
+	pnpm docs:build &&
 	mkdir -p "$TEMPLATE_PATH" &&
 	cp -r "$DIST_PATH" "$TEMPLATE_PATH/${PACKAGE_VERSION}" &&
 	cd "$TEMPLATE_PATH" &&
@@ -48,16 +48,11 @@ build_docs() {
 	cd "$WORK_DIR" || exit
 }
 
-build_clean() {
-	npx lerna run clean
-}
-
 build_plugin() {
-	npx lerna run build
+	pnpm build
 }
 
 build_all() {
-	build_clean
 	build_plugin
 	build_docs
 }
@@ -66,7 +61,6 @@ build_all() {
 case "${1}" in
     docs)   	build_docs      ;;
     plugin)   build_plugin    ;;
-    clean)  	build_clean     ;;
     all)    	build_all       ;;
     *)      	build           ;;
 esac

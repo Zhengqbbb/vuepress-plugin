@@ -1,15 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
-  "references": [
-    { "path": "./packages/china-search-console/tsconfig.build.json" },
-    { "path": "./packages/clipboard/tsconfig.build.json" },
-  ],
-  "files": [],
-  "include": [
-    "blog/.vuepress/**/*",
-    "**/*.ts",
-    "**/*.vue",
-    "packages",
-    "packages/**/*", "commitlint.config.js",
-  ]
+  "compilerOptions": {
+    "baseUrl": "./",
+    "jsx": "preserve",
+    "module": "ES2020",
+    "types": ["webpack-env", "vite/client"]
+  },
+  "include": ["**/.vuepress/**/*", "packages/**/*"],
+  "exclude": ["node_modules", ".temp", "lib", "dist"]
 }

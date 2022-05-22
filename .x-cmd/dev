@@ -6,8 +6,8 @@ WORK_DIR="$(x wsroot)"
 
 # Section: Main
 if [ ! -d "$WORK_DIR/node_modules" ]; then
-    x install none && yarn dev
+    x ws install none && pnpm run docs:dev
 else
-    yarn dev
+    pnpm build && pnpm run docs:dev
 fi
 # EndSection

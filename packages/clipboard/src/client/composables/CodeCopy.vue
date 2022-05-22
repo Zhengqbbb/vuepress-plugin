@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, toRefs } from "vue";
 import type { PropType } from "vue";
-import type { ClipboardOptions, HexToRgb } from "../shared";
+import type { ClipboardOptions, HexToRgb } from "../../shared";
 
 const props = defineProps({
   parent: {

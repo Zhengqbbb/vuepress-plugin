@@ -1,7 +1,6 @@
-import { defineClientAppEnhance } from "@vuepress/client";
+import { defineClientConfig } from "@vuepress/client";
 import { addIcons } from "oh-vue-icons";
 import { IVuepress } from "./configs/icons";
-import About from "./components/About.vue";
 
 import {
   BiGit,
@@ -48,6 +47,4 @@ addIcons(
   IVuepress
 );
 
-export default defineClientAppEnhance(({ app }) => {
-  app.component("About", About);
-});
+export default defineClientConfig({});

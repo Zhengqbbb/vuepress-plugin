@@ -39,7 +39,6 @@ module.exports = {
       {name: 'theme'},
       ...plugins
     ],
-    useEmoji: true,
     skipQuestions: ["body", "breaking"]
   }
 };

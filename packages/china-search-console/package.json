@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-china-search-console",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "VuePress plugin - China search console",
   "keywords": [
     "vuepress-plugin",
@@ -25,9 +25,16 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc -b tsconfig.build.json && yarn copy",
+    "build": "pnpm clean && tsc -b tsconfig.build.json",
     "clean": "rimraf lib *.tsbuildinfo",
     "copy": "cpx \"src/**/*.{css,vue}\" lib"
+  },
+  "dependencies": {
+    "@vuepress/client": "2.0.0-beta.45",
+    "@vuepress/core": "2.0.0-beta.45",
+    "@vuepress/utils": "2.0.0-beta.45",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.15"
   },
   "publishConfig": {
     "access": "public"

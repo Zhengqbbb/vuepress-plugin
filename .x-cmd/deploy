@@ -6,7 +6,7 @@ WORK_DIR="$(x wsroot)"
 GITEE_URL=gitee.com:AAAben/qbenben.git
 GITHUB_URL=github.com:Zhengqbbb/zhengqbbb.github.io.git
 BRANCH_NAME=gh-page
-DIST_PATH="$WORK_DIR"/dist
+DIST_PATH="$WORK_DIR"/blog/.vuepress/dist
 
 page_deploy(){
     set -e
@@ -15,7 +15,7 @@ page_deploy(){
     git remote add origin git@"$1"
     git checkout -b $BRANCH_NAME
     git add -A
-    git commit -m 'deploy'
+    git commit -m 'build: :books: deploy docs'
     git push -f git@"$1" $BRANCH_NAME
     printf "%s\n" "$(ui bold green '🎉 Packaged successfully! 🎉')"
     set +e
@@ -23,12 +23,12 @@ page_deploy(){
 
 # Section: Main
 if [ ! -d "$WORK_DIR/node_modules" ]; then
-    yarn --frozen-lockfile
-    xws build all
+    pnpm install --frozen-lockfile
+    x ws build all
 else
-    x build docs
+    x ws build docs
 fi
-cd "$WORK_DIR"/dist || exit
+cd "$DIST_PATH" || exit
 # 如果是发布到自定义域名
 echo 'www.qbenben.com' > CNAME
 # page_deploy "$GITEE_URL"
