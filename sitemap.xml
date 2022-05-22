@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.qbenben.com/</loc>
+  <lastmod>2022-01-20T02:44:10+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/post/2022/02/27/cz-git/</loc>
+  <lastmod>2022-02-28T02:44:10+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/posts/2021/11/30/mac.html</loc>
+  <lastmod>2022-02-10T02:44:10+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/post/2022/01/11/husky.html</loc>
+  <lastmod>2022-02-10T02:44:10+00:00</lastmod>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/post/2022/03/16/vscode.html</loc>
+  <lastmod>2022-02-11T02:44:10+00:00</lastmod>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/docs/play/terminal-plugin-qb.html</loc>
+  <lastmod>2022-01-20T02:44:10+00:00</lastmod>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/docs/play/vuepress-plugin-china-search-console.html</loc>
+  <lastmod>2022-01-23T02:44:10+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/docs/play/vuepress-plugin-clipboard.html</loc>
+  <lastmod>2022-02-28T02:44:10+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://www.qbenben.com/docs/play/cz-git.html</loc>
+  <lastmod>2022-02-28T02:44:10+00:00</lastmod>
+  <priority>0.8</priority>
+</url>
+
+
+</urlset>
