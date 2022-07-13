@@ -17,14 +17,14 @@
     "docs:serve": "pnpm --filter=blog docs:serve"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.16.4",
+    "@types/webpack-env": "^1.17.0",
     "bumpp": "^7.1.1",
     "cpx2": "^4.2.0",
-    "cz-git": "^1.3.2",
-    "concurrently": "^7.2.0",
+    "cz-git": "^1.3.9",
+    "concurrently": "^7.2.2",
     "rimraf": "^3.0.2",
-    "typescript": "^4.6.4",
-    "vite": "~2.9.9"
+    "typescript": "^4.7.4",
+    "vite": "~2.9.14"
   },
   "config": {
     "commitizen": {
