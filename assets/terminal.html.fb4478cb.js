@@ -1,1 +1,0 @@
-import{_ as t,o as l,c as n,F as o,b as e}from"./app.ece9721a.js";const a={},c=e("blockquote",null,[e("p",null,"\u5206\u4EAB\u6211\u7EC8\u7AEF\u4E3B\u9898\u7684\u914D\u7F6E")],-1),r=e("p",null,"WIP ...",-1);function _(s,m){return l(),n(o,null,[c,r],64)}var i=t(a,[["render",_],["__file","terminal.html.vue"]]);export{i as default};
