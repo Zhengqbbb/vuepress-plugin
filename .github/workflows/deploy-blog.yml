@@ -2,8 +2,8 @@ name: Deploy Blog
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   # pull_request:
   #   branches: [main]
 
@@ -15,20 +15,48 @@ jobs:
         node: [14]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
+      # - name: Use Node.js ${{ matrix.node }}
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: ${{ matrix.node }}
+
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 7
+
+      # - name: 📚 Run Deploy Script 📚
+      #   uses: x-cmd/action@main
+      #   with:
+      #     git_user: Zhengqbbb
+      #     git_email: 1074059947@qq.com
+      #     ssh_key: "${{ secrets.ssh_key }}"
+      #     code: x ws deploy
+
+      - uses: actions/checkout@v2
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 7
 
-      - name: 🔖 Run Deploy Script 🔖
-        uses: x-cmd/action@main
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          git_user: Zhengqbbb
-          git_email: 1074059947@qq.com
-          ssh_key: "${{ secrets.ssh_key }}"
-          code: x ws deploy
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm docs:build
+
+      - name: 📚 Deploy Docs to GitHub Pages 📚
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          cname: www.qbenben.com
+          publish_dir: blog/.vuepress/dist
+          publish_branch: gh-page
+          commit_message: "build: :books: deploy docs"
