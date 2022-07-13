@@ -8,6 +8,12 @@ const plugins = fs
 /** @type {import('cz-git').UserConfig} */
 module.exports = {
   prompt: {
+    alias: {
+      b: "chore: bump dep version",
+      c: "chore: update config",
+      f: "docs: fix typos",
+      "::": "docs(blog): update post",
+    },
     messages: {
       type: "选择你的提交类型   | Select the type of change that you\'re committing:",
       scope: "选择一个模块范围(可选) | Denote the SCOPE of this change (optional)",
