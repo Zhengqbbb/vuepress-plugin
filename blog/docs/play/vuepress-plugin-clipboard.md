@@ -91,17 +91,62 @@ export default defineUserConfig({
 
 ## Options
 
-| option                    | type              | default                   | info                                                                                                         | 说明                                             |
-| ------------------------- | ----------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| staticIcon                | boolean           | false                     | Copy icon is only visible when hovering over code block or is always visible.                                | 复制按钮是否设置为悬停时可见                     |
-| align                     | "top" \| "bottom" | "bottom"                  | This option describes the vertical position of the copy button component as well as the `successText`        | 设置复制按钮和成功提示的垂直位置                 |
-| selector                  | string            | 'div[class*="language-"]' | This is the CSS selector to which the copy button component will be attached.                                | 目标代码块的CSS选择器                            |
-| delay                     | number            | 400                       | Page animation delay(ms). Affect the generation of buttons when rendering                                    | 页面动画的延迟毫秒, 这会影响到渲染时的按钮生成   |
-| color                     | string            | "var(--c-brand)"          | This sets the color of the copy button and can take any hex code.                                            | 复制按钮的颜色, 可以使用任意的十六进制颜色代码   |
-| backgroundTransition      | boolean           | true                      | Enables the background transition animation of the attached code block when a user presses the copy button.  | 点击复制按钮时是否启动过渡动画                   |
-| backgroundTransitionColor | string            | "var(--code-bg-color)"    | This sets the color of the background transition animation and can take any hex code.                        | 过渡动画背景颜色, 可以使用任意的十六进制颜色代码 |
-| successText               | string            | "Copied!"                 | This sets the text that displays when a user presses the copy button.                                        | 复制成功后的提示词                               |
-| successTextColor          | string            | "var(--c-brand-light)"    | This sets the color of the text that displays when a user presses the copy button and                       | 设置提示词的颜色, 可以使用任意的十六进制颜色代码|
+<table>
+  <thead>
+    <th width="10%">option</th>
+    <th width="10%">type</th>
+    <th width="10%">default</th>
+    <th width="30%">info</th>
+  </thead>
+  <tr>
+    <td>staticIcon</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>Copy icon is only visible when hovering over code block or is always visible.<br><br>复制按钮是否设置为悬停时可见</td>
+  </tr>
+  <tr>
+    <td>selector</td>
+    <td>string</td>
+    <td>'div[class*="language-"]'</td>
+    <td>This is the CSS selector to which the copy button component will be attached.<br><br>目标代码块的CSS选择器</td>
+  </tr>
+  <tr>
+    <td>delay</td>
+    <td>number</td>
+    <td>400</td>
+    <td>Page animation delay(ms). Affect the generation of buttons when rendering<br><br>页面动画的延迟毫秒, 这会影响到渲染时的按钮生成</td>
+  </tr>
+  <tr>
+    <td>color</td>
+    <td>string</td>
+    <td>"var(--c-brand)"</td>
+    <td>This sets the color of the copy button and can take any hex code.<br><br>复制按钮的颜色, 可以使用任意的十六进制颜色代码</td>
+  </tr>
+  <tr>
+    <td>backgroundTransition</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>Enables the background transition animation of the attached code block when a user presses the copy button.<br><br>点击复制按钮时是否启动过渡动画</td>
+  </tr>
+  <tr>
+    <td>backgroundTransitionColor</td>
+    <td>string</td>
+    <td>"var(--code-bg-color)"</td>
+    <td>This sets the color of the background transition animation and can take any hex code.<br><br>过渡动画背景颜色, 可以使用任意的十六进制颜色代码</td>
+  </tr>
+  <tr>
+    <td>successText</td>
+    <td>string</td>
+    <td>"Copied!"</td>
+    <td>Setting the text that displays when a user presses the copy button. <br><br>复制成功后的提示词</td>
+  </tr>
+  <tr>
+    <td>successTextColor</td>
+    <td>string</td>
+    <td>"var(--c-brand-light)"</td>
+    <td>This sets the color of the text that displays when a user presses the copy button<br><br>设置提示词的颜色, 可以使用任意的十六进制颜色代码</td>
+  </tr>
+</table>
 
 <br>
 <br>
