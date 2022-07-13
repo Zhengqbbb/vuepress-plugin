@@ -12,7 +12,7 @@ module.exports = {
       b: "chore: bump dep version",
       c: "chore: update config",
       f: "docs: fix typos",
-      "::": "docs(blog): update post",
+      ":": "docs(blog): update post",
     },
     messages: {
       type: "选择你的提交类型   | Select the type of change that you\'re committing:",
