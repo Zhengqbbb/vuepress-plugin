@@ -50,7 +50,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm docs:build
+        run: pnpm build && pnpm docs:build
 
       - name: 📚 Deploy Docs to GitHub Pages 📚
         uses: peaceiris/actions-gh-pages@v3
