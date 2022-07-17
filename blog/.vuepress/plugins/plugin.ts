@@ -15,7 +15,5 @@ export const codeCopyPlugin = clipboardPlugin({
  * @see: https://blog.qbb.sh/docs/play/vuepress-plugin-china-search-console
  */
 export const searchCNConsolePlugin = searchConsolePlugin({
-  baiduId: "dbf4327a921eac36c68ec119c80f31b9",
-  toutiaoAutoPushId:
-    "3dcbba9b816cb647a31f0b393b5c1830e236e2c357573edc072b52b73042d4dc30632485602430134f60bc55ca391050b680e2741bf7233a8f1da9902314a3fa",
+  baiduId: "21f490689f6e0886d4a314695c85c028"
 });

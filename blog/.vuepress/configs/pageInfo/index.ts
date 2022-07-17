@@ -99,7 +99,7 @@ export const themeConfig: Partial<GungnirThemeOptions> = {
     mdPlus: {
       all: true
     },
-    ga: "G-8R2K3ZRCY6",
+    ga: "G-408GMFDRSG",
     pwa: true,
     search: false
   },
