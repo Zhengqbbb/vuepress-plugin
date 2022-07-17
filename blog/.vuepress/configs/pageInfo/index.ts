@@ -15,7 +15,8 @@ export const title = `Qbenben`
 export const description = 'Qbenben blog. Record my life | 在代码世界里打怪升级的小靓仔'
 
 export const headConfig: HeadConfig[] = [
-  [ 'meta', { name: 'google-site-verification', content: 'bmaXCuUg4k9-nZLe3yIz1yQb0WO4_h8wHhkhBOl3Dec' } ],
+  [ 'meta', { name: 'google-site-verification', content: 'j6cNWewUj3QcJBpdv48t67XoDxdlKPQ6dwKgXg9Nigo' } ],
+  [ 'meta', { name: 'baidu-site-verification', content: 'code-Hg9Z7syVP3' } ],
   [ 'meta', { name: 'application-name', content: 'Qbenben' } ],
   [ 'meta', { name: 'apple-mobile-web-app-title', content: 'VuePress' } ],
   [ 'meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' } ],
