@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.qbenben.com/sitemap.xml
+Sitemap: https://blog.qbb.sh/sitemap.xml
