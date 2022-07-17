@@ -5,9 +5,9 @@ import { docsearchPlugin } from "@vuepress/plugin-docsearch";
  * @see: https://v2.vuepress.vuejs.org/reference/plugin/docsearch
  */
 export const docSearchPlugin = docsearchPlugin({
-  appId: "GY1SQOTVPB",
-  apiKey: "6ee264634f900ffd070c242e256d60ae",
-  indexName: "qbenben",
+  appId: "ZXNKKDIAEP",
+  apiKey: "e04c4314ce642d9c6cb2a71e7a0306f1",
+  indexName: "blog",
   locales: {
     "/": {
       placeholder: "搜索文档",

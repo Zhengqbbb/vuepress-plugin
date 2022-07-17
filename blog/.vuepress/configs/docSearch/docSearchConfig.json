@@ -1,5 +1,5 @@
 {
-  "index_name": "qbenben",
+  "index_name": "blog",
   "start_urls": [
     "https://blog.qbb.sh/tags/",
     "https://blog.qbb.sh/docs/play/",
