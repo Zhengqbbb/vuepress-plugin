@@ -56,7 +56,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          cname: www.qbenben.com
+          cname: blog.qbb.sh
           publish_dir: blog/.vuepress/dist
           publish_branch: gh-page
           commit_message: "build: :books: deploy docs"

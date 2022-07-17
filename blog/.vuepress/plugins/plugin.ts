@@ -3,7 +3,7 @@ import { searchConsolePlugin } from "vuepress-plugin-china-search-console";
 
 /**
  * @description: Code Copy Plugin
- * @see: https://www.qbenben.com/docs/play/vuepress-plugin-clipboard
+ * @see: https://blog.qbb.sh/docs/play/vuepress-plugin-clipboard
  */
 export const codeCopyPlugin = clipboardPlugin({
   align: "top",
@@ -12,7 +12,7 @@ export const codeCopyPlugin = clipboardPlugin({
 
 /**
  * @description: China Search Console Plugin
- * @see: https://www.qbenben.com/docs/play/vuepress-plugin-china-search-console
+ * @see: https://blog.qbb.sh/docs/play/vuepress-plugin-china-search-console
  */
 export const searchCNConsolePlugin = searchConsolePlugin({
   baiduId: "dbf4327a921eac36c68ec119c80f31b9",

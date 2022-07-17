@@ -14,7 +14,7 @@
 </a>
 </p>
 
-Home: https://www.qbenben.com/docs/play/vuepress-plugin-clipboard
+Home: https://blog.qbb.sh/docs/play/vuepress-plugin-clipboard
 
 Source: [Github](https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/main/packages/clipboard)
 

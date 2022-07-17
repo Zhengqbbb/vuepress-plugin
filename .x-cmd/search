@@ -2,7 +2,7 @@
 
 # Section: Arg
 WORK_DIR="$(x wsroot)"
-WEB_SITE="www.qbenben.com"
+WEB_SITE="blog.qbb.sh"
 DOC_SEARCH_CONFIG_FILE=$WORK_DIR/blog/.vuepress/configs/docSearch/docSearchConfig.json
 
 

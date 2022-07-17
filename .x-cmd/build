@@ -9,7 +9,7 @@ DIST_PATH=$WORK_DIR/blog/.vuepress/dist
 TEMPLATE_PATH=$WORK_DIR/templates
 PACKAGE_VERSION=template-${BRANCH_INFO}-${COMMIT_ID}
 DOC_SEARCH_CONFIG_FILE=$WORK_DIR/blog/.vuepress/configs/docSearch/docSearchConfig.json
-WEB_SIT="www.qbenben.com"
+WEB_SIT="blog.qbb.sh"
 
 # Section: Function
 build() {

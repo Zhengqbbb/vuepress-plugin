@@ -44,11 +44,11 @@ sidebarDepth: 2
 <p align="center">
     <a href="https://github.com/Zhengqbbb/cz-git">Github</a>
     &nbsp; | &nbsp;
-    <a href="https://cz-git.qbenben.com/guide/getting-started.html">Installation</a>
+    <a href="https://cz-git.qbb.sh/guide/getting-started.html">Installation</a>
     &nbsp; | &nbsp;
-    <a href="https://cz-git.qbenben.com">Website</a>
+    <a href="https://cz-git.qbb.sh">Website</a>
     &nbsp; | &nbsp;
-    <a href="https://cz-git.qbenben.com/zh/">简体中文文档</a>
+    <a href="https://cz-git.qbb.sh/zh/">简体中文文档</a>
 </p>
 
 ## 介绍
@@ -73,4 +73,4 @@ Copyright (c) 2022-present Qiubin Zheng <zhengqbbb@gmail.com> (https://github.co
 
 > I just try my best to make thing well, Could you give a [star ⭐](https://github.com/Zhengqbbb/cz-git) to encourage me ?
 
-> 我是 Qbenben，一个爱折腾在沉浸在代码世界打怪升级的深圳小靓仔，感谢您的阅读。[Github](https://github.com/Zhengqbbb) · [Blog](https://www.qbenben.com/)
+> 我是 Qbenben，一个爱折腾在沉浸在代码世界打怪升级的深圳小靓仔，感谢您的阅读。[Github](https://github.com/Zhengqbbb) · [Blog](https://blog.qbb.sh/)

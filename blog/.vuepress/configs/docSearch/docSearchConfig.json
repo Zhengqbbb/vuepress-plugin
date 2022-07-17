@@ -1,12 +1,12 @@
 {
   "index_name": "qbenben",
   "start_urls": [
-    "https://www.qbenben.com/tags/",
-    "https://www.qbenben.com/docs/play/",
-    "https://www.qbenben.com/docs/fontend/"
+    "https://blog.qbb.sh/tags/",
+    "https://blog.qbb.sh/docs/play/",
+    "https://blog.qbb.sh/docs/fontend/"
   ],
   "stop_urls": [
-    "!https://www.qbenben.com"
+    "!https://blog.qbb.sh"
   ],
   "selectors": {
     "lvl0": {

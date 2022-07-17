@@ -24,7 +24,7 @@ tags:
 <p align="center">
 <a target="_blank" href="https://github.com/Zhengqbbb/cz-git">Github</a>
 ·
-<a target="_blank" href="https://cz-git.qbenben.com">中文文档</a>
+<a target="_blank" href="https://cz-git.qbb.sh">中文文档</a>
 </p>
 
 ![demo-gif](https://user-images.githubusercontent.com/40693636/154906217-e0b1c5d0-9294-4072-8082-c0cdd9392023.gif)
@@ -100,4 +100,4 @@ tags:
 <br>
 
 > I just try my best to make thing well, Could you give a [star ⭐](https://github.com/Zhengqbbb/cz-git).    
-> 我是 Qbenben，一个爱折腾在沉浸在代码世界打怪升级的深圳小靓仔，感谢您的阅读。[Github](https://github.com/Zhengqbbb) · [Blog](https://www.qbenben.com/)
+> 我是 Qbenben，一个爱折腾在沉浸在代码世界打怪升级的深圳小靓仔，感谢您的阅读。[Github](https://github.com/Zhengqbbb) · [Blog](https://blog.qbb.sh/)

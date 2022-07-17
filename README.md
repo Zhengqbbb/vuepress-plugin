@@ -29,7 +29,7 @@ pnpm run docs:build
 
 ## Page
 
-[http://www.qbenben.com](http://www.qbenben.com)
+[https://blog.qbb.sh](https://blog.qbb.sh)
 
 ## LICENSE
 
