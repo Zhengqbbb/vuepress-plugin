@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.qbb.sh/sitemap.xml
+Sitemap: http://localhost/sitemap.xml
