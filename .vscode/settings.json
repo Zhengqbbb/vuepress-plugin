@@ -17,19 +17,22 @@
     "vueuse"
   ],
   "cSpell.files": ["src"],
-  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.sourceLanguage": "zh-CN",
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true,
+  // use eslint
   "prettier.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.formatOnSave": false,
   "files.associations": {
     "*.css": "postcss"
   },
-  "editor.formatOnSave": false,
   "yaml.schemas": {
     "https://json.schemastore.org/github-workflow.json": "file:///Users/qbenben/project/me/.github/workflows/deploy.yml"
-  }
+  },
+  "picgo.picBed.github.path": "blog/",
+  // "unocss.root": "build/plugins/unocss.ts",
 }

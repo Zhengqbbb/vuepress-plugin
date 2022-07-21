@@ -1,5 +1,6 @@
 /** @type {import('cz-git').CommitizenGitOptions} */
 module.exports = {
+  // @use termianl like: `czg :i`
   alias: {
     'i': 'feat: initial commit',
     's': 'style: update code format',
@@ -10,4 +11,5 @@ module.exports = {
     ':': 'docs: update posts',
   },
   scopes: ['theme', 'posts'],
+  customScopesAlign: 'top',
 }

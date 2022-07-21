@@ -1,9 +1,8 @@
 <script setup lang="ts">
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
+import { isClient } from '~/utils'
+
 useHead({
-  title: 'Q.Ben | Qbenben\'s personal website',
+  title: 'Q.Ben',
   meta: [
     { name: 'description', content: 'Qbenben\'s personal website' },
     {
@@ -19,6 +18,14 @@ useHead({
     },
   ],
 })
+
+// Scroll to top after route change
+const route = useRoute()
+
+watch(
+  () => route.path,
+  () => isClient && window.scrollTo({ top: 0 }),
+)
 </script>
 
 <template>
