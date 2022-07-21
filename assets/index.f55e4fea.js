@@ -1,0 +1,1 @@
+import{g as t,o,c as s,b as a}from"./app.9844b3b2.js";const c={class:"prose prose-sm m-auto text-left"},n=a("h1",null,"Hello World",-1),r=[n],i=[],u={__name:"index",setup(_,{expose:e}){return e({frontmatter:{meta:[]}}),t({meta:[]}),(l,p)=>(o(),s("div",c,r))}};export{u as default,i as meta};
