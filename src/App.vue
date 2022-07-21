@@ -2,7 +2,7 @@
 import { isClient } from '~/utils'
 
 useHead({
-  title: 'Q.Ben',
+  title: 'Q.Ben | Zhengqbbb',
   meta: [
     { name: 'description', content: 'Qbenben\'s personal website' },
     {
