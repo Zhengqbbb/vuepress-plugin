@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "vite-ssg build && && cp _redirects dist",
+    "build": "vite-ssg build && cp _redirects dist",
     "dev": "vite --port 3333",
     "lint": "eslint .",
     "serve": "vite preview"
