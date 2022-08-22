@@ -28,7 +28,8 @@
   },
   "editor.formatOnSave": false,
   "files.associations": {
-    "*.css": "postcss"
+    "*.css": "postcss",
+    "_redirects": "properties"
   },
   "yaml.schemas": {
     "https://json.schemastore.org/github-workflow.json": "file:///Users/qbenben/project/me/.github/workflows/deploy.yml"
