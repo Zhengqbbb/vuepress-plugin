@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vuepress.qbb.sh/sitemap.xml

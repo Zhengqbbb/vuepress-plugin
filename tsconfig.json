@@ -3,7 +3,10 @@
     "baseUrl": ".",
     "module": "ESNext",
     "target": "ESNext",
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "strict": true,
     "esModuleInterop": true,
     "jsx": "preserve",
@@ -13,16 +16,13 @@
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": [
-      "vite/client",
-      "vue/ref-macros",
-      "vite-plugin-pages/client",
-      "vite-plugin-vue-layouts/client"
-    ],
-    "paths": {
-      "~/*": ["src/*"]
-    }
+    "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["dist", "node_modules", "**/*.cjs"]
+  "exclude": [
+    "node_modules",
+    "./scripts/commitizen.cjs",
+    ".temp",
+    "**/*/lib/**/*",
+    "**/*/dist/**/*"
+  ],
 }

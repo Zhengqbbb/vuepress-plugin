@@ -1,0 +1,15 @@
+.code-copy-added-top:hover > div > .code-copy svg {
+  opacity: 0.75;
+}
+
+.code-copy-added-bottom:hover > div > .code-copy svg {
+  opacity: 0.75;
+}
+
+div[class*=language-].code-copy-added-top::before {
+  right: 3em;
+}
+
+.code-group div[class*=language-].code-copy-added-top::before {
+  top: -2.4em;
+}

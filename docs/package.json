@@ -1,0 +1,24 @@
+{
+  "name": "docs",
+  "private": true,
+  "description": "qb vuepress demo",
+  "license": "MIT",
+  "author": "Zhengqbbb <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)",
+  "scripts": {
+    "docs:build": "vuepress-cli build --clean-cache",
+    "docs:clean": "rimraf .vuepress/.temp .vuepress/.cache .vuepress/dist",
+    "docs:dev": "vuepress-cli dev --clean-cache",
+    "docs:serve": "serve .vuepress/dist"
+  },
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.49",
+    "@vuepress/plugin-google-analytics": "v2.0.0-beta.49",
+    "sass-loader": "^13.0.2",
+    "serve": "^13.0.4",
+    "vue": "^3.2.37",
+    "vuepress": "2.0.0-beta.49",
+    "vuepress-plugin-china-search-console": "workspace:*",
+    "vuepress-plugin-clipboard": "workspace:*",
+    "vuepress-plugin-sitemap2": "2.0.0-beta.86"
+  }
+}

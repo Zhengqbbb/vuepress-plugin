@@ -1,10 +1,17 @@
 {
+  "name": "qb-vuepress-plugin",
   "private": true,
+  "description": "qbenben's vuepress-next plugins",
+  "license": "MIT",
+  "author": "Zhengqbbb <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)",
   "scripts": {
-    "build": "vite-ssg build && cp _redirects dist",
-    "dev": "vite --port 3333",
+    "build": "pnpm --filter=\"vuepress*\" --stream build && pnpm copy",
+    "copy": "pnpm --filter=\"vuepress*\" --parallel --stream copy",
+    "dev": "concurrently \"tsc -b ./tsconfig.build.json --watch\" \"pnpm run copy\"",
     "lint": "eslint .",
-    "serve": "vite preview"
+    "docs:build": "pnpm --filter=docs docs:build",
+    "docs:dev": "pnpm --filter=docs docs:dev",
+    "docs:serve": "pnpm --filter=docs docs:serve"
   },
   "config": {
     "commitizen": {
@@ -12,58 +19,38 @@
       "czConfig": "./scripts/commitizen.cjs"
     }
   },
-  "eslintConfig": {
-    "extends": "@antfu"
-  },
-  "dependencies": {
-    "@vueuse/core": "^8.9.2",
-    "@vueuse/head": "^0.7.6",
-    "dayjs": "^1.11.3",
-    "nprogress": "^0.2.0",
-    "prism-theme-vars": "^0.2.4",
-    "vue": "^3.2.37",
-    "vue-router": "^4.1.2"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
-    "@iconify-json/carbon": "^1.1.6",
-    "@types/markdown-it": "^12.2.3",
-    "@types/markdown-it-link-attributes": "^3.0.1",
-    "@types/nprogress": "^0.2.0",
-    "@unocss/reset": "^0.43.0",
-    "@vitejs/plugin-vue": "^3.0.0",
-    "@vue/test-utils": "^2.0.2",
-    "critters": "^0.0.16",
-    "cross-env": "^7.0.3",
+    "@types/node": "^18.0.5",
+    "bumpp": "7.2.0",
+    "cpx2": "^4.2.0",
+    "concurrently": "^7.2.2",
+    "conventional-changelog-cli": "^2.2.2",
     "cz-git": "^1.3.9",
-    "eslint": "^8.19.0",
     "esno": "^0.16.3",
+    "eslint": "^8.19.0",
     "fast-glob": "^3.2.11",
-    "feed": "^4.2.2",
-    "fs-extra": "^10.1.0",
-    "gray-matter": "^4.0.3",
-    "markdown-it-anchor": "^8.6.4",
-    "markdown-it-link-attributes": "^4.0.0",
-    "markdown-it-prism": "^2.2.4",
-    "markdown-it-table-of-contents": "^0.6.0",
+    "js-yaml": "^4.1.0",
+    "ora": "^6.1.2",
     "pathe": "^0.3.2",
-    "pnpm": "^7.5.2",
-    "prismjs": "^1.28.0",
-    "typescript": "^4.7.4",
-    "unocss": "^0.44.2",
-    "unplugin-auto-import": "^0.9.3",
-    "unplugin-icons": "^0.14.7",
-    "unplugin-vue-components": "^0.21.1",
-    "vite": "^3.0.0",
-    "vite-plugin-inspect": "^0.6.0",
-    "vite-plugin-pages": "^0.25.0",
-    "vite-plugin-pwa": "^0.12.3",
-    "vite-plugin-vue-layouts": "^0.6.0",
-    "vite-plugin-vue-markdown": "^0.20.1",
-    "vite-plugin-yaml": "^1.0.5",
-    "vite-ssg": "^0.20.2",
-    "vite-ssg-sitemap": "^0.3.1",
-    "vite-svg-loader": "^3.4.0"
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
   },
-  "packageManager": "pnpm@7.5.2"
+  "engines": {
+    "pnpm": ">=7"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "@types/react",
+        "eslint-plugin-import",
+        "eslint-plugin-n",
+        "eslint-plugin-promise",
+        "react",
+        "react-dom",
+        "webpack"
+      ]
+    }
+  }
 }

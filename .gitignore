@@ -1,8 +1,28 @@
+# VuePress files
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+docs/.vuepress/dist/
+/dist/
+/templates/
+
+# Dist files
+lib/
+
+urls.txt
+urls.json
+
+# Test temp files
+**/__fixtures__/.temp/
+
+# Node modules
+node_modules/
+
+# MacOS Desktop Services Store
 .DS_Store
-.vite-ssg-dist
-.vite-ssg-temp
-*.local
-dist
-dist-ssr
-node_modules
+
+# Log files
 *.log
+
+# Typescript build info
+*.tsbuildinfo
+.env

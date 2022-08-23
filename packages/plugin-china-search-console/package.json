@@ -1,0 +1,42 @@
+{
+  "name": "vuepress-plugin-china-search-console",
+  "version": "2.1.3",
+  "description": "VuePress plugin - China search console",
+  "keywords": [
+    "vuepress-plugin",
+    "baidu-tongji",
+    "vuepress2",
+    "vuepress2-plugin",
+    "baidu-analytics",
+    "baidu-auto-push",
+    "360-auto-push",
+    "analytics"
+  ],
+  "homepage": "https://vuepress.qbb.sh/china-search-console",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zhengqbbb/vuepress-plugin/tree/main/packages/plugin-china-search-console"
+  },
+  "author": "zhengqbbb <zhengqbbb@gmail.com>",
+  "license": "MIT",
+  "main": "lib/node/index.js",
+  "types": "lib/node/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "pnpm clean && tsc -b tsconfig.build.json",
+    "clean": "rimraf lib *.tsbuildinfo",
+    "copy": "cpx \"src/**/*.{css,vue}\" lib"
+  },
+  "dependencies": {
+    "@vuepress/client": "^2.0.0-beta.49",
+    "@vuepress/core": "^2.0.0-beta.49",
+    "@vuepress/utils": "^2.0.0-beta.49",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.15"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

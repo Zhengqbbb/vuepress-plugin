@@ -1,0 +1,51 @@
+name: Deploy Vuepress Demo
+
+on:
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'docs/**'
+  #     - 'vuepress/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_VERSION: '16'
+      DOCS_GA_ID: G-PKN44NEZKD
+      DOCS_BAIDU_ID: 8f73cb8b2d3fe504688fa20d62d00fae
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: |
+          pnpm build:vuepress
+          pnpm play:build:vuepress
+
+      - name: 🎉 Deploy GitHub Pages 🎉
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.VUEPRESS_ACTIONS_DEPLOY_KEY }}
+          cname: vuepress.qbb.sh
+          external_repository: Zhengqbbb/vuepress-plugin-website
+          publish_branch: main
+          publish_dir: docs/.vuepress/dist
+          commit_message: "build: :books: deploy page"
