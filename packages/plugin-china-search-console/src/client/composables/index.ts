@@ -1,2 +1,2 @@
-export * from './useSearchConsole'
+export * from './useSearchConsole.js'
 

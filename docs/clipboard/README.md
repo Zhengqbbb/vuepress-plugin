@@ -112,10 +112,6 @@ export default defineUserConfig({
 
 ## Options
 
-```js
-const a = 1
-```
-
 <table style="font-size: 0.9rem;">
   <thead>
     <th>option</th>

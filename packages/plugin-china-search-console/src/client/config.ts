@@ -1,5 +1,5 @@
 import { defineClientConfig } from '@vuepress/client'
-import { useSearchConsole } from './composables'
+import { useSearchConsole } from './composables/index.js'
 
 declare const __BA_ID__: string
 declare const __TT_ID__: string

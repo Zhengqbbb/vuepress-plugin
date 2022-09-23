@@ -1,5 +1,5 @@
 import type { Plugin, PluginObject } from '@vuepress/core'
-import { path } from '@vuepress/utils'
+import { getDirname, path } from '@vuepress/utils'
 
 export interface SearchConsolePluginOptions {
   /**
@@ -25,7 +25,7 @@ export interface SearchConsolePluginOptions {
    */
   autoPush360Switch?: boolean
 }
-
+const __dirname = getDirname(import.meta.url)
 export const searchConsolePlugin
   = ({
     baiduId = '',

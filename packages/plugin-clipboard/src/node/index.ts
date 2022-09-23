@@ -1,19 +1,20 @@
+import { getDirname, path } from '@vuepress/utils'
 import type { Plugin } from '@vuepress/core'
-import { path } from '@vuepress/utils'
-import type { ClipboardOptions } from '../shared'
+import type { ClipboardOptions } from '../shared/index.js'
 
-export * from '../shared'
+export * from '../shared/index.js'
+
+const __dirname = getDirname(import.meta.url)
 
 export const clipboardPlugin
   = (options: ClipboardOptions): Plugin =>
     () => ({
       name: 'vuepress-plugin-clipboard',
-      multiple: false,
 
-      clientConfigFile: path.resolve(__dirname, '../client/config.js'),
       define: {
         __CODE_CLIPBOARD_OPTIONS__: options,
       },
+      clientConfigFile: path.resolve(__dirname, '../client/config.js'),
     })
 
 export default clipboardPlugin

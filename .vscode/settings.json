@@ -7,7 +7,4 @@
     "*.css": "postcss"
   },
   "editor.formatOnSave": false,
-  "yaml.schemas": {
-    "https://json.schemastore.org/github-workflow.json": "file:///Users/qbenben/project/qb/.github/workflows/deploy.yml"
-  },
 }

@@ -1,5 +1,4 @@
-import { searchConsolePlugin } from './searchConsolePlugin'
+import { searchConsolePlugin } from './searchConsole.js'
 
-export * from './searchConsolePlugin'
-
+export * from './searchConsole.js'
 export default searchConsolePlugin

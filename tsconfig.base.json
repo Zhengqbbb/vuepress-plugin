@@ -3,8 +3,8 @@
     "composite": true,
     "declaration": true,
     "declarationMap": false,
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
     "newLine": "lf",
     "noEmitOnError": true,
     "noImplicitAny": true,
@@ -13,7 +13,7 @@
     "sourceMap": false,
     "strict": true,
     "strictNullChecks": true,
-    "target": "ES2018"
+    "target": "ES2020",
   },
   "exclude": ["node_modules", ".temp", "lib", "dist"]
 }

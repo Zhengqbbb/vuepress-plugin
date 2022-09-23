@@ -1,6 +1,6 @@
 import { createApp, onBeforeUnmount, onMounted, onUpdated, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import type { ClipboardOptions } from '../../shared'
+import type { ClipboardOptions } from '../../shared/index.js'
 import CodeCopy from './CodeCopy.vue'
 
 import '../styles/main.css'

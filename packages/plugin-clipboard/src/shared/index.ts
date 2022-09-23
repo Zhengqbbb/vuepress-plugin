@@ -1,4 +1,4 @@
-export { ClipboardOptions } from './options'
+export { ClipboardOptions } from './options.js'
 
 interface RGB {
   r: number
