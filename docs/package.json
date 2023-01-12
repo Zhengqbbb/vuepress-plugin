@@ -11,14 +11,14 @@
     "docs:serve": "serve .vuepress/dist"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.51",
-    "@vuepress/plugin-google-analytics": "v2.0.0-beta.51",
-    "sass-loader": "^13.0.2",
-    "serve": "^13.0.4",
-    "vue": "^3.2.37",
-    "vuepress": "2.0.0-beta.51",
+    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/plugin-google-analytics": "v2.0.0-beta.60",
+    "sass-loader": "^13.2.0",
+    "serve": "^14.1.2",
+    "vue": "^3.2.45",
+    "vuepress": "2.0.0-beta.60",
     "vuepress-plugin-china-search-console": "workspace:*",
     "vuepress-plugin-clipboard": "workspace:*",
-    "vuepress-plugin-sitemap2": "2.0.0-beta.86"
+    "vuepress-plugin-sitemap2": "2.0.0-beta.99"
   }
 }

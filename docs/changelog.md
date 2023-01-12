@@ -6,6 +6,11 @@ sidebarDepth: 0
 # CHANGELOG
 
 
+## 2.1.5
+
+### Fix:
+- (plugin-*): compatible upgrade vuepress-next version to <u>**2.0.0-beta.60**</u>
+
 ## 2.1.4
 ### Features:
 - (plugin-*): upgrade pure ESM packages
