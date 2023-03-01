@@ -39,7 +39,7 @@ importers:
   docs:
     specifiers:
       '@vuepress/client': 2.0.0-beta.61
-      '@vuepress/plugin-google-analytics': v2.0.0-beta.61
+      '@vuepress/plugin-google-analytics': 2.0.0-beta.61
       sass-loader: ^13.2.0
       serve: ^14.2.0
       vue: ^3.2.47
