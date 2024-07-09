@@ -2,8 +2,11 @@
   "name": "qb-vuepress-plugin",
   "private": true,
   "description": "qbenben's vuepress-next plugins",
-  "license": "MIT",
   "author": "Zhengqbbb <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)",
+  "license": "MIT",
+  "engines": {
+    "pnpm": ">=7"
+  },
   "scripts": {
     "build": "tsc -b ./tsconfig.build.json && pnpm copy",
     "copy": "pnpm --filter=\"vuepress*\" --parallel --stream copy",
@@ -23,21 +26,18 @@
     "@antfu/eslint-config": "^0.35.3",
     "@types/node": "^18.14.2",
     "bumpp": "7.2.0",
-    "cpx2": "^4.2.0",
     "concurrently": "^7.6.0",
     "conventional-changelog-cli": "^2.2.2",
+    "cpx2": "^4.2.0",
     "cz-git": "^1.5.0",
-    "esno": "^0.16.3",
     "eslint": "^8.35.0",
+    "esno": "^0.16.3",
     "fast-glob": "^3.2.12",
     "js-yaml": "^4.1.0",
     "ora": "^6.1.2",
     "pathe": "^1.1.0",
     "rimraf": "^4.1.2",
     "typescript": "^4.9.5"
-  },
-  "engines": {
-    "pnpm": ">=7"
   },
   "pnpm": {
     "peerDependencyRules": {
